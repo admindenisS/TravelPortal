@@ -1,0 +1,333 @@
+* {
+    margin: 0;
+    padding: 0;
+    line-height: 120%;
+}
+
+html, body {
+    height: 1000vh;
+    width: 100%;
+    background-color: var(--accent);
+}
+
+@font-face {
+    font-family: "Muller";
+    src: url("./fonts/Muller-Trial-Regular.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "Muller Bold";
+    src: url("./fonts/MullerDemo-ExtraBold.otf") format("opentype");
+}
+
+@font-face {
+    font-family: "TT Tsars B";
+    src: url("./fonts/TT-Tsars-B-Trial-Black.otf") format("opentype");
+}
+
+/* variables */
+
+:root {
+    --secondary-color: rgba(0,0,0, 0.8);
+    --primary-color: #000;
+    --primary-inv: #FFFFFF;
+    --globe-color: #F8F8F8;
+    --tetriary-color: rgba(0,0,0, 0.6);
+    --accent: #3A8C80;
+    --h1: 8.738vw;
+    --h2: 6.796vw;
+    --h3: 5.825vw;
+    --h4: 4.854vw;
+    --text: 3.883vw;
+}
+
+/* header */
+
+header {
+    position: sticky;
+    display: flex;
+    overflow-x: hidden;
+    flex-direction: row;
+    margin: 1.316vh 5.825vw 1.316vh 5.825vw;
+    justify-content: space-between;
+    width: calc(100vw - (5.825vw * 2));
+    align-items: center;
+    z-index: 1;
+    top: 0;
+}
+
+header::after {
+    position: sticky;
+    background-color: var(--primary-color);
+    width: 100%;
+    height: 100px;
+}
+
+.container {
+    width: fit-content;
+    display: flex;
+    height: fit-content;
+}
+
+.row {
+    flex-direction: row;
+}
+
+.collumn {
+    flex-direction: column;
+}
+
+.center {
+    align-items: center;
+    justify-content: center;
+}
+
+.branding {
+    gap: 3.883vw;    
+}
+
+.logos {
+    display: flex;
+    flex-direction: row;
+    gap: 2.913vw;
+    flex-wrap: nowrap;
+}
+
+.logo {
+    height: fit-content;
+    display: flex;
+}
+
+.logo img:first-child {
+    width: 8.981vw;
+}
+
+.logo img:last-child {
+    width: 8.252vw;
+}
+
+.name {
+    flex-direction: column;
+    text-wrap: nowrap;
+    height: 100%;
+    box-sizing: border-box;
+    font-size: 3.398vw;
+    font-family: "Muller Bold";
+    line-height: 120%;
+    text-transform: uppercase;
+}
+
+.menu {
+    width: 3.883vw;
+    margin: 2.913vw;
+}
+
+menu {
+    display: none;
+}
+
+.banner {
+    width: 100vw;
+    height: fit-content;
+    color: var(--primary-inv);
+}
+
+.banner img {
+    height: auto;
+    border-radius: 0 0 12.136vw 12.136vw;
+}
+
+.banner-text {
+    left: calc(4.854vw - 100vw);
+    top: 14.831vh;
+    position: relative;
+    flex-direction: column;
+}
+
+
+.banner-text h1 {
+    font-family: "TT Tsars B";
+    text-wrap: nowrap;
+    font-size: var(--h1);
+    width: fit-content;
+    line-height: 120%;
+}
+
+.banner-text h2 {
+    padding-top: 0.872vh;
+    line-height: 120%;
+    font-family: "Muller";
+    text-wrap: nowrap;
+    font-size: var(--text);
+    width: fit-content;
+}
+
+.background {
+    background-color: var(--globe-color);
+    border-radius: 0 0 12.136vw 12.136vw;
+    width: 100vw;
+}
+
+.header {
+    flex-direction: column;
+    gap: 5.825vw;
+}
+
+.header h1 {
+    text-transform: uppercase;
+    font-family: "TT Tsars B";
+    font-size: var(--h2);
+    color: var(--primary-color);
+    line-height: 120%;
+}
+
+.header span {
+    font-family: "Muller";
+    color: var(--secondary-color);
+    font-size: var(--text);
+    line-height: 120%;
+}
+
+.block {
+    margin: 5.234vh 5.825vw 0 5.825vw;
+    flex-direction: column;
+}
+
+.content {
+    margin-top: 4.362vh;
+    gap: 5.825vw;
+}
+
+.item {
+    text-transform: uppercase;
+    flex-direction: column;
+    text-decoration: none;
+    width: 41.262vw;
+    gap: 1.745vh;
+    font-family: "Muller Bold";
+    font-size: var(--h4);
+    line-height: 120%;
+    color: var(--secondary-color);
+}
+
+.item img {
+    border-radius: 6.068vw;
+}
+
+.single {
+    width: calc(100vw - 5.234vh);
+}
+
+.afisha .header {
+    gap: 1.309vh;
+}
+
+.afisha {
+    padding: 2.617vh 3.883vw 2.617vh 3.883vw;
+    width: calc(100vw - (5.825vw * 2) - (3.883vw * 2));
+    margin-bottom: 5.234vh;
+}
+
+.afisha h1 {
+    font-family: "Muller Bold";
+    color: var(--secondary-color);
+}
+
+.afisha a {
+    font-size: var(--text);
+    color: var(--primary-inv);
+    text-transform: uppercase;
+    background-color: var(--accent);
+    border-radius: 6.068vw;
+    padding: 1.309vh 0 1.309vh 0;
+    text-align: center;
+    margin-top: 5.234vh;
+    text-decoration: none;
+}
+
+
+@media screen and (orientation: landscape) {
+
+    header {
+        padding: 2.404vh 1.875vw 2.404vh 1.875vw;
+        width: calc(100% - (1.875vw * 2));
+    }
+
+    .branding {
+        gap: 1.875vw;
+    }
+
+    .logos {
+        gap: 1.25vw;
+    }
+
+    .logo img:first-child {
+        width: 3.984vw;
+    }
+    
+    .logo img:last-child {
+        width: 3.75vw;
+    }
+
+    .name {
+        font-size: 1.25vw;
+    }
+
+    .menu {
+        display: none;
+    }
+
+    menu {
+        font-family: Muller;
+        font-size: 1.683vh;
+        gap: 1.875vw;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        text-transform: uppercase;
+        display: flex;
+        justify-items: center;
+        align-items: center;
+    }
+
+    menu a {
+        color: var(--tetriary-color);
+        text-decoration: none;
+        height: 1.923vh;
+    }
+
+    menu button {
+        font-size: 1.683vh;
+        font-family: Muller;
+        color: var(--tetriary-color);
+        text-decoration: none;
+        height: fit-content;
+        text-transform: uppercase;
+        background-color: transparent;
+        border: none;
+        color: none;
+        display: flex;
+        align-items: center;
+    }
+
+    menu button img {
+        height: 0.601vh;
+        margin: 1.322vh;
+    }
+
+    .vk {
+        height: 2.5vw;
+        background-color: var(--accent);
+        width: 2.5vw;
+        border-radius: 100%;
+    }
+
+    .vk img {
+        position: relative;
+        height: 1.875vw;
+        width: 1.875vw;
+    }
+
+    .block {
+        display: none;
+    }
+}
