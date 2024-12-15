@@ -5,9 +5,9 @@
 }
 
 html, body {
-    height: 1000vh;
     width: 100%;
     background-color: var(--accent);
+    overflow-x: hidden;
 }
 
 @font-face {
@@ -29,16 +29,19 @@ html, body {
 
 :root {
     --secondary-color: rgba(0,0,0, 0.8);
+    --secondary-inv: rgba(255, 255, 255, 0.80);
     --primary-color: #000;
     --primary-inv: #FFFFFF;
     --globe-color: #F8F8F8;
     --tetriary-color: rgba(0,0,0, 0.6);
+    --tetriary-inv: rgba(255, 255, 255, 0.6);
     --accent: #3A8C80;
     --h1: 8.738vw;
     --h2: 6.796vw;
     --h3: 5.825vw;
     --h4: 4.854vw;
     --text: 3.883vw;
+    --navigation: 3.398vw;
 }
 
 /* header */
@@ -50,10 +53,10 @@ header {
     flex-direction: row;
     margin: 1.316vh 5.825vw 1.316vh 5.825vw;
     justify-content: space-between;
-    width: calc(100vw - (5.825vw * 2));
+    width: calc(100% - (5.825vw * 2));
     align-items: center;
     z-index: 1;
-    top: 0;
+    top: -50px;
 }
 
 header::after {
@@ -111,7 +114,7 @@ header::after {
     text-wrap: nowrap;
     height: 100%;
     box-sizing: border-box;
-    font-size: 3.398vw;
+    font-size: var(--navigation);
     font-family: "Muller Bold";
     line-height: 120%;
     text-transform: uppercase;
@@ -122,18 +125,15 @@ header::after {
     margin: 2.913vw;
 }
 
-menu {
-    display: none;
-}
-
 .banner {
-    width: 100vw;
+    width: 100%;
     height: fit-content;
     color: var(--primary-inv);
 }
 
 .banner img {
     height: auto;
+    width: 100vw;
     border-radius: 0 0 12.136vw 12.136vw;
 }
 
@@ -181,7 +181,7 @@ menu {
     line-height: 120%;
 }
 
-.header span {
+.header > span {
     font-family: "Muller";
     color: var(--secondary-color);
     font-size: var(--text);
@@ -245,12 +245,148 @@ menu {
     text-decoration: none;
 }
 
+footer {
+    margin: 5.234vh 4.854vw 5.234vh 4.854vw;
+    display: grid;
+    grid-template-columns: 1fr 5.825vw 1fr;
+    grid-template-rows: fit-content 1fr 2fr 2fr 0.545vh 2fr;
+    row-gap: 2.726vh; 
+}
+
+footer .branding {
+    grid-row: 1;
+    grid-column: span 3;
+}
+
+footer .name {
+    font-size: 3.883vw;
+    color: var(--primary-inv);
+}
+
+.contacts {
+    grid-area: contacts;
+    flex-direction: column;
+    gap: 2.617vh;
+    grid-row: 2;
+    grid-column: 1;
+}
+
+.contacts span {
+    font-size: var(--navigation);
+    text-transform: uppercase;
+    color: var(--secondary-inv);
+    font-family: "Muller";
+}
+
+.contacts div {
+    flex-direction: column;
+    display: flex;
+}
+
+.contacts a {
+    text-decoration: none;
+    font-size: var(--navigation);
+    color: var(--tetriary-inv);
+    font-family: "Muller";
+}
+
+.links {
+    flex-direction: column;
+    grid-row: 3;
+    grid-column: 1;
+    gap: 3.053vh;
+}
+
+.linked {
+    gap: 0.436vh;
+    flex-direction: column;
+}
+
+.linked a {
+    height: fit-content;
+    align-items: center;
+    gap: 1.942vw;
+    text-decoration: none;
+    font-size: var(--navigation);
+    font-family: "Muller";
+    color: var(--secondary-inv);
+}
+
+.navigation {
+    font-family: "Muller";
+    grid-column: 3;
+    grid-row: span 2;
+    font-size: var(--navigation);
+    flex-direction: column;
+    gap: 2.617vh;
+}
+
+.navigation span {
+    text-transform: uppercase;
+    color: var(--secondary-inv)
+}
+
+.navigation div {
+    flex-direction: column;
+    gap: 0.872vh;
+}
+
+.navigation a {
+    text-decoration: none;
+    color: var(--tetriary-inv);
+}
+
+.madeby {
+    flex-direction: column;
+    gap: 0.872vh;
+    row-gap: 4;
+    grid-row: 5;
+    grid-column: span 3;
+    font-family: "Muller";
+    font-size: var(--navigation);
+}
+
+.madeby span {
+    color: var(--secondary-inv);
+}
+
+.madeby a {
+    color: var(--tetriary-inv);
+    text-decoration: none;
+}
+
+#menu {
+    position: absolute;
+    display: flex;
+    overflow-x: hidden;
+    flex-direction: row;
+    align-items: center;
+    z-index: 2;
+    top: 0;
+    width: calc(100vw);
+}
+
+.hdr {
+    margin: 1.316vh 5.825vw 1.316vh 5.825vw;
+    width: calc(100% - (5.825vw * 2));
+    justify-content: space-between;
+}
+
 
 @media screen and (orientation: landscape) {
 
+    :root {
+        --h1: 4.688vw;
+        --h2: 2.813vw;
+        --h3: 2.188vw;
+        --h4: 0.971vw;
+        --text: 1.406vw;
+        --navigation: 1.25vw;
+    }
+
     header {
-        padding: 2.404vh 1.875vw 2.404vh 1.875vw;
-        width: calc(100% - (1.875vw * 2));
+        width: auto;
+        margin: 2.163vh 2.5vw;
     }
 
     .branding {
@@ -289,6 +425,14 @@ menu {
         align-items: center;
     }
 
+    .pages {
+        display: flex;
+    }
+
+    .page {
+
+    }
+
     menu a {
         color: var(--tetriary-color);
         text-decoration: none;
@@ -315,6 +459,7 @@ menu {
     }
 
     .vk {
+        display: flex;
         height: 2.5vw;
         background-color: var(--accent);
         width: 2.5vw;
@@ -327,7 +472,95 @@ menu {
         width: 1.875vw;
     }
 
+    .background {
+        display: flex;
+        gap: 4.688vw;
+        border-radius: 0 0 3.906vw 3.906vw;
+        padding: 7.212vh 2.422vw 12.74vh 0;
+        width: calc(100vw - 2.422vw - 15px);
+        flex-wrap: nowrap;
+        align-items: center;
+    }
+
+    .banner {
+        width: fit-content;
+        height: fit-content;
+        position: relative;
+    }
+
+    .banner img {
+        width: auto;
+        border-radius: 3.906vw;
+        height: 68.51vh;
+    }
+
+    .ship {
+        display: block;
+        position: absolute;
+        width: calc(100vw - 15px);
+        bottom: 0;
+        left: 0;
+    }
+
     .block {
+        display: none;
+    }
+
+    footer {
+        margin: 6.01vh 2.5vw 7.212vh 2.5vw;
+        grid-template-columns: 2fr 16.719vw 1fr 1fr;
+        grid-template-rows: 1fr 1fr;
+        row-gap: 0;   
+    }
+    
+    footer .branding {
+        grid-row: 1;
+        grid-column: 1;
+    }
+
+    footer .name {
+        font-size: 1.563vw;
+    }
+
+    .contacts {
+        gap: 2.617vh;
+        grid-row: 1;
+        grid-column: 4;
+    }
+
+    .navigation {
+        grid-column: 3;
+        grid-row: span 2;
+        width: 100%;
+    }
+
+    .links {
+        gap: 3.125vw;
+        flex-direction: row;
+        grid-row: 2;
+        grid-column: 1;
+        width: 100%;
+        height: 100%;
+        align-items: end;
+    }
+
+    .linked a {
+        gap: 0.625vw;
+    }
+
+    .linked a img{
+        width: 1.875vw;
+    }
+
+    .madeby {
+        grid-row: 2;
+        grid-column: 4;
+        width: 100%;
+        height: 100%;
+        justify-content: end;
+    }
+
+    #menu {
         display: none;
     }
 }

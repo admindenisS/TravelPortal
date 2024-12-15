@@ -10,15 +10,15 @@
 		<header>
 			<div class="container row center branding">
 				<div class="container row center logos">
-					<a class="logo center"><img src="assets/adm.svg" alt="Герб администрации Новоладожского городского поселения" /></a>
-					<a class="logo center"><img src="assets/center.svg" alt="Логотип Цетра компетенции Ленинградской области" /></a>
+					<a href="https://new-ladoga-adm.ru/" class="logo center"><img src="assets/adm.svg" alt="Герб администрации Новоладожского городского поселения" /></a>
+					<a href="https://sreda47.ru/" class="logo center"><img src="assets/center.svg" alt="Логотип Цетра компетенции Ленинградской области" /></a>
 				</div>
-				<div class="container name">
+				<div class="container name" hidden>
 					<span>Информационный портал</span>
 					<span>Новая Ладога</span>
 				</div>
 			</div>
-			<menu>
+			<menu hidden>
 				<a href="">О Новой Ладоге</a>
 				<a href="">Селфи с Суворовым</a>
 				<a href="">Афиша</a>
@@ -26,21 +26,30 @@
 					<span>Для туристов</span>
 					<img alt="" src="./assets/arrow.svg" />
 				</button>
-				<a href="" class="vk container center">
+				<a href="https://vk.com/newladogaadm" class="vk container center">
 					<img alt="Мы ВКонтакте" src="./assets/vk.svg" />
 				</a>
 			</menu>
-			<img alt="выпадающий список" class="menu" src="./assets/menu.svg" onclick="document.getElementById('menu').hidden = false" />
+			<img alt="выпадающий список" class="menu" src="./assets/menu.png" onclick="document.getElementById('menu').hidden = false" />
 		</header>
 		<div class="container collumn background">
 			<div class="container">
+				<div class="pages" hidden>
+					<div class="page" id="turists">
+						<span>Для туристов</span>
+					</div>
+				</div>
 				<div class="container banner">
-					<img class="banner" alt="Изображение Новой Ладоги" src="./assets/banner-small.png" />
+					<picture role="presentation">
+						<source media="(orientation: landscape)" srcset="./assets/banner.png" />
+						<img src="./assets/banner-small.png" alt="" />
+					  </picture>
 					<div class="container banner-text">
 						<h1>Новая Ладога</h1>
 						<h2>Откройте для себя Новую Ладогу!</h2>
 					</div>
 				</div>
+				<img class="ship" src="./assets/ship.png" alt="" role="presentation" hidden/>
 			</div>
 			<div class="block container">
 				<div class="header container">
@@ -50,27 +59,27 @@
 				<div class="container content">
 					<a class="item container" href="">
 						<span>Кафе</span>
-						<img alt="Столики для поситителей стоящие на улице" src="./assets/cafe.png" />
+						<img alt="Кафе" src="./assets/cafe.png" loading="lazy" />
 					</a>
 					<a class="item container" href="">
 						<span>Гостиницы</span>
-						<img alt="Гостевой дом «На Набережной»" src="./assets/guest-house.png" />
+						<img alt="Гостиницы" src="./assets/guest-house.png" loading="lazy"/>
 					</a>
 				</div>
 				<div class="container content">
 					<a class="item container" href="">
 						<span>Бренды</span>
-						<img alt="«Музей Корюшки»" src="./assets/fish-museum.png" />
+						<img alt="Бренды" src="./assets/fish-museum.png" loading="lazy"/>
 					</a>
 					<a class="item container" href="">
 						<span>Веломаршрут</span>
-						<img alt="Человек едущий на велосипеде" src="./assets/basicle.png" />
+						<img alt="Веломаршрут" src="./assets/basicle.png" loading="lazy"/>
 					</a>
 				</div>
 				<div class="container">
 					<a href="" class="container content item single">
 						<span>Фестиваль «Корюшка идёт!»</span>
-						<img alt="Фотография с фестиваля «Корюшка идёт!»" src="./assets/festival.png"
+						<img alt="Фестиваль «Корюшка идёт!»" src="./assets/festival.png" loading="lazy"
 					/></a>
 				</div>
 			</div>
@@ -82,11 +91,11 @@
 				<div class="container content">
 					<a class="item container" href="">
 						<span>О Новой Ладоге</span>
-						<img alt="Фото города с квардракоптера" src="./assets/town.png" />
+						<img alt="О Новой Ладоге" src="./assets/town.png" loading="lazy"/>
 					</a>
 					<a class="item container" href="">
 						<span>Селфи с Суворовым</span>
-						<img alt="Люди фотографирующиеся на фоне медного корабля" src="./assets/selfie.png" />
+						<img alt="Селфи с Суворовым" src="./assets/selfie.png" loading="lazy"/>
 					</a>
 				</div>
 			</div>
@@ -97,6 +106,79 @@
 				</div>
 				<a href="">Перейти</a>
 			</div>
+		</div>
+		<footer>
+			<div class="container row center branding">
+				<div class="container row center logos">
+					<a href="https://new-ladoga-adm.ru/" class="logo center"><img src="assets/adm.svg" alt="Герб администрации Новоладожского городского поселения" /></a>
+					<a href="https://sreda47.ru/" class="logo center"><img src="assets/center-white.svg" alt="Логотип Цетра компетенции Ленинградской области" /></a>
+				</div>
+				<div class="container name">
+					<span>Информационный портал</span>
+					<span>Новая Ладога</span>
+				</div>
+			</div>
+			<div class="container contacts">
+				<span>контакты</span>
+				<div class="container">
+					<a href="tel:+7813630063">+7 813 63-00-63</a>
+					<a href="mailto:new-ladoga@yandex.ru">new-ladoga@yandex.ru</a>
+				</div>
+			</div>
+			<div class="container links">
+				<div class="container linked">
+					<a href="https://vk.com/newladogaadm" class="container">
+						<img src="./assets/vk-inv.svg" alt=""/>
+						<span>Группа города</span>
+					</a>
+					<a href="https://new-ladoga-adm.ru/" class="container">
+						<img src="./assets/web.svg" alt=""/>
+						<span>Сайт администрации</span>
+					</a>
+				</div>
+				<div class="container linked">
+					<a href="https://vk.com/newladogaadm" class="container">
+						<img src="./assets/vk-inv.svg" alt=""/>
+						<span>Группа ЦК Лен. обл.</span>
+					</a>
+					<a href="https://new-ladoga-adm.ru/" class="container">
+						<img src="./assets/web.svg" alt=""/>
+						<span>Сайт ЦК Лен. обл.</span>
+					</a>
+				</div>
+			</div>
+			<div class="container navigation">
+				<span>навигация по сайту</span>
+				<div class="container">
+					<a href="#">О Новой Ладоге</a>
+					<a href="#">Селфи с Суворовым</a>
+					<a href="#">Афиша</a>
+					<a href="#">Кафе</a>
+					<a href="#">Бренды</a>
+					<a href="#">Гостиницы</a>
+					<a href="#">Веломаршрут</a>
+					<a href="#">«Корюшка идёт»</a>
+				</div>
+			</div>
+			<div class="madeby container">
+				<span>Портал подготовлен Центром компетенций (ЦК) Ленинградской области</span>
+				<a href="mailto:cc.lenreg@sreda47.ru">cc.lenreg@sreda47.ru</a>
+			</div>
+		</footer>
+		<div id="menu" hidden>
+			<div class="container hdr">
+				<div class="container row center branding">
+					<div class="container row center logos">
+						<a href="https://new-ladoga-adm.ru/" class="logo center"><img src="assets/adm.svg" alt="Герб администрации Новоладожского городского поселения" /></a>
+						<a href="https://sreda47.ru/" class="logo center"><img src="assets/center.svg" alt="Логотип Цетра компетенции Ленинградской области" /></a>
+					</div>
+					<div class="container name">
+						<span>Информационный портал</span>
+						<span>Новая Ладога</span>
+					</div>
+				</div>
+				<img alt="выпадающий список" class="menu" src="./assets/menu.png" onclick="document.getElementById('menu').hidden = false" />
+			</header>
 		</div>
 	</body>
 </html>
