@@ -31,81 +31,89 @@
 				</a>
 			</menu>
 			<img alt="выпадающий список" class="menu" src="./assets/menu.png" onclick="document.getElementById('menu').hidden = false" />
-		</header>
-		<div class="container collumn background">
-			<div class="container">
-				<div class="pages" hidden>
-					<div class="page" id="turists">
-						<span>Для туристов</span>
+		</header>	
+		<div class="container pages-list">
+			<div class="container background">
+				<div class="container banner-container">
+					<div class="pages" hidden>
+						<div class="container">
+							<span>Для туристов</span>
+							<div class="container center">
+								<img role="presentation" alt="" src="./assets/arrow-inv.svg" />
+							</div>
+						</div>
+						<a>О Новой Ладоге</a>
+						<a>Селфи с Суворовым</a>
+						<a>Афиша</a>
+					</div>
+					<div class="container banner">
+						<picture id="banner-image" class="unselectable" role="presentation">
+							<source media="(orientation: landscape)" srcset="./assets/banner.png" />
+							<img src="./assets/banner-small.png" alt="" />
+						</picture>
+						<div class="container banner-text">
+							<h1>Новая Ладога</h1>
+							<h2>Откройте для себя Новую Ладогу!</h2>
+						</div>
 					</div>
 				</div>
-				<div class="container banner">
-					<picture role="presentation">
-						<source media="(orientation: landscape)" srcset="./assets/banner.png" />
-						<img src="./assets/banner-small.png" alt="" />
-					  </picture>
-					<div class="container banner-text">
-						<h1>Новая Ладога</h1>
-						<h2>Откройте для себя Новую Ладогу!</h2>
+				<div class="block container">
+					<div class="header container">
+						<h1>Для туристов</h1>
+						<span>Чем заняться в городе: куда сходить поесть, где остановиться, где купить сувениры, где прокатиться на велосипеде.</span>
+					</div>
+					<div class="container content">
+						<a class="item container" href="">
+							<span>Кафе</span>
+							<img alt="Кафе" src="./assets/cafe.png" loading="lazy" />
+						</a>
+						<a class="item container" href="">
+							<span>Гостиницы</span>
+							<img alt="Гостиницы" src="./assets/guest-house.png" loading="lazy"/>
+						</a>
+					</div>
+					<div class="container content">
+						<a class="item container" href="">
+							<span>Бренды</span>
+							<img alt="Бренды" src="./assets/fish-museum.png" loading="lazy"/>
+						</a>
+						<a class="item container" href="">
+							<span>Веломаршрут</span>
+							<img alt="Веломаршрут" src="./assets/basicle.png" loading="lazy"/>
+						</a>
+					</div>
+					<div class="container">
+						<a href="" class="container content item single">
+							<span>Фестиваль «Корюшка идёт!»</span>
+							<img alt="Фестиваль «Корюшка идёт!»" src="./assets/festival.png" loading="lazy"
+						/></a>
 					</div>
 				</div>
-				<img class="ship" src="./assets/ship.png" alt="" role="presentation" hidden/>
-			</div>
-			<div class="block container">
-				<div class="header container">
-					<h1>Для туристов</h1>
-					<span>Чем заняться в городе: куда сходить поесть, где остановиться, где купить сувениры, где прокатиться на велосипеде.</span>
+				<div class="block container">
+					<div class="header container">
+						<h1>Жизнь города</h1>
+						<span>Хотите знать, что происходит в городе, история которого связана с великим полководцем Суворовым?</span>
+					</div>
+					<div class="container content">
+						<a class="item container" href="">
+							<span>О Новой Ладоге</span>
+							<img alt="О Новой Ладоге" src="./assets/town.png" loading="lazy"/>
+						</a>
+						<a class="item container" href="">
+							<span>Селфи с Суворовым</span>
+							<img alt="Селфи с Суворовым" src="./assets/selfie.png" loading="lazy"/>
+						</a>
+					</div>
 				</div>
-				<div class="container content">
-					<a class="item container" href="">
-						<span>Кафе</span>
-						<img alt="Кафе" src="./assets/cafe.png" loading="lazy" />
-					</a>
-					<a class="item container" href="">
-						<span>Гостиницы</span>
-						<img alt="Гостиницы" src="./assets/guest-house.png" loading="lazy"/>
-					</a>
-				</div>
-				<div class="container content">
-					<a class="item container" href="">
-						<span>Бренды</span>
-						<img alt="Бренды" src="./assets/fish-museum.png" loading="lazy"/>
-					</a>
-					<a class="item container" href="">
-						<span>Веломаршрут</span>
-						<img alt="Веломаршрут" src="./assets/basicle.png" loading="lazy"/>
-					</a>
-				</div>
-				<div class="container">
-					<a href="" class="container content item single">
-						<span>Фестиваль «Корюшка идёт!»</span>
-						<img alt="Фестиваль «Корюшка идёт!»" src="./assets/festival.png" loading="lazy"
-					/></a>
+				<div class="block afisha container">
+					<div class="container header">
+						<h1>Афиша</h1>
+						<span>Все события города на одной странице!</span>
+					</div>
+					<a href="">Перейти</a>
 				</div>
 			</div>
-			<div class="block container">
-				<div class="header container">
-					<h1>Жизнь города</h1>
-					<span>Хотите знать, что происходит в городе, история которого связана с великим полководцем Суворовым?</span>
-				</div>
-				<div class="container content">
-					<a class="item container" href="">
-						<span>О Новой Ладоге</span>
-						<img alt="О Новой Ладоге" src="./assets/town.png" loading="lazy"/>
-					</a>
-					<a class="item container" href="">
-						<span>Селфи с Суворовым</span>
-						<img alt="Селфи с Суворовым" src="./assets/selfie.png" loading="lazy"/>
-					</a>
-				</div>
-			</div>
-			<div class="block afisha container">
-				<div class="container header">
-					<h1>Афиша</h1>
-					<span>Все события города на одной странице!</span>
-				</div>
-				<a href="">Перейти</a>
-			</div>
+			<img class="ship unselectable"  src="./assets/ship.png" alt="" role="presentation" hidden/>
 		</div>
 		<footer>
 			<div class="container row center branding">
