@@ -6,20 +6,19 @@
 
 html,
 body {
-	width: 100%;
+	max-width: 100vw;
 	background-color: var(--accent);
-	overflow-x: hidden;
 }
 
 @font-face {
 	font-family: "Muller";
-	src: url("./fonts/Muller-Trial-Regular.otf") format("opentype") url("./fonts/Muller-Trial-Regular.ttf") format("truetype")
+	src: url("./fonts/Fontfabric-MullerRegular.otf") format("opentype") url("./fonts/Muller-Trial-Regular.ttf") format("truetype")
 		url("./fonts/Muller-Trial-Regular.woff") format("woff") url("./fonts/Muller-Trial-Regular.woff2") format("woff2");
 }
 
 @font-face {
 	font-family: "Muller Bold";
-	src: url("./fonts/Muller-Trial-Bold.otf") format("opentype")
+	src: url("./fonts/Fontfabric-MullerBold.otf") format("opentype")
     url("./fonts/Muller-Trial-Black.ttf") format("truetype")
     url("./fonts/Muller-Trial-Bold.woff") format("woff")
     url("./fonts/Muller-Trial-Bold.woff2") format("woff2");
@@ -27,7 +26,7 @@ body {
 
 @font-face {
 	font-family: "TT Tsars B";
-	src: url("./fonts/TT-Tsars-B-Trial-Black.otf") format("opentype");
+	src: url("./fonts/TTTsarsB-Regular.ttf") format("truetype");
 }
 
 /* variables */
@@ -52,24 +51,32 @@ body {
 /* header */
 
 header {
-	position: sticky;
+	position:sticky;
 	display: flex;
-	overflow-x: hidden;
 	flex-direction: row;
-	margin: 1.316vh 5.825vw 1.316vh 5.825vw;
+	padding: 1.316vh 5.825vw 1.316vh 5.825vw;
 	justify-content: space-between;
-	width: calc(100% - (5.825vw * 2));
+	width: auto;
 	align-items: center;
 	z-index: 1;
-	top: -50px;
+	top: 0;
+	background-color: var(--globe-color);
 }
 
-header::after {
-	position: sticky;
+/* header::after {
+	position: absolute;
+	left: 0;
 	background-color: var(--primary-color);
-	width: 100%;
-	height: 100px;
-}
+	width: 100vw;
+	height: 9.135vh;
+	overflow-y: visible;
+	background-image: url("./assets/header-background.svg");
+	background-size: contain;
+	background-color: var(--globe-color);
+	content: "";
+	z-index: -1;
+} */
+
 
 .unselectable {
 	user-drag: none;
@@ -136,7 +143,7 @@ header::after {
 }
 
 .banner {
-	width: 100%;
+	width: 100vw;
 	height: fit-content;
 	color: var(--primary-inv);
 }
@@ -173,12 +180,13 @@ header::after {
 
 .pages-list {
     position: relative;
+	width: 100%;
 }
 
 .background {
 	background-color: var(--globe-color);
 	border-radius: 0 0 12.136vw 12.136vw;
-	width: 100vw;
+	width: 100%;
 	flex-direction: column;
 }
 
@@ -381,8 +389,8 @@ footer .name {
 }
 
 .hdr {
-	margin: 1.316vh 5.825vw 1.316vh 5.825vw;
-	width: calc(100% - (5.825vw * 2));
+	padding: 1.316vh 5.825vw 1.316vh 5.825vw;
+	width: 100%;
 	justify-content: space-between;
 }
 
@@ -398,7 +406,7 @@ footer .name {
 
 	header {
 		width: auto;
-		margin: 2.163vh 2.5vw;
+		padding: 2.163vh 2.5vw;
 	}
 
 	.branding {
@@ -485,7 +493,6 @@ footer .name {
 		gap: 4.688vw;
 		border-radius: 0 0 3.906vw 3.906vw;
 		padding: 7.212vh 2.422vw 12.74vh 0;
-		width: calc(100vw - 2.422vw - 15px);
 		flex-direction: row;
 	}
 
@@ -532,6 +539,7 @@ footer .name {
 	.banner {
 		width: fit-content;
 		height: fit-content;
+		position: relative;
 	}
 
 	.banner img {
@@ -540,10 +548,20 @@ footer .name {
 		width: 62.422vw;
 	}
 
+	.banner-text {
+		position: absolute;
+		left: 2.188vw;
+		top: 33.654vh;
+	}
+
+	.banner-text h2 {
+		font-size: var(--h3);
+	}
+
 	.ship {
 		display: block;
 		position: absolute;
-		width: calc(100vw - 15px);
+		width: 100%;
 		bottom: 0;
 		left: 0;
 	}
@@ -609,8 +627,4 @@ footer .name {
 	#menu {
 		display: none;
 	}
-}
-
-.banner-text {
-    display: none;
 }
