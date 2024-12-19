@@ -12,8 +12,11 @@ body {
 
 @font-face {
 	font-family: "Muller";
-	src: url("./fonts/Fontfabric-MullerRegular.otf") format("opentype") url("./fonts/Muller-Trial-Regular.ttf") format("truetype")
-		url("./fonts/Muller-Trial-Regular.woff") format("woff") url("./fonts/Muller-Trial-Regular.woff2") format("woff2");
+	src:
+		url("./fonts/Muller-Trial-Regular.ttf") format("truetype") 
+		url("./fonts/Fontfabric-MullerRegular.otf") format("opentype") 
+		url("./fonts/Muller-Trial-Regular.woff") format("woff") 
+		url("./fonts/Muller-Trial-Regular.woff2") format("woff2");
 }
 
 @font-face {
