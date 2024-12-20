@@ -8,28 +8,33 @@ html,
 body {
 	max-width: 100vw;
 	background-color: var(--accent);
+	position: relative;
 }
 
 @font-face {
 	font-family: "Muller";
 	src:
-		url("./fonts/Muller-Trial-Regular.ttf") format("truetype") 
-		url("./fonts/Fontfabric-MullerRegular.otf") format("opentype") 
-		url("./fonts/Muller-Trial-Regular.woff") format("woff") 
-		url("./fonts/Muller-Trial-Regular.woff2") format("woff2");
+	url("./fonts/FontfabricMullerRegular.otf") format("opentype"),
+		url("./fonts/MullerTrialRegular.woff2") format("woff2"),
+		url("./fonts/MullerTrialRegular.woff") format("woff"),
+		url("./fonts/MullerTrialRegular.ttf") format("truetype");
+	font-weight: normal;
 }
 
 @font-face {
 	font-family: "Muller Bold";
-	src: url("./fonts/Fontfabric-MullerBold.otf") format("opentype")
-    url("./fonts/Muller-Trial-Black.ttf") format("truetype")
-    url("./fonts/Muller-Trial-Bold.woff") format("woff")
-    url("./fonts/Muller-Trial-Bold.woff2") format("woff2");
+	src:
+		url("./fonts/FontfabricMullerBold.otf") format("opentype"),
+		url("./fonts/MullerTrialBold.woff2") format("woff2"),
+		url("./fonts/MullerTrialBold.woff") format("woff"),
+		url("./fonts/MullerTrialBlack.ttf") format("truetype");
+	font-weight: bold;
 }
 
 @font-face {
 	font-family: "TT Tsars B";
-	src: url("./fonts/TTTsarsB-Regular.ttf") format("truetype");
+	src: url("./fonts/TTTsarsBRegular.ttf") format("truetype");
+	font-weight: normal;
 }
 
 /* variables */
@@ -54,7 +59,7 @@ body {
 /* header */
 
 header {
-	position:sticky;
+	position: sticky;
 	display: flex;
 	flex-direction: row;
 	padding: 1.316vh 5.825vw 1.316vh 5.825vw;
@@ -142,8 +147,10 @@ header {
 
 .menu {
 	width: 3.883vw;
-	margin: 2.913vw;
+	padding: 2.913vw;
 }
+
+/* banner */
 
 .banner {
 	width: 100vw;
@@ -182,7 +189,7 @@ header {
 }
 
 .pages-list {
-    position: relative;
+	position: relative;
 	width: 100%;
 }
 
@@ -206,7 +213,7 @@ header {
 	line-height: 120%;
 }
 
-.header > span {
+.header>span {
 	font-family: "Muller";
 	color: var(--secondary-color);
 	font-size: var(--text);
@@ -380,21 +387,37 @@ footer .name {
 	text-decoration: none;
 }
 
-#menu {
-	position: absolute;
-	display: flex;
+#menu-mob {
+	position: fixed;
 	overflow-x: hidden;
-	flex-direction: row;
+	flex-direction: column;
 	align-items: center;
 	z-index: 2;
 	top: 0;
-	width: calc(100vw);
+	width: 100vw;
+	height: 100vh;
+	background-color: var(--globe-color);
 }
 
 .hdr {
 	padding: 1.316vh 5.825vw 1.316vh 5.825vw;
-	width: 100%;
+	width: calc(100% - 5.825vw * 2);
 	justify-content: space-between;
+}
+
+.hdr .menu {
+	height: 1.745vh;
+}
+
+.dialog {
+	width: calc(100% - 5.825vw * 2);
+	height: 100%;
+	margin: 3.162vh 5.825vw 13.959vh 5.825vw;
+}
+
+.dialog hr {
+	width: 100vw;
+	transform: translateX(-5.825vw);
 }
 
 @media screen and (orientation: landscape) {
@@ -573,6 +596,8 @@ footer .name {
 		display: none;
 	}
 
+	/* footer */
+
 	footer {
 		margin: 6.01vh 2.5vw 7.212vh 2.5vw;
 		grid-template-columns: 2fr 16.719vw 1fr 1fr;
@@ -626,6 +651,8 @@ footer .name {
 		height: 100%;
 		justify-content: end;
 	}
+
+	/* menu for phones */
 
 	#menu {
 		display: none;

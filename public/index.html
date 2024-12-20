@@ -30,7 +30,7 @@
 					<img alt="Мы ВКонтакте" src="./assets/vk.svg" />
 				</a>
 			</menu>
-			<img alt="выпадающий список" class="menu" src="./assets/menu.png" onclick="document.getElementById('menu').hidden = false" />
+			<img alt="выпадающий список" class="menu" src="./assets/menu.svg" onclick="openMenu(`mobile`)" />
 		</header>	
 		<div class="container pages-list">
 			<div class="container background">
@@ -173,7 +173,7 @@
 				<a href="mailto:cc.lenreg@sreda47.ru">cc.lenreg@sreda47.ru</a>
 			</div>
 		</footer>
-		<!-- <div id="menu" hidden>
+		<div id="menu-mob" hidden>
 			<div class="container hdr">
 				<div class="container row center branding">
 					<div class="container row center logos">
@@ -185,8 +185,20 @@
 						<span>Новая Ладога</span>
 					</div>
 				</div>
-				<img alt="выпадающий список" class="menu" src="./assets/menu.png" onclick="document.getElementById('menu').hidden = false" />
-			</header>
-		</div> -->
+				<img alt="выпадающий список" class="menu" src="./assets/close.svg" onclick="openMenu(`mobile`)" />
+			</div>
+			<div class="dialog">
+				<div class="list">
+					<div class="list-name">
+						<span>Для туристов</span>
+						<img src=""/>
+					</div>
+					<hr>
+				</div>
+			</div>
+		</div>
+		<script src="./scripts/menu.js"></script>
 	</body>
 </html>
+
+<!-- TODO: change web and vk to svg and color with css -->
