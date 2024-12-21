@@ -13,21 +13,15 @@ body {
 
 @font-face {
 	font-family: "Muller";
-	src:
-	url("./fonts/FontfabricMullerRegular.otf") format("opentype"),
-		url("./fonts/MullerTrialRegular.woff2") format("woff2"),
-		url("./fonts/MullerTrialRegular.woff") format("woff"),
-		url("./fonts/MullerTrialRegular.ttf") format("truetype");
+	src: url("./fonts/FontfabricMullerRegular.otf") format("opentype"), url("./fonts/MullerTrialRegular.woff2") format("woff2"),
+		url("./fonts/MullerTrialRegular.woff") format("woff"), url("./fonts/MullerTrialRegular.ttf") format("truetype");
 	font-weight: normal;
 }
 
 @font-face {
 	font-family: "Muller Bold";
-	src:
-		url("./fonts/FontfabricMullerBold.otf") format("opentype"),
-		url("./fonts/MullerTrialBold.woff2") format("woff2"),
-		url("./fonts/MullerTrialBold.woff") format("woff"),
-		url("./fonts/MullerTrialBlack.ttf") format("truetype");
+	src: url("./fonts/FontfabricMullerBold.otf") format("opentype"), url("./fonts/MullerTrialBold.woff2") format("woff2"),
+		url("./fonts/MullerTrialBold.woff") format("woff"), url("./fonts/MullerTrialBlack.ttf") format("truetype");
 	font-weight: bold;
 }
 
@@ -84,7 +78,6 @@ header {
 	content: "";
 	z-index: -1;
 } */
-
 
 .unselectable {
 	user-drag: none;
@@ -217,7 +210,7 @@ menu button img {
 	line-height: 120%;
 }
 
-.header>span {
+.header > span {
 	font-family: "Muller";
 	color: var(--secondary-color);
 	font-size: var(--text);
@@ -463,7 +456,7 @@ details {
 }
 
 summary::marker {
-	content: ""
+	content: "";
 }
 
 .dialog hr {
@@ -477,10 +470,11 @@ summary::marker {
 	display: flex;
 	flex-direction: column;
 	justify-content: space-between;
-	flex: auto
+	flex: auto;
 }
 
-.dialog span, dialog a {
+.dialog span,
+dialog a {
 	font-size: var(--text);
 	width: 100%;
 }
@@ -516,7 +510,7 @@ summary::marker {
 	padding: 0.85vw;
 }
 
-.dialog .linked svg:last-child{
+.dialog .linked svg:last-child {
 	width: 3.883vw;
 	padding: 1.488vw;
 }
@@ -645,28 +639,52 @@ summary::marker {
 		width: fit-content;
 	}
 
-	.pages div {
-		gap: 0.313vw;
-	}
-
-	.pages div div {
-		height: 3.846vh;
-		width: 2.5vw;
-	}
-
-	.pages div img {
-		width: 1.406vw;
-		height: auto;
-	}
-
-	.pages a,
-	.pages div:first-child {
+	.pages > a,
+	.pages details {
 		text-decoration: none;
 		background-color: var(--accent);
-		padding: 1.803vh 2.5vw;
 		border-radius: 0 2.344vw 2.344vw 0;
 		text-wrap: nowrap;
 		width: fit-content;
+		color: var(--primary-inv);;
+		font-family: "Muller Bold";
+	}
+
+	.pages > a {
+		padding: 1.803vh 2.5vw;
+	}
+
+	.pages details {
+		height: auto;
+		font-size: var(--h3);
+	}
+
+	.pages summary {
+		gap: 0.313vw;
+		padding: 1.803vh 2.5vw;
+	}
+
+	.pages details .urls {
+		font-size: 1.563vw;
+		flex-direction: column;
+		gap: 0.493vh;
+		padding: 0;
+		margin-left: 3.125vw;
+	}
+
+	.pages details[open] a:last-child{
+		margin-bottom: 2.956vh;
+	}
+
+	.pages details .urls a {
+		color: var(--secondary-inv);
+		text-decoration: none;
+	}
+
+	.pages details img {
+		width: 1.406vw;
+		height: auto;
+		padding: 1.368vh 0.555vw;
 	}
 
 	.banner {
@@ -743,7 +761,7 @@ summary::marker {
 		align-items: end;
 	}
 
-	.links:first-child .linked:last-child span{
+	.links:first-child .linked:last-child span {
 		content: "Группа города ВКонтакте";
 	}
 
@@ -777,9 +795,11 @@ summary::marker {
 		justify-content: end;
 	}
 
-	/* menu for phones */
-
 	#menu {
 		display: none;
 	}
+}
+
+.ship {
+	display: none;
 }

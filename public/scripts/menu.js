@@ -1,32 +1,46 @@
+//opens menus
+
 function openMenu(device) {
-    let menuElement = null;
+	let menuElement = null;
 
-    console.log(device);
-    
-    if (device == "mobile") {
-        menuElement = document.getElementById('menu-mob');
-    } else if (device == "pc") {
-        menuElement = document.getElementById('menu-pc');
-    }
+	console.log(device);
 
-    if (menuElement === null) return;
-    let status = menuElement.getAttribute("data-active");
-    
-    console.log(status);
-    console.log(menuElement);
-    
-    if (status == 1) {
-        document.body.style.overflowY = "unset";
-        menuElement.style.display = "none";
-        menuElement.setAttribute("data-active", 0);
-        if (device == "mobile") {
-            document.querySelector("#menu-mob details").removeAttribute("open");
-        }
-    } else {
-        document.body.style.overflowY = "hidden";
-        menuElement.removeAttribute("hidden");
-        menuElement.style.display = "flex";
-        menuElement.setAttribute("data-active", 1);
-    }
-    console.log(menuElement);
+	if (device == "mobile") {
+		menuElement = document.getElementById("menu-mob");
+	} else if (device == "pc") {
+		menuElement = document.getElementById("menu-pc");
+	}
+
+	if (menuElement === null) return;
+	let status = menuElement.getAttribute("data-active");
+
+	if (status == 1) {
+		document.body.style.overflowY = "unset";
+		menuElement.style.display = "none";
+		menuElement.setAttribute("data-active", 0);
+
+        //auto close after exit from menu
+		if (device == "mobile") {
+			document.querySelector("#menu-mob details").removeAttribute("open");
+		}
+	} else {
+		document.body.style.overflowY = "hidden";
+		menuElement.removeAttribute("hidden");
+		menuElement.style.display = "flex";
+		menuElement.setAttribute("data-active", 1);
+	}
 }
+
+//arrow wrapper for details
+
+document.querySelectorAll("details").forEach(function (element) {
+	element.addEventListener("click", function (event) {
+		let arrow = event.target.querySelector("img") ? event.target.querySelector("img") : event.target.parentElement.querySelector("img");
+        
+		if (arrow.style.rotate == 0 || arrow.style.rotate == "0deg") {
+			arrow.style.rotate = "180deg";
+		} else {
+			arrow.style.rotate = "0deg";
+		}
+	});
+});
