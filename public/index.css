@@ -150,6 +150,10 @@ header {
 	padding: 2.913vw;
 }
 
+menu button img {
+	opacity: 0.6;
+}
+
 /* banner */
 
 .banner {
@@ -344,6 +348,20 @@ footer .name {
 	color: var(--secondary-inv);
 }
 
+.linked a svg {
+	width: 4.369vw;
+	fill: var(--accent);
+	background-color: var(--primary-inv);
+	border-radius: 100%;
+	padding: 0.728vw;
+	height: auto;
+}
+
+footer .linked a:last-child svg {
+	width: 3.277vw;
+	padding: 1.274vw;
+}
+
 .navigation {
 	font-family: "Muller";
 	grid-column: 3;
@@ -412,12 +430,99 @@ footer .name {
 .dialog {
 	width: calc(100% - 5.825vw * 2);
 	height: 100%;
-	margin: 3.162vh 5.825vw 13.959vh 5.825vw;
+	margin: 0.545vh 5.825vw 13.959vh 5.825vw;
+	font-family: "Muller";
+	display: flex;
+	flex-direction: column;
+}
+
+details {
+	display: flex;
+	flex-direction: column;
+	font-size: var(--text);
+	height: auto;
+}
+
+.dialog summary {
+	padding-bottom: 1.309vh;
+	padding-top: 2.617vh;
+	display: flex;
+	justify-content: space-between;
+	color: var(--primary-color);
+}
+
+.dialog details a {
+	padding-bottom: 1.309vh;
+	padding-top: 1.309vh;
+	text-decoration: none;
+	color: var(--secondary-color);
+}
+
+.dialog details a:last-child {
+	margin-bottom: 2.617vh;
+}
+
+summary::marker {
+	content: ""
 }
 
 .dialog hr {
 	width: 100vw;
 	transform: translateX(-5.825vw);
+}
+
+.dialog .links {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	flex: auto
+}
+
+.dialog span, dialog a {
+	font-size: var(--text);
+	width: 100%;
+}
+
+.dialog .urls {
+	flex-direction: column;
+	width: 100%;
+	color: var(--tetriary-color);
+}
+
+.dialog .urls a {
+	padding: 1.478vh 0;
+	font-size: var(--text);
+	color: var(--tetriary-color);
+	text-decoration: none;
+}
+
+.dialog .linked {
+	gap: 2.617vh;
+	width: 100%;
+}
+
+.dialog .linked a {
+	gap: 1.092vw;
+	width: 100%;
+}
+
+.dialog .linked svg {
+	fill: var(--globe-color);
+	background-color: var(--accent);
+	width: 5.097vw;
+	height: auto;
+	padding: 0.85vw;
+}
+
+.dialog .linked svg:last-child{
+	width: 3.883vw;
+	padding: 1.488vw;
+}
+
+.dialog .linked span {
+	color: var(--accent);
 }
 
 @media screen and (orientation: landscape) {
@@ -498,9 +603,10 @@ footer .name {
 	menu button img {
 		height: 0.601vh;
 		margin: 1.322vh;
+		opacity: 0.6;
 	}
 
-	.vk {
+	menu .vk {
 		display: flex;
 		height: 2.5vw;
 		background-color: var(--accent);
@@ -508,10 +614,11 @@ footer .name {
 		border-radius: 100%;
 	}
 
-	.vk img {
+	menu .vk svg {
 		position: relative;
-		height: 1.875vw;
+		height: 3.079vh;
 		width: 1.875vw;
+		fill: var(--primary-inv);
 	}
 
 	.background {
@@ -636,12 +743,30 @@ footer .name {
 		align-items: end;
 	}
 
+	.links:first-child .linked:last-child span{
+		content: "Группа города ВКонтакте";
+	}
+
 	.linked a {
 		gap: 0.625vw;
 	}
 
-	.linked a img {
-		width: 1.875vw;
+	.linked a svg {
+		width: 1.406vw;
+		padding: 0.234vw;
+	}
+
+	footer .linked a:last-child svg {
+		width: 1.055vw;
+		padding: 0.41vw;
+	}
+
+	#town-group {
+		display: none;
+	}
+
+	#town-group-desc {
+		display: block;
 	}
 
 	.madeby {

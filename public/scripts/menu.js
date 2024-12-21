@@ -19,6 +19,9 @@ function openMenu(device) {
         document.body.style.overflowY = "unset";
         menuElement.style.display = "none";
         menuElement.setAttribute("data-active", 0);
+        if (device == "mobile") {
+            document.querySelector("#menu-mob details").removeAttribute("open");
+        }
     } else {
         document.body.style.overflowY = "hidden";
         menuElement.removeAttribute("hidden");
