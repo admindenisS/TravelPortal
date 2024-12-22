@@ -21,6 +21,7 @@ function openMenu(device) {
 
         //auto close after exit from menu
 		if (device == "mobile") {
+			document.querySelector("#menu-mob details summary img").style.rotate = "0deg";
 			document.querySelector("#menu-mob details").removeAttribute("open");
 		}
 	} else {

@@ -1,61 +1,49 @@
-//image changer
+let currentAnimation = null;
+
 function changeImage(newUrl, image) {
-	let url = image.src.trim().replace(/.*assets\/|[)]+/g, "");
-	if (url == newUrl) return;
+	let currentUrl = image.src.trim().replace(/.*assets\/|[)]+/g, "");
+	if (currentUrl === newUrl) return;
+
+	if (currentAnimation) {
+		currentAnimation.cancel();
+	}
 
 	let bannerText = document.getElementsByClassName("banner-text")[0];
 	if (bannerText) bannerText.style.display = "none";
 
-    image.st
-
-	image.animate([{ opacity: 1 }, { opacity: 0 }, { opacity: 1, content: `url(./assets/${newUrl})` }], {
+	let currentInimation = (image.animate([{ opacity: 1 }, { opacity: 0 }, { opacity: 1, content: `url(./assets/${newUrl})` }], {
 		duration: 300,
 		easing: "ease-in-out",
 		fill: "forwards",
 	}).onfinish = () => {
-		image.src = `./assets/${newUrl})`;
-        if (bannerText && newUrl == "banner.png") bannerText.style.display = "flex";
-	};
+		image.src = `./assets/${newUrl}`;
+		if (newUrl === "banner.png") {
+			bannerText.style.display = "flex";
+		}
+		currentAnimation = null;
+	});
 }
 
-document.querySelectorAll("[data-changeble='1']").forEach(function (element) {
-	let text = document.querySelector(".banner-text");
+let isMouseOverSubimage = false;
+
+document.querySelectorAll("[data-subimage]").forEach(function (element) {
 	let banner = document.getElementById("banner-image");
 
-	element.addEventListener("mouseover", function (event) {
-		let target = event.target.id
-			? event.target.id
-			: event.target.parentNode.id
-			? event.target.parentNode.id
-			: event.target.parentNode.parentNode.id;
+	element.addEventListener("mouseenter", function (event) {
+		isMouseOverSubimage = true;
+		let target = event.target;
 
-		switch (target) {
-			case "tourists":
-				changeImage("tourists.png", banner);
-				break;
-			case "about":
-				changeImage("about.png", banner);
-				break;
-			case "selfie":
-				changeImage("selfie.png", banner);
-				break;
-			case "afisha":
-				changeImage("afisha.png", banner);
-				break;
-		}
+		if (!target || !target.dataset.subimage) return;
+
+		changeImage(target.dataset.subimage, banner);
 	});
 
-	element.addEventListener("mouseout", function () {
-		element.parentNode.addEventListener("mouseout", function (event) {
-			let target = event.target.id
-				? event.target.id
-				: event.target.parentNode.id
-				? event.target.parentNode.id
-				: event.target.parentNode.parentNode.id;
-
-			if (["tourists", "about", "selfie", "afisha"].includes(target)) return;
-			changeImage("banner.png", banner);
-		});
+	element.addEventListener("mouseleave", function (event) {
+		isMouseOverSubimage = false;
+		setTimeout(() => {
+			if (!isMouseOverSubimage) {
+				changeImage("banner.png", banner);
+			}
+		}, 150);
 	});
 });
-// TODO: вставить в data-image ссылку на изображение и хватать её через js, уменьшая количество кода и улучшая его качество
