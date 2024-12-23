@@ -619,6 +619,7 @@ dialog a {
 		border-radius: 0.781vw;
 		padding: 2.463vh 1.563vw;
 		transform: translateX(-25%);
+		box-shadow: 0.156vw 0.156vw 1.563vw rgba(153, 153, 153, 0.25), 0.156vw -0.156vw 1.563vw rgba(153, 153, 153, 0.25);
 	}
 
 	menu details a {
