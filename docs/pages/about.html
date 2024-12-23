@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="./styles/about.css" />
     <link rel="icon" href="../assets/favicon.ico" />
 </head>
+
 <body>
     <header>
         <div class="container row center branding">
@@ -27,7 +28,8 @@
             <a href="">Селфи с Суворовым</a>
             <a href="">Афиша</a>
             <details>
-                <summary><span>Для туристов</span> <img alt="" role="presentation" src="../assets/arrow.svg" /></summary>
+                <summary><span>Для туристов</span> <img alt="" role="presentation" src="../assets/arrow.svg" />
+                </summary>
                 <div class="container">
                     <a href="#">Кафе</a>
                     <a href="#">Гостиницы</a>
@@ -47,7 +49,44 @@
     </header>
     <div class="content">
         <div class="container drone">
-            
+            <div class="container">
+                <div>
+                    <img alt="" role="presentation" src="../assets/marker.svg">
+                    <span>Новая Ладога</span>
+                </div>
+                <span>Историческое поселение и уютный провинциальный городок</span>
+            </div>
+        </div>
+        <div class="container info">
+            <div class="text">
+                <p>Новая Ладога - историческое поселение расположенное в Волховском районе на левом берегу реки Волхов
+                    на месте его впадения в Ладожское озеро. Растояние от Санкт-Петербурга - 120 км.</p>
+                <p>Город основан Петро I в 1704 году. Исторический центр города богат памятниками архитектуры. Всего в
+                    городе более 70 объектов культурного наследия.</p>
+            </div>
+            <div class="slider">
+                <div id="images" role="slider">
+                    <img alt="" role="presentation" src="../assets/town-slider-v.png">
+                    <img alt="" role="presentation" src="../assets/autum.png">
+                    <img alt="" role="presentation" src="../assets/ship-statue.png">
+                    <img alt="" role="presentation" src="../assets/church-round.png">
+                    <img alt="" role="presentation" src="../assets/happy-people-1.png">
+                    <img alt="" role="presentation" src="../assets/happy-people-2.png">
+                </div>
+                <div class="slider-info">
+                    <div class="progress-container">
+                        <div id="progress" role="progressbar"></div>
+                    </div>
+                    <img src="../assets/swipe.svg" alt="" role="note">
+                </div>
+            </div>
+            <div class="text">
+                <p>Жители до сих пор называют свой город купеческим, в память о расцвете торговли и меценатства в XIX
+                    веке. Благодаря удачному территориальному расположению - город стал торговым центром и
+                    административным центром. В городе активно развивалась промышленность. Там проживали и работали
+                    купцы, проходили ярмарки.</p>
+                <p><b>Сегодня Новая Ладога</b> - маленький и уютный провинциальный город.</p>
+            </div>
         </div>
     </div>
     <footer>
@@ -182,6 +221,7 @@
         </div>
     </div>
     <script src="../scripts/menu.js"></script>
+    <script src="../scripts/scroll-progress.js"></script>
 </body>
 
 </html>

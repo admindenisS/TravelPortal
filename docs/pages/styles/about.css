@@ -159,12 +159,133 @@ menu button img {
 }
 
 .drone {
-    height: 91.133vh;
+    position: relative;
+    height: 50.164vh;
     width: 100%;
     background-image: url("../../assets/drone.png");
     background-position: 0;
-    background-size: contain;
+    background-size: cover;
+    overflow: hidden;
     background-repeat: no-repeat;
+    border-radius: 0 0 12.136vw 12.136vw;
+}
+
+.drone div {
+    flex-direction: column;
+}
+
+.drone span{
+    color: var(--primary-inv);
+}
+
+.drone > .container {
+    gap: 0.872vh;
+    position: absolute;
+    bottom: 8.288vh;
+    left: 5.583vw;
+}
+
+.drone > .container > span {
+    font-family: "Muller";
+    font-size: var(--text);
+}
+
+.drone > .container > div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.drone img {
+    display: none;
+}
+
+.drone > .container > div > span {
+    font-family: "TT Tsars B";
+    font-size: var(--h1);
+}
+
+.info {
+    flex-direction: column;
+    width: calc(100% - 7.767vw * 2);
+    align-items: center;
+    gap: 7.692vh;
+    padding: 5.234vh 7.767vw 6.979vh 7.767vw;
+}
+
+.text {
+    width: 100%;
+    height: fit-content;
+    font-family: "Muller";
+    font-size: var(--text);
+    color: var(--secondary-color);
+    gap: 1.5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.text b {
+    color: var(--accent);
+}
+
+.slider {
+    width: 100%;
+    height: 100%;
+}
+
+#images {
+    height: fit-content;
+    display: flex;
+    flex-direction: row;
+    gap: 7.767vw;
+    width: 100%;
+    overflow-y: hidden;
+    aspect-ratio: 2/1;
+    -ms-overflow-style: none;
+    left: 0;
+    top: 0;
+}
+
+#images::-webkit-scrollbar {
+    width: 0;
+}
+
+#images img {
+    width: 100%;
+    height: auto;
+    border-radius: 7.282vw;
+}
+
+.slider-info {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: calc(100% - 5.34vw * 2);
+    gap: 1.745vh;
+    height: fit-content;
+    margin: 3.49vh 5.34vw 0 5.34vw;
+}
+
+.progress-container {
+    height: 0.436vh;
+    width: 100%;
+    background-color: rgba(0, 0, 0, 0.3);
+    border-radius: 2px;
+    position: relative;
+}
+
+#progress {
+    position: absolute;
+    top: 0;
+    left: 0;
+    background-color: var(--secondary-color);
+    height: 100%;
+    width: 29.126vw;
+}
+
+.slider-info img {
+    width: 9.709vw;
+    height: auto;
 }
 
 footer {
@@ -550,6 +671,40 @@ dialog a {
 		border-radius: 0 0 3.906vw 3.906vw;
 	}
 
+    .drone {
+        height: 91.133vh;
+        border-radius: 0 0 3.906vw 3.906vw;
+        justify-content: center;
+        align-items: end;
+    }
+
+    .drone > .container {
+        position: unset;
+        margin-bottom: 18.885vh;
+    }
+    
+    .drone > .container > span {
+        font-family: "Muller";
+        font-size: 3.306vh;
+    }
+    
+    .drone > .container > div {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 1.563vh;
+    }
+    
+    .drone > .container > div > img {
+        display: block;
+        height: 8.654vh;
+        width: auto;
+    }
+    
+    .drone > .container > div > span {
+        font-family: "TT Tsars B";
+        font-size: 12.019vh;
+    }
 
     /* footer */
 
