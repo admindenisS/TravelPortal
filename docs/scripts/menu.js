@@ -19,7 +19,7 @@ function openMenu(device) {
 		menuElement.style.display = "none";
 		menuElement.setAttribute("data-active", 0);
 
-        //auto close after exit from menu
+		//auto close after exit from menu
 		if (device == "mobile") {
 			document.querySelector("#menu-mob details summary img").style.rotate = "0deg";
 			document.querySelector("#menu-mob details").removeAttribute("open");
@@ -37,7 +37,7 @@ function openMenu(device) {
 document.querySelectorAll("details").forEach(function (element) {
 	element.addEventListener("click", function (event) {
 		let arrow = event.target.querySelector("img") ? event.target.querySelector("img") : event.target.parentElement.querySelector("img");
-        
+
 		if (arrow.style.rotate == 0 || arrow.style.rotate == "0deg") {
 			arrow.style.rotate = "180deg";
 		} else {
@@ -45,3 +45,15 @@ document.querySelectorAll("details").forEach(function (element) {
 		}
 	});
 });
+
+//close tourists on main page
+
+let tourists = document.getElementById("tourists");
+
+if (tourists) {
+	tourists.addEventListener("mouseleave", (event) => {
+		if (tourists.attributes.open) {
+			tourists.removeAttribute("open");
+		}
+	});
+}

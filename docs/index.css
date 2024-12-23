@@ -212,7 +212,7 @@ menu button img {
 	line-height: 120%;
 }
 
-.header > span {
+.header>span {
 	font-family: "Muller";
 	color: var(--secondary-color);
 	font-size: var(--text);
@@ -618,8 +618,8 @@ dialog a {
 		background-color: #FFF;
 		border-radius: 0.781vw;
 		padding: 2.463vh 1.563vw;
-		transform: translateX(-25%);
-		box-shadow: 0.156vw 0.156vw 1.563vw rgba(153, 153, 153, 0.25), 0.156vw -0.156vw 1.563vw rgba(153, 153, 153, 0.25);
+		margin-left: -25%;
+		box-shadow: 0.246vh 0.246vh 2.463vh rgba(153, 153, 153, 0.25), 0.246vh -0.246vh 2.463vh rgba(153, 153, 153, 0.25);
 	}
 
 	menu details a {
@@ -676,14 +676,15 @@ dialog a {
 		z-index: 3;
 	}
 
-	.pages > a,
+	.pages>a,
 	.pages details {
 		text-decoration: none;
 		background-color: var(--accent);
 		border-radius: 0 2.344vw 2.344vw 0;
 		text-wrap: nowrap;
 		width: fit-content;
-		color: var(--primary-inv);;
+		color: var(--primary-inv);
+		;
 		font-family: "Muller Bold";
 	}
 
@@ -704,7 +705,7 @@ dialog a {
 		margin-left: 3.125vw;
 	}
 
-	.pages details[open] a:last-child{
+	.pages details[open] a:last-child {
 		margin-bottom: 2.956vh;
 	}
 
@@ -728,6 +729,7 @@ dialog a {
 			padding: 1.724vh 1.25vw 1.232vh 2.578vw;
 			font-size: var(--h3);
 		}
+
 		100% {
 			padding: 1.727vh 1.348vw 1.727vh 2.578vw;
 			font-size: 2.5vw;
@@ -747,6 +749,7 @@ dialog a {
 			padding: 1.601vh 1.25vw 1.601vh 2.344vw;
 			font-size: var(--h3);
 		}
+
 		100% {
 			font-size: 2.5vw;
 			padding: 1.829vh 2.677vw;
@@ -756,7 +759,7 @@ dialog a {
 	#about {
 		padding: 1.601vh 1.25vw 1.601vh 2.344vw;
 	}
-	
+
 	#about:hover {
 		animation: about 300ms ease-in-out both;
 	}
@@ -766,6 +769,7 @@ dialog a {
 			padding: 1.601vh 2.578vw;
 			font-size: var(--h3);
 		}
+
 		100% {
 			font-size: 2.5vw;
 			padding: 1.724vh 2.109vw 1.724vh 2.578vw;
@@ -784,13 +788,14 @@ dialog a {
 		0% {
 			font-size: var(--h3);
 		}
+
 		100% {
 			font-size: 2.5vw;
 		}
 	}
 
 	#afisha {
-		padding:  1.601vh 2.891vw 1.601vh 2.578vw;
+		padding: 1.601vh 2.891vw 1.601vh 2.578vw;
 	}
 
 	#afisha:hover {
@@ -903,8 +908,8 @@ dialog a {
 	}
 }
 
-@media screen and (max-width: 768px ) and (orientation: landscape) {
-    #banner-image {
+@media screen and (max-width: 768px) and (orientation: landscape) {
+	#banner-image {
 		height: 50.2vh;
 		border-radius: 3.906vw;
 		width: auto;
@@ -916,7 +921,7 @@ dialog a {
 }
 
 @media screen and (max-width: 1280px) and (orientation: landscape) {
-   	#banner-image {
+	#banner-image {
 		height: 70.2vh;
 		border-radius: 3.906vw;
 		width: auto;
