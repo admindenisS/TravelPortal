@@ -209,7 +209,7 @@ menu button img {
     flex-direction: column;
     width: calc(100% - 7.767vw * 2);
     align-items: center;
-    gap: 7.692vh;
+    gap: 4.362vh;
     padding: 5.234vh 7.767vw 6.979vh 7.767vw;
 }
 
@@ -240,7 +240,6 @@ menu button img {
     gap: 7.767vw;
     width: 100%;
     overflow-y: hidden;
-    aspect-ratio: 2/1;
     -ms-overflow-style: none;
     left: 0;
     top: 0;
@@ -251,9 +250,10 @@ menu button img {
 }
 
 #images img {
-    width: 100%;
+    width: 88.35vw;
     height: auto;
     border-radius: 7.282vw;
+    aspect-ratio: auto;
 }
 
 .slider-info {
@@ -704,6 +704,33 @@ dialog a {
     .drone > .container > div > span {
         font-family: "TT Tsars B";
         font-size: 12.019vh;
+    }
+
+    .info {
+        gap: 7.692vh;
+        padding: 9.615vh 2.656vw 20.192vh 2.656vw;
+        width: calc(100% - 2.656vw * 2);
+    }
+
+    .text {
+        width: 62.5vw;
+        font-size: 2.163vh;
+        gap: 2.885vh;
+    }
+
+    #images {
+        gap: 2.5vw;
+        overflow-x: scroll;
+    }
+
+    #images img {
+        border-radius: 2.344vw;
+        width: 64.183vh;
+        height: auto;
+    }
+
+    .slider-info {
+        display: none;
     }
 
     /* footer */
