@@ -39,10 +39,10 @@ if (window.matchMedia("(pointer: fine)").matches) {
     });
 
     container.addEventListener('mousemove', (e) => {
-        if (!isDown) return; // если мышь не нажата, выходим
+        if (!isDown) return; 
         e.preventDefault();
         const x = e.pageX - container.offsetLeft;
-        const walk = (x - startX) * 2; // скорость прокрутки
+        const walk = (x - startX) * 2;
         container.scrollLeft = scrollLeft - walk;
     });
 }

@@ -158,11 +158,11 @@ menu button img {
     background-color: var(--globe-color);
 }
 
-.drone {
+.scene {
     position: relative;
     height: 50.164vh;
     width: 100%;
-    background-image: url("../../assets/drone.png");
+    background-image: url("../../assets/festival-scene.png");
     background-position: 0;
     background-size: cover;
     overflow: hidden;
@@ -170,39 +170,30 @@ menu button img {
     border-radius: 0 0 12.136vw 12.136vw;
 }
 
-.drone div {
+.scene div {
     flex-direction: column;
 }
 
-.drone span{
+.scene span{
     color: var(--primary-inv);
 }
 
-.drone > .container {
+.scene > .container {
     gap: 0.872vh;
     position: absolute;
     bottom: 8.288vh;
     left: 5.583vw;
 }
 
-.drone > .container > span {
+.scene > .container > span {
     font-family: "Muller";
     font-size: var(--text);
 }
 
-.drone > .container > div {
+.scene > .container > div {
     display: flex;
     flex-direction: row;
     align-items: center;
-}
-
-.drone img {
-    display: none;
-}
-
-.drone > .container > div > span {
-    font-family: "TT Tsars B";
-    font-size: var(--h1);
 }
 
 .info {
@@ -211,6 +202,19 @@ menu button img {
     align-items: center;
     gap: 4.362vh;
     padding: 5.234vh 7.767vw 6.979vh 7.767vw;
+}
+
+.event {
+    flex-direction: column;
+    gap: 1.091vh;
+}
+
+.event h2 {
+    height: fit-content;
+    width: 100%;
+    font-size: var(--h2);
+    content: "Фестиваль \n «Корюшка идёт»";
+    font-family: "TT Tsars B";
 }
 
 .text {
@@ -222,10 +226,6 @@ menu button img {
     gap: 1.5rem;
     display: flex;
     flex-direction: column;
-}
-
-.text b {
-    color: var(--accent);
 }
 
 .slider {
@@ -251,7 +251,6 @@ menu button img {
     height: 0;
     display: none;
 }
-
 #images img {
     width: 100%;
     height: auto;
