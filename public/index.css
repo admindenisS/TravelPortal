@@ -14,21 +14,21 @@ body {
 
 @font-face {
 	font-family: "Muller";
-	src: url("../../fonts/FontfabricMullerRegular.otf") format("opentype"), url("../../fonts/MullerTrialRegular.woff2") format("woff2"),
-		url("../../fonts/MullerTrialRegular.woff") format("woff"), url("../../fonts/MullerTrialRegular.ttf") format("truetype");
+	src: url("./fonts/FontfabricMullerRegular.otf") format("opentype"), url("./fonts/MullerTrialRegular.woff2") format("woff2"),
+		url("./fonts/MullerTrialRegular.woff") format("woff"), url("./fonts/MullerTrialRegular.ttf") format("truetype");
 	font-weight: normal;
 }
 
 @font-face {
 	font-family: "Muller Bold";
-	src: url("../../fonts/FontfabricMullerBold.otf") format("opentype"), url("../../fonts/MullerTrialBold.woff2") format("woff2"),
-		url("../../fonts/MullerTrialBold.woff") format("woff"), url("../../fonts/MullerTrialBlack.ttf") format("truetype");
+	src: url("./fonts/FontfabricMullerBold.otf") format("opentype"), url("./fonts/MullerTrialBold.woff2") format("woff2"),
+		url("./fonts/MullerTrialBold.woff") format("woff"), url("./fonts/MullerTrialBlack.ttf") format("truetype");
 	font-weight: bold;
 }
 
 @font-face {
 	font-family: "TT Tsars B";
-	src: url("../../fonts/TTTsarsBRegular.ttf") format("truetype");
+	src: url("./fonts/TTTsarsBRegular.ttf") format("truetype");
 	font-weight: normal;
 }
 
@@ -82,12 +82,12 @@ header {
 }  */
 
 .unselectable {
-	user-drag: none;
-	user-select: none;
 	-moz-user-select: none;
 	-webkit-user-drag: none;
 	-webkit-user-select: none;
 	-ms-user-select: none;
+	user-drag: none;
+	user-select: none;
 }
 
 .container {
@@ -149,175 +149,131 @@ menu button img {
 	opacity: 0.6;
 }
 
-.content {
+/* banner */
+
+.banner {
+	width: 100vw;
 	height: fit-content;
-	width: 100%;
-	display: flex;
-	flex-direction: column;
-	border-radius: 0 0 12.136vw 12.136vw;
-	background-color: var(--globe-color);
-}
-
-.scene {
-	position: relative;
-	height: 50.164vh;
-	width: 100%;
-	background-image: url("../../assets/festival-scene.png");
-	background-position: 0;
-	background-size: cover;
-	overflow: hidden;
-	background-repeat: no-repeat;
-	border-radius: 0 0 12.136vw 12.136vw;
-}
-
-.marker {
-	position: absolute;
-	bottom: 2.617vh;
-	right: 5.825vw;
-    display: flex;
-    flex-direction: row;
-    gap: 1.942vw;
-}
-
-.marker img {
-    width: 3.398vw;
-    height: auto;
-    padding: 0.218vh 1.214vw;
-}
-
-.marker span {
-	font-family: "Muller";
 	color: var(--primary-inv);
-	font-size: var(--h4);
-    transform: translateY(0.2rem);
 }
 
-.title {
-    padding: 0.612vh 1.91vw 0.612vh 0;
-    background-color: var(--accent);
-    border-radius: 0 22.442vw 22.442vw 0;
-    position: absolute;
-    top: 14.068vh;
-    left: 0;
+.banner img {
+	height: auto;
+	width: 100vw;
+	border-radius: 0 0 12.136vw 12.136vw;
 }
 
-.title span {
-    color: var(--primary-inv);
-    font-size: var(--h2);
-    border-radius: 0 22.442vw 22.442vw 0;
-    border-color: var(--globe-color);
-    border-width: 0.223vw;
-    border-style: solid;
-    border-left: none;
-    margin: 0.915vh 0;
-    padding: 0 9.709vw 0 4.854vw;
-    box-sizing: border-box;
-    height: fit-content;
-    width: fit-content;
-    line-height: 120%;
-    font-family: "TT Tsars B";
-    text-transform: uppercase";
-}
-
-.info {
+.banner-text {
+	left: calc(4.854vw - 100vw);
+	top: 14.831vh;
+	position: relative;
 	flex-direction: column;
-	width: calc(100% - 7.767vw * 2);
-	align-items: center;
-	gap: 4.362vh;
-	padding: 5.234vh 7.767vw 6.979vh 7.767vw;
 }
 
-.event {
-	flex-direction: column;
-	gap: 1.091vh;
+.banner-text h1 {
+	font-family: "TT Tsars B";
+	text-wrap: nowrap;
+	font-size: var(--h1);
+	width: fit-content;
+	line-height: 120%;
 }
 
-.event > div:first-child {
-	flex-direction: column;
-	display: flex;
+.banner-text h2 {
+	padding-top: 0.872vh;
+	line-height: 120%;
+	font-family: "Muller";
+	text-wrap: nowrap;
+	font-size: var(--text);
 	width: fit-content;
 }
 
-.event h2 {
-	height: fit-content;
-	width: 100%;
-	font-size: var(--h2);
-	font-family: "TT Tsars B";
-	text-wrap: nowrap;
-	word-wrap: nowrap;
-}
-
-.text {
-	width: 100%;
-	height: fit-content;
-	font-family: "Muller";
-	font-size: var(--text);
-	color: var(--secondary-color);
-	gap: 1.5rem;
-	display: flex;
-	flex-direction: column;
-}
-
-.slider {
-	width: 100%;
-	height: 100%;
-}
-
-#images {
-	height: fit-content;
-	display: flex;
-	flex-direction: row;
-	gap: 7.767vw;
-	width: 100%;
-	overflow-y: hidden;
-	-ms-overflow-style: none;
-	left: 0;
-	top: 0;
-}
-
-#images::-webkit-scrollbar {
-	width: 0;
-	-webkit-appearance: none;
-	height: 0;
-	display: none;
-}
-#images img {
-	width: 100%;
-	height: auto;
-	border-radius: 7.282vw;
-	aspect-ratio: auto;
-}
-
-.slider-info {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	width: calc(100% - 5.34vw * 2);
-	gap: 1.745vh;
-	height: fit-content;
-	margin: 3.49vh 5.34vw 0 5.34vw;
-}
-
-.progress-container {
-	height: 0.436vh;
-	width: 100%;
-	background-color: rgba(0, 0, 0, 0.3);
-	border-radius: 2px;
+.pages-list {
 	position: relative;
+	width: 100%;
 }
 
-#progress {
-	position: absolute;
-	top: 0;
-	left: 0;
-	background-color: var(--secondary-color);
-	height: 100%;
-	width: 29.126vw;
+.background {
+	background-color: var(--globe-color);
+	border-radius: 0 0 12.136vw 12.136vw;
+	width: 100%;
+	flex-direction: column;
 }
 
-.slider-info img {
-	width: 9.709vw;
-	height: auto;
+.header {
+	flex-direction: column;
+	gap: 5.825vw;
+}
+
+.header h1 {
+	text-transform: uppercase;
+	font-family: "TT Tsars B";
+	font-size: var(--h2);
+	color: var(--primary-color);
+	line-height: 120%;
+}
+
+.header > span {
+	font-family: "Muller";
+	color: var(--secondary-color);
+	font-size: var(--text);
+	line-height: 120%;
+}
+
+.block {
+	margin: 5.234vh 5.825vw 0 5.825vw;
+	flex-direction: column;
+}
+
+.content {
+	margin-top: 4.362vh;
+	gap: 5.825vw;
+}
+
+.item {
+	text-transform: uppercase;
+	flex-direction: column;
+	text-decoration: none;
+	width: 41.262vw;
+	gap: 1.745vh;
+	font-family: "Muller Bold";
+	font-size: var(--h4);
+	line-height: 120%;
+	color: var(--secondary-color);
+}
+
+.item img {
+	border-radius: 6.068vw;
+}
+
+.single {
+	width: calc(100vw - 5.234vh);
+}
+
+.afisha .header {
+	gap: 1.309vh;
+}
+
+.afisha {
+	padding: 2.617vh 3.883vw 2.617vh 3.883vw;
+	width: calc(100vw - (5.825vw * 2) - (3.883vw * 2));
+	margin-bottom: 5.234vh;
+}
+
+.afisha h1 {
+	font-family: "Muller Bold";
+	color: var(--secondary-color);
+}
+
+.afisha a {
+	font-size: var(--text);
+	color: var(--primary-inv);
+	text-transform: uppercase;
+	background-color: var(--accent);
+	border-radius: 6.068vw;
+	padding: 1.309vh 0 1.309vh 0;
+	text-align: center;
+	margin-top: 5.234vh;
+	text-decoration: none;
 }
 
 footer {
@@ -630,10 +586,6 @@ dialog a {
 		height: 1.923vh;
 	}
 
-	menu a[data-activeLink] {
-		color: var(--accent);
-	}
-
 	menu details {
 		position: relative;
 	}
@@ -663,11 +615,10 @@ dialog a {
 		margin-top: 1.07vh;
 		gap: 0.985vh;
 		flex-direction: column;
-		background-color: #fff;
+		background-color: #FFF;
 		border-radius: 0.781vw;
 		padding: 2.463vh 1.563vw;
-		margin-left: -25%;
-		box-shadow: 0.246vh 0.246vh 2.463vh rgba(153, 153, 153, 0.25), 0.246vh -0.246vh 2.463vh rgba(153, 153, 153, 0.25);
+		transform: translateX(-25%);
 	}
 
 	menu details a {
@@ -699,72 +650,176 @@ dialog a {
 		fill: var(--primary-inv);
 	}
 
-	.content {
+	.background {
+		display: flex;
+		gap: 4.688vw;
 		border-radius: 0 0 3.906vw 3.906vw;
-	}
-
-	.scene {
-		height: 91.133vh;
-		border-radius: 0 0 3.906vw 3.906vw;
-		justify-content: center;
-		align-items: end;
-	}
-
-    .marker {
-        bottom: 3.486vh;
-        right: 7.524vw;
-        gap: 0.625vw;
-    }
-    
-    .marker img {
-        width: 2.404vh;
-        padding: 0.24vh 0.391vw;
-    }
-
-    .marker span {
-        font-size: var(--h3);
-    }
-    
-    .title {
-        border-radius: 0 14.866vw 14.866vw 0;
-        top: 14.904vh;
-        padding: 1.563vh 1.641vw 1.563vh 0;
-    }
-
-    .title span {
-        font-size: var(--h1);
-        padding: 2.885vh 4.688vw 2.885vh 2.344vw;
-    }
-
-	.info {
-		gap: 7.692vh;
-		padding: 9.615vh 2.656vw 20.192vh 2.656vw;
-		width: calc(100% - 2.656vw * 2);
-	}
-
-	.event > div:first-child {
+		padding: 7.212vh 2.422vw 12.74vh 0;
 		flex-direction: row;
-		gap: 1rem;
 	}
 
-	.text {
-		width: 62.5vw;
-		font-size: 2.163vh;
-		gap: 2.885vh;
+	.banner-container {
+		width: 100%;
+		justify-content: space-between;
 	}
 
-	#images {
-		gap: 2.5vw;
-		overflow-x: scroll;
+	.pages {
+		flex-direction: column;
+		gap: 0.962vh;
+		margin-top: 12.5vh;
+		font-family: "Muller";
+		text-transform: uppercase;
+		font-size: var(--h3);
+		color: var(--primary-inv);
+		width: fit-content;
+		z-index: 3;
 	}
 
-	#images img {
-		border-radius: 2.344vw;
-		width: 64.183vh;
+	.pages > a,
+	.pages details {
+		text-decoration: none;
+		background-color: var(--accent);
+		border-radius: 0 2.344vw 2.344vw 0;
+		text-wrap: nowrap;
+		width: fit-content;
+		color: var(--primary-inv);;
+		font-family: "Muller Bold";
+	}
+
+	.pages details {
 		height: auto;
+		font-size: var(--h3);
 	}
 
-	.slider-info {
+	.pages summary {
+		gap: 0.313vw;
+	}
+
+	.pages details .urls {
+		font-size: 1.563vw;
+		flex-direction: column;
+		gap: 0.493vh;
+		padding: 0;
+		margin-left: 3.125vw;
+	}
+
+	.pages details[open] a:last-child{
+		margin-bottom: 2.956vh;
+	}
+
+	.pages details .urls a {
+		color: var(--secondary);
+		text-decoration: none;
+	}
+
+	.pages details .urls a:hover {
+		color: var(--secondary-inv);
+	}
+
+	.pages details img {
+		width: 1.406vw;
+		height: auto;
+		padding: 1.368vh 0.555vw;
+	}
+
+	@keyframes tourists {
+		0% {
+			padding: 1.724vh 1.25vw 1.232vh 2.578vw;
+			font-size: var(--h3);
+		}
+		100% {
+			padding: 1.727vh 1.348vw 1.727vh 2.578vw;
+			font-size: 2.5vw;
+		}
+	}
+
+	#tourists summary {
+		padding: 1.724vh 1.25vw 1.232vh 2.578vw;
+	}
+
+	#tourists:hover summary {
+		animation: tourists 300ms ease-in-out both;
+	}
+
+	@keyframes about {
+		0% {
+			padding: 1.601vh 1.25vw 1.601vh 2.344vw;
+			font-size: var(--h3);
+		}
+		100% {
+			font-size: 2.5vw;
+			padding: 1.829vh 2.677vw;
+		}
+	}
+
+	#about {
+		padding: 1.601vh 1.25vw 1.601vh 2.344vw;
+	}
+	
+	#about:hover {
+		animation: about 300ms ease-in-out both;
+	}
+
+	@keyframes selfie {
+		0% {
+			padding: 1.601vh 2.578vw;
+			font-size: var(--h3);
+		}
+		100% {
+			font-size: 2.5vw;
+			padding: 1.724vh 2.109vw 1.724vh 2.578vw;
+		}
+	}
+
+	#selfie {
+		padding: 1.601vh 2.578vw;
+	}
+
+	#selfie:hover {
+		animation: selfie 300ms ease-in-out both;
+	}
+
+	@keyframes afisha {
+		0% {
+			font-size: var(--h3);
+		}
+		100% {
+			font-size: 2.5vw;
+		}
+	}
+
+	#afisha {
+		padding:  1.601vh 2.891vw 1.601vh 2.578vw;
+	}
+
+	#afisha:hover {
+		animation: afisha 300ms ease-in-out both;
+	}
+
+	.banner {
+		width: fit-content;
+		height: fit-content;
+		position: relative;
+	}
+
+	.banner-text {
+		position: absolute;
+		left: 2.188vw;
+		top: 33.654vh;
+	}
+
+	.banner-text h2 {
+		font-size: var(--h3);
+	}
+
+	.ship {
+		display: block;
+		position: absolute;
+		width: 100%;
+		bottom: 0;
+	}
+
+	.block {
 		display: none;
 	}
 
@@ -844,5 +899,41 @@ dialog a {
 
 	#menu {
 		display: none;
+	}
+}
+
+@media screen and (max-width: 768px ) and (orientation: landscape) {
+    #banner-image {
+		height: 50.2vh;
+		border-radius: 3.906vw;
+		width: auto;
+	}
+
+	.ship {
+		transform: translateY(-20%);
+	}
+}
+
+@media screen and (max-width: 1280px) and (orientation: landscape) {
+   	#banner-image {
+		height: 70.2vh;
+		border-radius: 3.906vw;
+		width: auto;
+	}
+
+	.ship {
+		transform: translateY(0);
+	}
+}
+
+@media screen and (min-width: 1281px) and (orientation: landscape) {
+	#banner-image {
+		height: 80vh;
+		border-radius: 3.906vw;
+		width: auto;
+	}
+
+	.ship {
+		transform: translateY(5%);
 	}
 }

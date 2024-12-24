@@ -82,12 +82,12 @@ header {
 }  */
 
 .unselectable {
-    user-drag: none;
-    user-select: none;
     -moz-user-select: none;
     -webkit-user-drag: none;
     -webkit-user-select: none;
     -ms-user-select: none;
+    user-drag: none;
+    user-select: none;
 }
 
 .container {
@@ -185,12 +185,14 @@ menu button img {
     left: 5.583vw;
 }
 
-.drone > .container > span {
+.drone > .container > div:last-child > span {
     font-family: "Muller";
     font-size: var(--text);
+    flex-direction: column;
+    display: flex;
 }
 
-.drone > .container > div {
+.drone > .container > div:first-child {
     display: flex;
     flex-direction: row;
     align-items: center;
@@ -200,7 +202,7 @@ menu button img {
     display: none;
 }
 
-.drone > .container > div > span {
+.drone > .container > div:first-child > span {
     font-family: "TT Tsars B";
     font-size: var(--h1);
 }
@@ -601,10 +603,6 @@ dialog a {
         height: 1.923vh;
     }
 
-    menu a[data-activeLink] {
-        color: var(--accent);
-    }
-
     menu details {
         position: relative;
     }
@@ -684,11 +682,18 @@ dialog a {
     .drone > .container {
         position: unset;
         margin-bottom: 18.885vh;
+        gap: 1.563vh;
     }
-    
-    .drone > .container > span {
+
+    .drone > .container > div:last-child > span {
         font-family: "Muller";
         font-size: 3.306vh;
+        flex-direction: column;
+        display: flex;
+    }
+    
+    .drone > .container > div:first-child > span {
+        font-size: 11.921vh;
     }
     
     .drone > .container > div {
@@ -702,11 +707,6 @@ dialog a {
         display: block;
         height: 8.654vh;
         width: auto;
-    }
-    
-    .drone > .container > div > span {
-        font-family: "TT Tsars B";
-        font-size: 12.019vh;
     }
 
     .info {
