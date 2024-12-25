@@ -162,6 +162,7 @@ menu button img {
 	position: relative;
 	height: 50.164vh;
 	width: 100%;
+	background-image: url("../../assets/festival-scene.png");
 	background-position: 0;
 	background-size: cover;
 	overflow: hidden;
@@ -169,66 +170,53 @@ menu button img {
 	border-radius: 0 0 12.136vw 12.136vw;
 }
 
-@media screen and (orientation: portrait) {
-	.scene {
-		background-image: url("../../assets/festival-scene-small.png");
-	}
-}
-
-@media screen and (orientation: landscape) {
-	.scene {
-		background-image: url("../../assets/festival-scene.png");
-	}
-}
-
 .marker {
 	position: absolute;
 	bottom: 2.617vh;
 	right: 5.825vw;
-	display: flex;
-	flex-direction: row;
-	gap: 1.942vw;
+    display: flex;
+    flex-direction: row;
+    gap: 1.942vw;
 }
 
 .marker img {
-	width: 3.398vw;
-	height: auto;
-	padding: 0.218vh 1.214vw;
+    width: 3.398vw;
+    height: auto;
+    padding: 0.218vh 1.214vw;
 }
 
 .marker span {
 	font-family: "Muller";
 	color: var(--primary-inv);
 	font-size: var(--h4);
-	transform: translateY(0.2rem);
+    transform: translateY(0.2rem);
 }
 
 .title {
-	padding: 0.612vh 1.91vw 0.612vh 0;
-	background-color: var(--accent);
-	border-radius: 0 22.442vw 22.442vw 0;
-	position: absolute;
-	top: 14.068vh;
-	left: 0;
+    padding: 0.612vh 1.91vw 0.612vh 0;
+    background-color: var(--accent);
+    border-radius: 0 22.442vw 22.442vw 0;
+    position: absolute;
+    top: 14.068vh;
+    left: 0;
 }
 
 .title span {
-	color: var(--primary-inv);
-	font-size: var(--h2);
-	border-radius: 0 22.442vw 22.442vw 0;
-	border-color: var(--globe-color);
-	border-width: 0.223vw;
-	border-style: solid;
-	border-left: none;
-	margin: 0.915vh 0;
-	padding: 0 9.709vw 0 4.854vw;
-	box-sizing: border-box;
-	height: fit-content;
-	width: fit-content;
-	line-height: 120%;
-	font-family: "TT Tsars B";
-	text-transform: uppercase";
-
+    color: var(--primary-inv);
+    font-size: var(--h2);
+    border-radius: 0 22.442vw 22.442vw 0;
+    border-color: var(--globe-color);
+    border-width: 0.223vw;
+    border-style: solid;
+    border-left: none;
+    margin: 0.915vh 0;
+    padding: 0 9.709vw 0 4.854vw;
+    box-sizing: border-box;
+    height: fit-content;
+    width: fit-content;
+    line-height: 120%;
+    font-family: "TT Tsars B";
+    text-transform: uppercase";
 }
 
 .info {
@@ -244,7 +232,7 @@ menu button img {
 	gap: 1.091vh;
 }
 
-.event>div:first-child {
+.event > div:first-child {
 	flex-direction: column;
 	display: flex;
 	width: fit-content;
@@ -293,7 +281,6 @@ menu button img {
 	height: 0;
 	display: none;
 }
-
 #images img {
 	width: 100%;
 	height: auto;
@@ -723,31 +710,31 @@ dialog a {
 		align-items: end;
 	}
 
-	.marker {
-		bottom: 3.486vh;
-		right: 7.524vw;
-		gap: 0.625vw;
-	}
+    .marker {
+        bottom: 3.486vh;
+        right: 7.524vw;
+        gap: 0.625vw;
+    }
+    
+    .marker img {
+        width: 2.404vh;
+        padding: 0.24vh 0.391vw;
+    }
 
-	.marker img {
-		width: 2.404vh;
-		padding: 0.24vh 0.391vw;
-	}
+    .marker span {
+        font-size: var(--h3);
+    }
+    
+    .title {
+        border-radius: 0 14.866vw 14.866vw 0;
+        top: 14.904vh;
+        padding: 1.563vh 1.641vw 1.563vh 0;
+    }
 
-	.marker span {
-		font-size: var(--h3);
-	}
-
-	.title {
-		border-radius: 0 14.866vw 14.866vw 0;
-		top: 14.904vh;
-		padding: 1.563vh 1.641vw 1.563vh 0;
-	}
-
-	.title span {
-		font-size: var(--h1);
-		padding: 2.885vh 4.688vw 2.885vh 2.344vw;
-	}
+    .title span {
+        font-size: var(--h1);
+        padding: 2.885vh 4.688vw 2.885vh 2.344vw;
+    }
 
 	.info {
 		gap: 7.692vh;
@@ -755,7 +742,7 @@ dialog a {
 		width: calc(100% - 2.656vw * 2);
 	}
 
-	.event>div:first-child {
+	.event > div:first-child {
 		flex-direction: row;
 		gap: 1rem;
 	}
