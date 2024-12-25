@@ -59,14 +59,14 @@ header {
 	flex-direction: row;
 	padding: 1.316vh 5.825vw 1.316vh 5.825vw;
 	justify-content: space-between;
-	width: 100%;
+	width: auto;
 	align-items: center;
 	z-index: 4;
 	top: 0;
 	background-color: var(--globe-color);
 }
 
-header::after {
+/* header::after {
 	position: absolute;
 	left: 0;
 	width: 100vw;
@@ -79,7 +79,7 @@ header::after {
 	background-repeat: repeat-x;
 	content: "";
 	z-index: -1;
-}
+} */
 
 .unselectable {
 	-moz-user-select: none;

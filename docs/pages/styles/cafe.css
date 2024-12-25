@@ -163,7 +163,7 @@ menu button img {
 	position: relative;
 	height: 50.164vh;
 	width: 100%;
-	background-image: url("../../assets/festival-scene.png");
+	background-image: url("../../assets/banner-cafe.png");
 	background-position: 0;
 	background-size: cover;
 	overflow: hidden;
@@ -220,106 +220,7 @@ menu button img {
     text-transform: uppercase;
 }
 
-.info {
-	flex-direction: column;
-	width: calc(100% - 7.767vw * 2);
-	align-items: center;
-	gap: 4.362vh;
-	padding: 5.234vh 7.767vw 6.979vh 7.767vw;
-}
 
-.event {
-	flex-direction: column;
-	gap: 1.091vh;
-}
-
-.event > div:first-child {
-	flex-direction: column;
-	display: flex;
-	width: fit-content;
-}
-
-.event h2 {
-	height: fit-content;
-	width: 100%;
-	font-size: var(--h2);
-	font-family: "TT Tsars B";
-	text-wrap: nowrap;
-	word-wrap: nowrap;
-}
-
-.text {
-	width: 100%;
-	height: fit-content;
-	font-family: "Muller";
-	font-size: var(--text);
-	color: var(--secondary-color);
-	gap: 1.5rem;
-	display: flex;
-	flex-direction: column;
-}
-
-.slider {
-	width: 100%;
-	height: 100%;
-}
-
-#images {
-	height: fit-content;
-	display: flex;
-	flex-direction: row;
-	gap: 7.767vw;
-	width: 100%;
-	overflow-y: hidden;
-	-ms-overflow-style: none;
-	left: 0;
-	top: 0;
-}
-
-#images::-webkit-scrollbar {
-	width: 0;
-	-webkit-appearance: none;
-	height: 0;
-	display: none;
-}
-#images img {
-	width: 100%;
-	height: auto;
-	border-radius: 7.282vw;
-	aspect-ratio: auto;
-}
-
-.slider-info {
-	display: flex;
-	flex-direction: column;
-	align-items: center;
-	width: calc(100% - 5.34vw * 2);
-	gap: 1.745vh;
-	height: fit-content;
-	margin: 3.49vh 5.34vw 0 5.34vw;
-}
-
-.progress-container {
-	height: 0.436vh;
-	width: 100%;
-	background-color: rgba(0, 0, 0, 0.3);
-	border-radius: 2px;
-	position: relative;
-}
-
-#progress {
-	position: absolute;
-	top: 0;
-	left: 0;
-	background-color: var(--secondary-color);
-	height: 100%;
-	width: 29.126vw;
-}
-
-.slider-info img {
-	width: 9.709vw;
-	height: auto;
-}
 
 footer {
 	padding: 5.234vh 4.854vw 5.234vh 4.854vw;
@@ -778,14 +679,14 @@ dialog a {
 
 	footer {
 		padding: 6.01vh 2.5vw 7.212vh 2.5vw;
-		grid-template-columns: 2fr 16.719vw 1fr 1fr;
-		grid-template-rows: 1fr 1fr;
+		grid-template-columns: 1fr 3.125vw 1fr 3.75vw 1fr 2fr;
+		grid-template-rows: 1fr 1fr 1fr;
 		row-gap: 0;
 	}
 
 	footer .branding {
 		grid-row: 1;
-		grid-column: 1;
+		grid-column: span 3;
 	}
 
 	footer .name {
@@ -794,23 +695,30 @@ dialog a {
 
 	.contacts {
 		gap: 2.617vh;
-		grid-row: 1;
-		grid-column: 4;
+		grid-row: 2;
+		grid-column: 1;
+		justify-content: end;
+		width: auto;
+		height: 100%;
+	}
+
+	.contacts span {
+		display: none;
 	}
 
 	.navigation {
-		grid-column: 3;
-		grid-row: span 2;
+		grid-column: 5;
+		grid-row: span 3;
 		width: 100%;
 	}
 
 	.links {
 		gap: 3.125vw;
 		flex-direction: row;
-		grid-row: 2;
-		grid-column: 1;
-		width: 100%;
+		width: auto;
 		height: 100%;
+		grid-row: 3;
+		grid-column: span 3;
 		align-items: end;
 	}
 
@@ -820,11 +728,26 @@ dialog a {
 
 	.linked a {
 		gap: 0.625vw;
+		width: 100%;
 	}
 
 	.linked a svg {
 		width: 1.406vw;
 		padding: 0.234vw;
+	}
+
+	.linked div:first-child {
+		grid-row: 3;
+		grid-column: 1;
+	}
+
+	.linked div:last-child {
+		grid-row: 3;
+		grid-column: 2;
+	}
+
+	.linked span {
+		width: 100%;
 	}
 
 	footer .linked a:last-child svg {
@@ -842,13 +765,29 @@ dialog a {
 
 	.madeby {
 		grid-row: 2;
-		grid-column: 4;
+		grid-column: 3;
 		width: 100%;
 		height: 100%;
 		justify-content: end;
 	}
 
+	.madeby span {
+		color: var(--tetriary-inv);
+	}
+
+	.madeby a {
+		display: none;
+	}
+
 	#menu {
 		display: none;
+	}
+
+	#suvorov {
+		display: flex;
+		height: 60.817vh;
+		position: absolute;
+		bottom: 0;
+		right: 0;
 	}
 }

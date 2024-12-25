@@ -4,22 +4,19 @@
 		<title>Туристический портал г. Новая Ладога</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<link rel="stylesheet" href="index.css" />
-		<link rel="icon" href="assets/favicon.ico" />
-		<link rel="prefetch" href="./assets/about.png" loading="lazy"/>
-		<link rel="prefetch" href="./assets/selfie.png" loading="lazy"/>
-		<link rel="prefetch" href="./assets/afisha.png" loading="lazy"/>
-		<link rel="prefetch" href="./assets/tourists.png" loading="lazy"/>
+		<link rel="stylesheet" href="./styles/cafe.css" />
+		<link rel="icon" href="../assets/favicon.ico" />
 	</head>
+
 	<body>
 		<header>
 			<div class="container row center branding">
 				<div class="container row center logos">
 					<a href="https://new-ladoga-adm.ru/" class="logo center"
-						><img src="assets/adm.svg" alt="Герб администрации Новоладожского городского поселения"
+						><img src="../assets/adm.svg" alt="Герб администрации Новоладожского городского поселения"
 					/></a>
 					<a href="https://sreda47.ru/" class="logo center"
-						><img src="assets/center.svg" alt="Логотип Цетра компетенции Ленинградской области"
+						><img src="../assets/center.svg" alt="Логотип Цетра компетенции Ленинградской области"
 					/></a>
 				</div>
 				<div class="container name" hidden>
@@ -28,17 +25,17 @@
 				</div>
 			</div>
 			<menu hidden>
-				<a href="./pages/about.html">О Новой Ладоге</a>
-				<a href="./pages/selfie.html">Селфи с Суворовым</a>
+				<a href="./about.html">О Новой Ладоге</a>
+				<a href="./selfie.html">Селфи с Суворовым</a>
 				<a href="">Афиша</a>
 				<details>
-					<summary><span>Для туристов</span> <img alt="" role="presentation" src="./assets/arrow.svg" /></summary>
+					<summary><span>Для туристов</span> <img alt="" role="presentation" src="../assets/arrow.svg" /></summary>
 					<div class="container">
-						<a href="./pages/cafe.html">Кафе</a>
+						<a href="./cafe.html">Кафе</a>
 						<a href="#">Гостиницы</a>
 						<a href="#">Бренды</a>
 						<a href="#">Веломаршрут</a>
-						<a href="./pages/festival.html">«Корюшка идёт!»</a>
+						<a href="./festival.html">«Корюшка идёт!»</a>
 					</div>
 				</details>
 				<a href="https://vk.com/newladogaadm" class="vk container center">
@@ -48,106 +45,30 @@
 					</svg>
 				</a>
 			</menu>
-			<img alt="выпадающий список" class="menu" src="./assets/menu.svg" onclick="openMenu(`mobile`)" />
+			<img alt="выпадающий список" class="menu" src="../assets/menu.svg" onclick="openMenu(`mobile`)" />
 		</header>
-		<div class="container pages-list">
-			<div class="container background">
-				<div class="container banner-container">
-					<div class="pages" hidden>
-						<details id="tourists" data-subimage="tourists.png" class="container center">
-							<summary class="container center">
-								<span>Для туристов</span>
-								<img role="presentation" alt="" src="./assets/arrow-inv.svg" />
-							</summary>
-							<div class="container urls">
-								<a href="./pages/cafe.html">Кафе</a>
-								<a href="#">Гостиницы</a>
-								<a href="#">Бренды</a>
-								<a href="#">Веломаршрут</a>
-								<a href="./pages/festival.html">«Корюшка идёт!»</a>
-							</div>
-						</details>
-						<a id="about" data-subimage="about.png" href="./pages/about.html">О Новой Ладоге</a>
-						<a id="selfie" data-subimage="selfie.png" href="./pages/selfie.html">Селфи с Суворовым</a>
-						<a id="afisha" data-subimage="afisha.png" href="#">Афиша</a>
-					</div>
-					<div class="container banner">
-						<picture class="unselectable" role="presentation">
-							<source media="(orientation: landscape)" srcset="./assets/banner.png" />
-							<img id="banner-image" src="./assets/banner-small.png" alt="" />
-						</picture>
-						<div class="container banner-text">
-							<h1>Новая Ладога</h1>
-							<h2>Откройте для себя Новую Ладогу!</h2>
-						</div>
-					</div>
+		<div class="content">
+			<div class="container scene">
+				<div class="marker container">
+					<img alt="" role="presentation" src="../assets/marker.svg" />
+					<span>Новая Ладога</span>
 				</div>
-				<div class="block container">
-					<div class="header container">
-						<h1>Для туристов</h1>
-						<span>Чем заняться в городе: куда сходить поесть, где остановиться, где купить сувениры, где прокатиться на велосипеде.</span>
-					</div>
-					<div class="container content">
-						<a class="item container" href="./pages/cafe.html">
-							<span>Кафе</span>
-							<img alt="Кафе" src="./assets/cafe.png" loading="lazy" />
-						</a>
-						<a class="item container" href="">
-							<span>Гостиницы</span>
-							<img alt="Гостиницы" src="./assets/guest-house.png" loading="lazy" />
-						</a>
-					</div>
-					<div class="container content">
-						<a class="item container" href="">
-							<span>Бренды</span>
-							<img alt="Бренды" src="./assets/fish-museum.png" loading="lazy" />
-						</a>
-						<a class="item container" href="">
-							<span>Веломаршрут</span>
-							<img alt="Веломаршрут" src="./assets/basicle.png" loading="lazy" />
-						</a>
-					</div>
-					<div class="container">
-						<a href="./pages/festival.html" class="container content item single">
-							<span>Фестиваль «Корюшка идёт!»</span>
-							<img alt="Фестиваль «Корюшка идёт!»" src="./assets/festival.png" loading="lazy"
-						/></a>
-					</div>
-				</div>
-				<div class="block container">
-					<div class="header container">
-						<h1>Жизнь города</h1>
-						<span>Хотите знать, что происходит в городе, история которого связана с великим полководцем Суворовым?</span>
-					</div>
-					<div class="container content">
-						<a class="item container" href="./pages/about.html">
-							<span>О Новой Ладоге</span>
-							<img alt="О Новой Ладоге" src="./assets/town.png" loading="lazy" />
-						</a>
-						<a class="item container" href="./pages/selfie.html">
-							<span>Селфи с Суворовым</span>
-							<img alt="Селфи с Суворовым" src="./assets/selfie-mini.png" loading="lazy" />
-						</a>
-					</div>
-				</div>
-				<div class="block afisha container">
-					<div class="container header">
-						<h1>Афиша</h1>
-						<span>Все события города на одной странице!</span>
-					</div>
-					<a href="">Перейти</a>
+				<div class="title container">
+					<span>Где поесть?</span>
 				</div>
 			</div>
-			<img class="ship unselectable" src="./assets/ship.svg" alt="" role="presentation" hidden />
+			<div>
+
+			</div>
 		</div>
 		<footer>
 			<div class="container row center branding">
 				<div class="container row center logos">
 					<a href="https://new-ladoga-adm.ru/" class="logo center"
-						><img src="assets/adm.svg" alt="Герб администрации Новоладожского городского поселения"
+						><img src="../assets/adm.svg" alt="Герб администрации Новоладожского городского поселения"
 					/></a>
 					<a href="https://sreda47.ru/" class="logo center"
-						><img src="assets/center-white.svg" alt="Логотип Цетра компетенции Ленинградской области"
+						><img src="../assets/center-white.svg" alt="Логотип Цетра компетенции Ленинградской области"
 					/></a>
 				</div>
 				<div class="container name">
@@ -204,30 +125,31 @@
 			<div class="container navigation">
 				<span>навигация по сайту</span>
 				<div class="container">
-					<a href="./pages/about.html">О Новой Ладоге</a>
-					<a href="./pages/selfie.html">Селфи с Суворовым</a>
+					<a href="./about.html">О Новой Ладоге</a>
+					<a href="./selfie.html">Селфи с Суворовым</a>
 					<a href="#">Афиша</a>
-					<a href="./pages/cafe.html">Кафе</a>
+					<a href="./cafe.html">Кафе</a>
 					<a href="#">Бренды</a>
 					<a href="#">Гостиницы</a>
 					<a href="#">Веломаршрут</a>
-					<a href="./pages/festival.html">«Корюшка идёт»</a>
+					<a href="./festival.html">«Корюшка идёт»</a>
 				</div>
 			</div>
 			<div class="madeby container">
-				<span>Портал подготовлен Центром компетенций (ЦК) Ленинградской области</span>
+				<span>Портал подготовлен Центром компетенций Ленинградской области:</span>
 				<a href="mailto:cc.lenreg@sreda47.ru">cc.lenreg@sreda47.ru</a>
 			</div>
+			<img id="suvorov" hidden src="../assets/suvorov-table.png" alt="">
 		</footer>
 		<div id="menu-mob" hidden>
 			<div class="container hdr">
 				<div class="container row center branding">
 					<div class="container row center logos">
 						<a href="https://new-ladoga-adm.ru/" class="logo center"
-							><img src="assets/adm.svg" alt="Герб администрации Новоладожского городского поселения"
+							><img src="../assets/adm.svg" alt="Герб администрации Новоладожского городского поселения"
 						/></a>
 						<a href="https://sreda47.ru/" class="logo center"
-							><img src="assets/center.svg" alt="Логотип Цетра компетенции Ленинградской области"
+							><img src="../assets/center.svg" alt="Логотип Цетра компетенции Ленинградской области"
 						/></a>
 					</div>
 					<div class="container name">
@@ -235,27 +157,27 @@
 						<span>Новая Ладога</span>
 					</div>
 				</div>
-				<img alt="выпадающий список" class="menu" src="./assets/close.svg" onclick="openMenu(`mobile`)" />
+				<img alt="выпадающий список" class="menu" src="../assets/close.svg" onclick="openMenu(`mobile`)" />
 			</div>
 			<div class="dialog">
 				<details>
 					<summary>
 						<span>Для туристов</span>
-						<img src="./assets/arrow.svg" alt="" role="presentation" />
+						<img src="../assets/arrow.svg" alt="" role="presentation" />
 					</summary>
 					<div class="container">
-						<a href="./pages/cafe.html">Кафе</a>
+						<a href="./cafe.html">Кафе</a>
 						<a href="">Гостиницы</a>
 						<a href="">Бренды</a>
 						<a href="">Веломаршрут</a>
-						<a href="./pages/festival.html">Фестиваль «Корюшка идёт!»</a>
+						<a href="./festival.html">Фестиваль «Корюшка идёт!»</a>
 					</div>
 				</details>
 				<hr />
 				<div class="container links">
 					<div class="container urls">
-						<a href="./pages/about.html">О Новой Ладоге</a>
-						<a href="./pages/selfie.html">Селфи с Суворовым</a>
+						<a href="./about.html">О Новой Ладоге</a>
+						<a href="./selfie.html">Селфи с Суворовым</a>
 						<a href="">Афиша</a>
 					</div>
 					<div class="container linked">
@@ -277,7 +199,6 @@
 				</div>
 			</div>
 		</div>
-		<script src="./scripts/menu.js"></script>
-		<script src="./scripts/imagewrapper.js"></script>
+		<script src="../scripts/menu.js"></script>
 	</body>
 </html>
