@@ -10,6 +10,6 @@ function limiter(element, maxLength) {
 
 function validate() {
     let element = document.getElementById("code");
-    if (element.value.length === 4) return true;
+    if (element.value.length <= 4 && element.value.length > 0) return true;
     return false;
 }

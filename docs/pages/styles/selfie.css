@@ -20,7 +20,7 @@ body {
 }
 
 @font-face {
-    font-family: "Muller Bold";
+    font-family: "Muller";
     src: url("../../fonts/FontfabricMullerBold.otf") format("opentype"), url("../../fonts/MullerTrialBold.woff2") format("woff2"),
         url("../../fonts/MullerTrialBold.woff") format("woff"), url("../../fonts/MullerTrialBlack.ttf") format("truetype");
     font-weight: bold;
@@ -28,8 +28,15 @@ body {
 
 @font-face {
     font-family: "TT Tsars B";
+    font-style: regular;
     src: url("../../fonts/TTTsarsBRegular.ttf") format("truetype");
     font-weight: normal;
+}
+
+@font-face {
+    font-family: "TT Tsars B";
+    src: url("../../fonts/TTTsarsB-Black.ttf") format("truetype");
+    font-weight: bold;
 }
 
 /* variables */
@@ -135,7 +142,8 @@ header {
     height: 100%;
     box-sizing: border-box;
     font-size: var(--navigation);
-    font-family: "Muller Bold";
+    font-family: "Muller";
+    font-weight: bold;
     line-height: 120%;
     text-transform: uppercase;
 }
@@ -175,7 +183,8 @@ menu button img {
     display: flex;
     flex-direction: column;
     font-family: "TT Tsars B";
-    font-size: var(--h1);
+    font-weight: bold;
+    font-size: var(--h2);
     color: var(--primary-color);
     text-transform: uppercase;
 }
@@ -184,12 +193,15 @@ menu button img {
     display: flex;
     flex-direction: column;
     font-family: "Muller";
+    font-weight: normal;
 }
 
 .what div:last-child h4 {
     display: none;
     font-size: var(--h4);
     text-transform: uppercase;
+    font-weight: bold;
+    font-family: "Muller";
 }
 
 .what div:last-child p {
@@ -512,7 +524,7 @@ dialog a {
         --h1: 4.688vw;
         --h2: 2.813vw;
         --h3: 2.188vw;
-        --h4: 0.971vw;
+        --h4: 1.875vw;
         --text: 1.25vw;
         --navigation: 1.094vw;
     }
@@ -638,9 +650,92 @@ dialog a {
     }
 
     .content {
-		border-radius: 0 0 3.906vw 3.906vw;
-	}
+        border-radius: 0 0 3.906vw 3.906vw;
+        padding: 7.212vh 0 calc(39.964vh + 5.769vh) 0;
+        gap: 0;
+        position: relative;
+    }
 
+    .what {
+        width: 62.5vw;
+        gap: 5.769vh;
+    }
+
+    .what div:first-child {
+        flex-direction: row;
+        gap: 1rem;
+        text-wrap: nowrap;
+        word-wrap: nowrap;
+    }
+
+    .what div:last-child {
+        gap: 2.885vh;
+    }
+
+    .what div:last-child h4 {
+        display: flex;
+        font-size: var(--h4);
+    }
+
+    .what div:last-child p {
+        font-size: 1.406vw;
+        color: var(--secondary-color);
+        font-family: "Muller";
+        font-weight: normal;
+    }
+
+    .how {
+        width: 62.5vw;
+        flex-direction: column-reverse;
+        margin-top: 2.163vh;
+        gap: 5.769vh;
+        align-items: center;
+    }
+
+    input::-webkit-outer-spin-button,
+    input::-webkit-inner-spin-button {
+        -webkit-appearance: none;
+    }
+
+    input[type='number'] {
+        -moz-appearance: textfield;
+    }
+
+    .how form {
+        width: 30.547vw;
+        gap: 1.923vh;
+        padding: 0 2.734vw;
+    }
+
+    .how label {
+        font-size: var(--text);
+        margin-bottom: 0.962vh;
+    }
+
+    .how input {
+        padding: 1.743vh 6.719vw;
+        border-radius: 0.625vw;
+        border-color: rgba(20, 20, 20, 0.8);
+        border-width: 0.094vw;
+    }
+
+    .how button {
+        width: 14.297vw;
+        font-size: 1.406vw;
+        padding: 1.442vh 3.75vw;
+    }
+
+    .how p {
+        font-size: 1.406vw;
+    }
+
+    .content img {
+        position: absolute;
+        height: 62.538vh;
+        width: auto;
+        bottom: 0;
+        left: 8.75vw;
+    }
 
     /* footer */
 

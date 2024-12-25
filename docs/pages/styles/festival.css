@@ -20,7 +20,7 @@ body {
 }
 
 @font-face {
-	font-family: "Muller Bold";
+	font-family: "Muller";
 	src: url("../../fonts/FontfabricMullerBold.otf") format("opentype"), url("../../fonts/MullerTrialBold.woff2") format("woff2"),
 		url("../../fonts/MullerTrialBold.woff") format("woff"), url("../../fonts/MullerTrialBlack.ttf") format("truetype");
 	font-weight: bold;
@@ -135,7 +135,8 @@ header {
 	height: 100%;
 	box-sizing: border-box;
 	font-size: var(--navigation);
-	font-family: "Muller Bold";
+	font-family: "Muller";
+	font-weight: bold;
 	line-height: 120%;
 	text-transform: uppercase;
 }

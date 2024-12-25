@@ -20,7 +20,7 @@ body {
 }
 
 @font-face {
-	font-family: "Muller Bold";
+	font-family: "Muller";
 	src: url("./fonts/FontfabricMullerBold.otf") format("opentype"), url("./fonts/MullerTrialBold.woff2") format("woff2"),
 		url("./fonts/MullerTrialBold.woff") format("woff"), url("./fonts/MullerTrialBlack.ttf") format("truetype");
 	font-weight: bold;
@@ -66,20 +66,20 @@ header {
 	background-color: var(--globe-color);
 }
 
-/* header::after {
+header::after {
 	position: absolute;
 	left: 0;
-	background-color: var(--primary-color);
-	width: calc(100% - 15px);
-	height: 20vh;
+	width: 100vw;
+	height: calc(100% + 5.78vh);
 	overflow-y: visible;
-	overflow-x:hidden;
+	overflow-x: hidden;
 	background-image: url("./assets/header-background.svg");
-	background-size: contain;
-	background-color: var(--globe-color);
+	background-clip: border-box;
+	background-size: cover;
+	background-repeat: repeat-x;
 	content: "";
 	z-index: -1;
-}  */
+}
 
 .unselectable {
 	user-drag: none;
@@ -136,7 +136,8 @@ header {
 	height: 100%;
 	box-sizing: border-box;
 	font-size: var(--navigation);
-	font-family: "Muller Bold";
+	font-family: "Muller";
+	font-weight: bold;
 	line-height: 120%;
 	text-transform: uppercase;
 }
@@ -238,7 +239,8 @@ menu button img {
 	text-decoration: none;
 	width: 41.262vw;
 	gap: 1.745vh;
-	font-family: "Muller Bold";
+	font-family: "Muller";
+	font-weight: bold;
 	font-size: var(--h4);
 	line-height: 120%;
 	color: var(--secondary-color);
@@ -269,7 +271,8 @@ menu button img {
 
 .afisha a {
 	font-size: var(--text);
-	font-family: "Muller Bold";
+	font-family: "Muller";
+	font-weight: bold;
 	color: var(--primary-inv);
 	text-transform: uppercase;
 	background-color: var(--accent);
@@ -451,8 +454,8 @@ details {
 }
 
 .dialog details div {
-    flex-direction: column;
-    width: 100%;
+	flex-direction: column;
+	width: 100%;
 }
 
 .dialog details a {
@@ -695,7 +698,8 @@ dialog a {
 		width: fit-content;
 		color: var(--primary-inv);
 		;
-		font-family: "Muller Bold";
+		font-family: "Muller";
+		font-weight: bold;
 	}
 
 	.pages details {
@@ -822,6 +826,9 @@ dialog a {
 		position: absolute;
 		left: 2.188vw;
 		top: 33.654vh;
+		font-size: var(--h1);
+		text-transform: uppercase;
+		backdrop-filter: blur(1.953vw);
 	}
 
 	.banner-text h2 {

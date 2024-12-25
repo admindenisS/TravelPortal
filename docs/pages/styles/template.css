@@ -20,7 +20,7 @@ body {
 }
 
 @font-face {
-    font-family: "Muller Bold";
+    font-family: "Muller";
     src: url("../../fonts/FontfabricMullerBold.otf") format("opentype"), url("../../fonts/MullerTrialBold.woff2") format("woff2"),
         url("../../fonts/MullerTrialBold.woff") format("woff"), url("../../fonts/MullerTrialBlack.ttf") format("truetype");
     font-weight: bold;
@@ -543,8 +543,8 @@ dialog a {
     }
 
     .content {
-		border-radius: 0 0 3.906vw 3.906vw;
-	}
+        border-radius: 0 0 3.906vw 3.906vw;
+    }
 
 
     /* footer */
