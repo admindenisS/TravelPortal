@@ -463,6 +463,11 @@ details {
     color: var(--primary-color);
 }
 
+.dialog details div {
+    flex-direction: column;
+    width: 100%;
+}
+
 .dialog details a {
     padding-bottom: 1.309vh;
     padding-top: 1.309vh;

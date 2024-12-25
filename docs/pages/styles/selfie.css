@@ -151,11 +151,106 @@ menu button img {
 
 .content {
     height: fit-content;
-    width: 100%;
     display: flex;
+    width: calc(100% - 12.125 * 2);
     flex-direction: column;
     border-radius: 0 0 12.136vw 12.136vw;
     background-color: var(--globe-color);
+    height: fit-content;
+    display: flex;
+    padding: 6.761vh 5.825vw 0 5.825vw;
+    gap: 4.362vh;
+    align-items: center;
+}
+
+.what {
+    width: 100%;
+    height: fit-content;
+    gap: 2.617vh;
+    display: flex;
+    flex-direction: column;
+}
+
+.what div:first-child {
+    display: flex;
+    flex-direction: column;
+    font-family: "TT Tsars B";
+    font-size: var(--h1);
+    color: var(--primary-color);
+    text-transform: uppercase;
+}
+
+.what div:last-child {
+    display: flex;
+    flex-direction: column;
+    font-family: "Muller";
+}
+
+.what div:last-child h4 {
+    display: none;
+    font-size: var(--h4);
+    text-transform: uppercase;
+}
+
+.what div:last-child p {
+    font-size: 4.369vw;
+    color: var(--secondary-color);
+}
+
+.how {
+    width: 100%;
+    height: fit-content;
+    display: flex;
+    flex-direction: column;
+    gap: 4.362vh;
+    font-family: "Muller";
+}
+
+.how form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1.745vh;
+    color: var(--tetriary-color);
+}
+
+.how input {
+    font-size: var(--h3);
+    color: var(--tetriary-color);
+    text-anchor: middle;
+    text-align: center;
+    padding: 0.709vh 0;
+    box-sizing: border-box;
+    border-radius: 1.942vw;
+    border-width: 0.291vw;
+    letter-spacing: 1rem;
+}
+
+.how button {
+    width: 100%;
+    border-radius: 6.068vw;
+    border-style: none;
+    background-color: var(--accent);
+    padding: 1.309vh 0;
+    font-family: "Muller";
+    font-size: var(--text);
+    color: var(--primary-inv);
+}
+
+.how div {
+    flex-direction: column;
+    box-sizing: border-box;
+    width: 100%;
+    font-size: var(--text);
+}
+
+.how p {
+    color: var(--secondary-color);
+}
+
+.content img {
+    width: 57.852vw;
+    height: auto;
 }
 
 footer {
@@ -313,7 +408,7 @@ footer .linked a:last-child svg {
     flex-direction: column;
 }
 
-details {
+.dialog details {
     display: flex;
     flex-direction: column;
     font-size: var(--text);
