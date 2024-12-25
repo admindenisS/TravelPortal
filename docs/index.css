@@ -82,12 +82,11 @@ header::after {
 }
 
 .unselectable {
-	user-drag: none;
-	user-select: none;
 	-moz-user-select: none;
 	-webkit-user-drag: none;
 	-webkit-user-select: none;
 	-ms-user-select: none;
+	user-select: none;
 }
 
 .container {
@@ -833,6 +832,7 @@ dialog a {
 		top: 33.654vh;
 		font-size: var(--h1);
 		text-transform: uppercase;
+		-webkit-backdrop-filter: blur(1.953vw);
 		backdrop-filter: blur(1.953vw);
 	}
 
