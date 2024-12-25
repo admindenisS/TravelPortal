@@ -59,7 +59,7 @@ header {
 	flex-direction: row;
 	padding: 1.316vh 5.825vw 1.316vh 5.825vw;
 	justify-content: space-between;
-	width: auto;
+	width: 100%;
 	align-items: center;
 	z-index: 4;
 	top: 0;
@@ -550,6 +550,11 @@ dialog a {
 	header {
 		width: auto;
 		padding: 2.163vh 2.5vw;
+	}
+
+	header::after {
+		width: calc(100% - 15px);
+		background-size: contain;
 	}
 
 	.branding {

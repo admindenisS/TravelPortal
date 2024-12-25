@@ -21,7 +21,6 @@ body {
 
 @font-face {
     font-family: "Muller";
-    font-weight: bold;
     src: url("../../fonts/FontfabricMullerBold.otf") format("opentype"), url("../../fonts/MullerTrialBold.woff2") format("woff2"),
         url("../../fonts/MullerTrialBold.woff") format("woff"), url("../../fonts/MullerTrialBlack.ttf") format("truetype");
     font-weight: bold;
@@ -29,8 +28,15 @@ body {
 
 @font-face {
     font-family: "TT Tsars B";
+    font-style: regular;
     src: url("../../fonts/TTTsarsBRegular.ttf") format("truetype");
     font-weight: normal;
+}
+
+@font-face {
+    font-family: "TT Tsars B";
+    src: url("../../fonts/TTTsarsB-Black.ttf") format("truetype");
+    font-weight: bold;
 }
 
 /* variables */
@@ -147,6 +153,10 @@ header {
     padding: 2.913vw;
 }
 
+menu a[data-activeLink] {
+    color: var(--accent);
+}
+
 menu button img {
     opacity: 0.6;
 }
@@ -191,6 +201,7 @@ menu button img {
     font-family: "Muller";
     font-size: var(--text);
     flex-direction: column;
+    font-weight: normal;
     display: flex;
 }
 
@@ -207,6 +218,7 @@ menu button img {
 .drone > .container > div:first-child > span {
     font-family: "TT Tsars B";
     font-size: var(--h1);
+    font-weight: bold;
 }
 
 .info {
@@ -226,10 +238,12 @@ menu button img {
     gap: 1.5rem;
     display: flex;
     flex-direction: column;
+    font-weight: normal;
 }
 
 .text b {
     color: var(--accent);
+    font-weight: bold;
 }
 
 .slider {
@@ -695,10 +709,8 @@ dialog a {
     }
 
     .drone > .container > div:last-child > span {
-        font-family: "Muller";
         font-size: 3.306vh;
-        flex-direction: column;
-        display: flex;
+        font-weight: bold;
     }
     
     .drone > .container > div:first-child > span {
