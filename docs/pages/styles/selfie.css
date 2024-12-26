@@ -28,7 +28,6 @@ body {
 
 @font-face {
     font-family: "TT Tsars B";
-    font-style: regular;
     src: url("../../fonts/TTTsarsBRegular.ttf") format("truetype");
     font-weight: normal;
 }
@@ -89,12 +88,11 @@ header {
 }  */
 
 .unselectable {
-    user-drag: none;
-    user-select: none;
     -moz-user-select: none;
     -webkit-user-drag: none;
     -webkit-user-select: none;
     -ms-user-select: none;
+    user-select: none;
 }
 
 .container {
@@ -699,7 +697,7 @@ dialog a {
 
     input[type='number'] {
         -moz-appearance: textfield;
-        appearance: none;
+        appearance: textfield;
     }
 
     .how form {

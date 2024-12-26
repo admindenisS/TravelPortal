@@ -82,12 +82,11 @@ header {
 } */
 
 .unselectable {
-	user-drag: none;
-	user-select: none;
 	-moz-user-select: none;
 	-webkit-user-drag: none;
 	-webkit-user-select: none;
 	-ms-user-select: none;
+	user-select: none;
 }
 
 .container {
@@ -552,6 +551,11 @@ dialog a {
 		padding: 2.163vh 2.5vw;
 	}
 
+	header::after {
+		width: calc(100% - 15px);
+		background-size: contain;
+	}
+
 	.branding {
 		gap: 1.875vw;
 	}
@@ -828,6 +832,7 @@ dialog a {
 		top: 33.654vh;
 		font-size: var(--h1);
 		text-transform: uppercase;
+		-webkit-backdrop-filter: blur(1.953vw);
 		backdrop-filter: blur(1.953vw);
 	}
 
