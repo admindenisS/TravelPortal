@@ -1,15 +1,27 @@
 function limiter(element, maxLength) {
-    let valueStr = element.value.toString();
+    let newValue = element.value.toUpperCase();
 
-    if (valueStr.length > maxLength) {
-        valueStr = valueStr.substring(0, maxLength);
-
-        element.value = valueStr;
+    if (newValue.length > maxLength) {
+        newValue = newValue.substring(0, maxLength);
     }
+    element.value = newValue;
 }
 
 function validate() {
     let element = document.getElementById("code");
-    if (element.value.length <= 4 && element.value.length > 0) return true;
+    if (element.value.length > 4 && element.value.length < 0) return false;
+
+    let form = document.getElementsByTagName("form")[0];
+    fetch("https://ladoganew.ru/" + element.value, {
+        method: 'GET',
+        'Content-Type': 'application/json'
+    }).then((res) => {
+        if (res.status == 200) {
+            location.href = "https://ladoganew.ru/" + element.value;
+        }
+        console.log(res);
+
+    });
+
     return false;
-}
+};

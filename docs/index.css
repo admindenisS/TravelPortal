@@ -66,7 +66,7 @@ header {
 	background-color: var(--globe-color);
 }
 
-header::after {
+/* header::after {
 	position: absolute;
 	left: 0;
 	width: 100vw;
@@ -79,7 +79,7 @@ header::after {
 	background-repeat: repeat-x;
 	content: "";
 	z-index: -1;
-}
+} */
 
 .unselectable {
 	user-drag: none;
