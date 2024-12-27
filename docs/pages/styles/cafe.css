@@ -160,16 +160,224 @@ menu button img {
 .content {
     height: fit-content;
     display: flex;
-    width: calc(100% - 12.125 * 2);
+    width: 100vw;
     flex-direction: column;
     border-radius: 0 0 12.136vw 12.136vw;
     background-color: var(--globe-color);
     height: fit-content;
     display: flex;
-    padding: 6.761vh 5.825vw 0 5.825vw;
-    gap: 4.362vh;
-    align-items: center;
 }
+
+.scene {
+    position: relative;
+    height: 50.164vh;
+    width: 100%;
+    background-image: url("../../assets/banner-cafe.png");
+    background-position: 0;
+    background-size: cover;
+    overflow: hidden;
+    background-repeat: no-repeat;
+    border-radius: 0 0 12.136vw 12.136vw;
+}
+
+.marker {
+    position: absolute;
+    bottom: 2.617vh;
+    right: 5.825vw;
+    display: flex;
+    flex-direction: row;
+    gap: 1.942vw;
+}
+
+.marker img {
+    width: 3.398vw;
+    height: auto;
+    padding: 0.218vh 1.214vw;
+}
+
+.marker span {
+    font-family: "Muller";
+    color: var(--primary-inv);
+    font-size: var(--h4);
+    transform: translateY(0.2rem);
+}
+
+.title {
+    padding: 0.612vh 1.91vw 0.612vh 0;
+    background-color: var(--accent);
+    border-radius: 0 22.442vw 22.442vw 0;
+    position: absolute;
+    top: 14.068vh;
+    left: 0;
+}
+
+.title span {
+    color: var(--primary-inv);
+    font-size: var(--h2);
+    border-radius: 0 22.442vw 22.442vw 0;
+    border-color: var(--globe-color);
+    border-width: 0.223vw;
+    border-style: solid;
+    border-left: none;
+    margin: 0.915vh 0;
+    padding: 0 9.709vw 0 4.854vw;
+    box-sizing: border-box;
+    height: fit-content;
+    width: fit-content;
+    line-height: 120%;
+    font-family: "TT Tsars B";
+    text-transform: uppercase;
+}
+
+main {
+    padding: 5.234vh 5.825vw 6.979vh 5.825vw;
+}
+
+.event-title h2 {
+    margin-bottom: 4.362vh;
+    font-size: var(--h2);
+    font-family: "TT Tsars B";
+    font-weight: bold;
+    color: var(--primary-color);
+}
+
+.items {
+    display: flex;
+    flex-direction: column;
+    gap: 6.979vh;
+}
+
+.item {
+    flex-direction: column;
+    gap: 2.617vh;
+}
+
+.preview {
+    width: calc(100vw - 5.825vw * 2);
+    height: fit-content;
+}
+
+.preview img {
+    width: 100%;
+    height: 100%;
+    border-radius: 12.993vw;
+    aspect-ratio: 1/1;
+}
+
+.item-content {
+    gap: 1.745vh;
+    flex-direction: column;
+    width: 100%;
+    height: fit-content;
+    display: flex;
+}
+
+.item-name {
+    font-family: "Muller";
+    font-weight: bold;
+    font-size: var(--h4);
+    text-transform: uppercase;
+}
+
+.item-data {
+    flex-direction: column;
+    gap: 0.872vh;
+}
+
+.item-where {
+    gap: 0.364vw;
+    font-size: var(--text);
+    color: var(--accent);
+    font-weight: bold;
+}
+
+.item-where img {
+    width: 2.184vw;
+    height: auto;
+    padding: 0.145vh 0.808vw;
+}
+
+.item-when {
+    flex-direction: row;
+    gap: 0.971vw;
+    align-items: start;
+}
+
+.item-when img {
+    width: 3.155vw;
+    height: auto;
+    padding: 0.323vw;
+}
+
+.item-when div {
+    font-family: "Muller";
+    font-weight: normal;
+    font-size: var(--text);
+    color: var(--secondary-color);
+    display: flex;
+    flex-direction: column;
+}
+
+.item-description {
+    color: var(--tetriary-color);
+    font-family: "Muller";
+    font-weight: normal;
+    font-size: var(--text);
+    flex-direction: column;
+    display: flex;
+}
+
+.item-contacts {
+    flex-direction: column;
+    gap: 0.872vh;
+    font-size: var(--text);
+    font-family: "Muller";
+}
+
+.item-contacts a:hover {
+    color: var(--accent);
+}
+
+.item-phone {
+    flex-direction: row;
+    display: flex;
+    gap: 0.2rem;
+    font-weight: bold;
+    color: var(--secondary-color);
+    text-decoration: none;
+    color: var(--secondary-color);
+}
+
+.item-site {
+    align-items: center;
+    flex-direction: row;
+    gap: 1.942vw;
+    font-weight: normal;
+    text-decoration: none;
+    color: var(--secondary-color);
+}
+
+.item-site img {
+    padding: 0.485vw;
+    height: auto;
+    width: 4.854vw;
+}
+
+.item-vk {
+    align-items: center;
+    flex-direction: row;
+    gap: 1.942vw;
+    font-weight: normal;
+    text-decoration: none;
+    color: var(--secondary-color);
+}
+
+.item-vk img {
+    padding: 0.518vh 0.061vw;
+    height: auto;
+    width: 5.583vw;
+}
+
 
 footer {
     padding: 5.234vh 4.854vw 5.234vh 4.854vw;
@@ -252,12 +460,12 @@ footer .linked a:last-child svg {
     padding: 1.274vw;
 }
 
-footer > div:nth-child(3){
+footer>div:nth-child(3) {
     grid-row: 3;
     grid-column: 1;
 }
 
-footer > div:nth-child(4) {
+footer>div:nth-child(4) {
     grid-row: 4;
     grid-column: 1;
 }
@@ -566,14 +774,71 @@ dialog a {
     }
 
     .content {
-        border-radius: 0 0 3.906vw 3.906vw;
-        padding: 7.212vh 0 calc(39.964vh + 5.769vh) 0;
-        gap: 0;
+		border-radius: 0 0 3.906vw 3.906vw;
         position: relative;
+	}
+
+	.scene {
+		height: 91.133vh;
+		border-radius: 0 0 3.906vw 3.906vw;
+		justify-content: center;
+		align-items: end;
+	}
+
+    .marker {
+        bottom: 3.486vh;
+        right: 7.524vw;
+        gap: 0.625vw;
+    }
+    
+    .marker img {
+        width: 2.404vh;
+        padding: 0.24vh 0.391vw;
     }
 
+    .marker span {
+        font-size: var(--h3);
+    }
+    
+    .title {
+        border-radius: 0 14.866vw 14.866vw 0;
+        top: 14.904vh;
+        padding: 1.563vh 1.641vw 1.563vh 0;
+    }
 
+    .title h2 {
+        font-size: var(--h1);
+        padding: 2.885vh 4.688vw 2.885vh 2.344vw;
+    }
 
+    main {
+        padding: 9.615vh 2.5vw 20.192vh 2.5vw;
+        width: calc(100vw - 2.5vw * 2);
+    }
+    
+    .event-title {
+        margin-bottom: 6.971vh;
+    }
+
+    .items {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 7.767vw;
+    }
+
+    .item {
+        gap: 2.5vw;
+        width: calc(100vw / 2 - 2.5vw * 3);
+    }
+
+    .preview {
+        width: calc(100vw / 2 - 2.5vw * 3)
+    }
+
+    .preview img {
+        
+    }
+    
     /* footer */
 
     footer {
@@ -634,12 +899,12 @@ dialog a {
         padding: 0.41vw;
     }
 
-    footer > div:nth-child(3){
+    footer>div:nth-child(3) {
         grid-row: 4;
         grid-column: 1;
     }
-    
-    footer > div:nth-child(4) {
+
+    footer>div:nth-child(4) {
         grid-row: 4;
         grid-column: 3;
     }
