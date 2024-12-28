@@ -252,7 +252,7 @@ main {
 }
 
 .preview {
-	width: calc(100vw - 5.825vw * 2);
+	width: 100%;
 	height: fit-content;
 }
 
@@ -851,15 +851,16 @@ dialog a {
 		column-gap: 2.5vw;
 		row-gap: 9.615vh;
 		justify-content: space-between;
+		width: 100%;
 	}
 
 	.item {
 		gap: 3.846vh;
-		width: calc(100vw / 2 - 2.5vw * 2);
+		width: calc(50vw - 2.5vw * 2 + 0.586vw);
 	}
 
 	.preview {
-		width: 100%;
+		width: 100%
 	}
 
 	.preview img {
@@ -1033,8 +1034,8 @@ dialog a {
 
 	#suvorov {
 		display: block;
-		width: auto;
-		height: 60.817vh;
+		width: 31.25vw;
+		height: auto;
 		position: absolute;
 		bottom: 0;
 		right: 0;

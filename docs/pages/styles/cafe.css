@@ -854,7 +854,7 @@ dialog a {
 
 	.item {
 		gap: 3.846vh;
-		width: calc(100vw / 2 - 2.5vw * 2);
+		width: calc(50vw - 2.5vw * 2 + 0.586vw);
 	}
 
 	.preview {
