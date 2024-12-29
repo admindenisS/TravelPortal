@@ -66,20 +66,21 @@ header {
 	background-color: var(--globe-color);
 }
 
-/* header::after {
+header::after {
 	position: absolute;
 	left: 0;
-	width: 100vw;
-	height: calc(100% + 5.78vh);
+	top: 0;
+	width: 100%;
+	height: calc(100% + 1.554vh);
 	overflow-y: visible;
 	overflow-x: hidden;
-	background-image: url("./assets/header-background.svg");
+	background-image: url("./assets/header-background.png");
 	background-clip: border-box;
-	background-size: cover;
+	background-size: contain;
 	background-repeat: repeat-x;
 	content: "";
 	z-index: -1;
-} */
+}
 
 .unselectable {
 	-moz-user-select: none;
@@ -552,8 +553,7 @@ dialog a {
 	}
 
 	header::after {
-		width: calc(100% - 15px);
-		background-size: contain;
+		height: calc(100% + 1.649vh);
 	}
 
 	.branding {

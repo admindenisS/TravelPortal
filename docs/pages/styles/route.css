@@ -73,20 +73,21 @@ header {
 	background-color: var(--globe-color);
 }
 
-/* header::after {
+header::after {
 	position: absolute;
 	left: 0;
-	background-color: var(--primary-color);
-	width: calc(100% - 15px);
-	height: 20vh;
+	top: 0;
+	width: 100%;
+	height: calc(100% + 1.554vh);
 	overflow-y: visible;
-	overflow-x:hidden;
-	background-image: url("./assets/header-background.svg");
+	overflow-x: hidden;
+	background-image: url("../../assets/header-background.png");
+	background-clip: border-box;
 	background-size: contain;
-	background-color: var(--globe-color);
+	background-repeat: repeat-x;
 	content: "";
 	z-index: -1;
-}  */
+}
 
 .unselectable {
 	-moz-user-select: none;
@@ -516,6 +517,10 @@ dialog a {
 	header {
 		width: auto;
 		padding: 2.163vh 2.5vw;
+	}
+
+	header::after {
+		height: calc(100% + 1.649vh);
 	}
 
 	.branding {
