@@ -156,6 +156,11 @@ menu button img {
 	opacity: 0.6;
 }
 
+menu a:hover, details summary:hover {
+	color: var(--primary-color);
+}
+
+
 .content {
 	height: fit-content;
 	display: flex;
@@ -831,7 +836,7 @@ dialog a {
 		padding: 1.563vh 1.641vw 1.563vh 0;
 	}
 
-	.title h2 {
+	.title span {
 		font-size: var(--h1);
 		padding: 2.885vh 4.688vw 2.885vh 2.344vw;
 	}

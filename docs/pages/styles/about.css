@@ -161,6 +161,11 @@ menu button img {
     opacity: 0.6;
 }
 
+menu a:hover, details summary:hover {
+	color: var(--primary-color);
+}
+
+
 .content {
     height: fit-content;
     width: 100%;

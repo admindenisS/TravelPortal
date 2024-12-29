@@ -1,0 +1,870 @@
+* {
+	margin: 0;
+	padding: 0;
+	line-height: 120%;
+}
+
+html,
+body {
+	max-width: 100vw;
+	height: fit-content;
+	min-height: 100vh;
+	background-color: var(--accent);
+	position: relative;
+}
+
+@font-face {
+	font-family: "Muller";
+	src: url("../../fonts/FontfabricMullerRegular.otf") format("opentype"), url("../../fonts/MullerTrialRegular.woff2") format("woff2"),
+		url("../../fonts/MullerTrialRegular.woff") format("woff"), url("../../fonts/MullerTrialRegular.ttf") format("truetype");
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: "Muller";
+	src: url("../../fonts/FontfabricMullerBold.otf") format("opentype"), url("../../fonts/MullerTrialBold.woff2") format("woff2"),
+		url("../../fonts/MullerTrialBold.woff") format("woff"), url("../../fonts/MullerTrialBlack.ttf") format("truetype");
+	font-weight: bold;
+}
+
+@font-face {
+	font-family: "Muller";
+	src: url("../../fonts/FontfabricMullerMedium.otf") format("opentype"), url("../../fonts/MullerTrialMedium.woff2") format("woff2"),
+		url("../../fonts/MullerTrialMedium.woff") format("woff"), url("../../fonts/MullerTrialMedium.ttf") format("truetype");
+	font-weight: 500;
+}
+
+@font-face {
+	font-family: "TT Tsars B";
+	src: url("../../fonts/TTTsarsBRegular.ttf") format("truetype");
+	font-weight: normal;
+}
+
+@font-face {
+	font-family: "TT Tsars B";
+	src: url("../../fonts/TTTsarsB-Black.ttf") format("truetype");
+	font-weight: bold;
+}
+
+/* variables */
+
+:root {
+	--secondary-color: rgba(0, 0, 0, 0.8);
+	--secondary-inv: rgba(255, 255, 255, 0.8);
+	--primary-color: #000;
+	--primary-inv: #ffffff;
+	--globe-color: #f8f8f8;
+	--tetriary-color: rgba(0, 0, 0, 0.6);
+	--tetriary-inv: rgba(255, 255, 255, 0.6);
+	--accent: #3a8c80;
+	--h1: 8.738vw;
+	--h2: 6.796vw;
+	--h3: 5.825vw;
+	--h4: 4.854vw;
+	--text: 3.883vw;
+	--navigation: 3.398vw;
+}
+
+/* header */
+
+header {
+	position: sticky;
+	display: flex;
+	flex-direction: row;
+	padding: 1.316vh 5.825vw 1.316vh 5.825vw;
+	justify-content: space-between;
+	width: auto;
+	align-items: center;
+	z-index: 4;
+	top: 0;
+	background-color: var(--globe-color);
+}
+
+/* header::after {
+	position: absolute;
+	left: 0;
+	background-color: var(--primary-color);
+	width: calc(100% - 15px);
+	height: 20vh;
+	overflow-y: visible;
+	overflow-x:hidden;
+	background-image: url("./assets/header-background.svg");
+	background-size: contain;
+	background-color: var(--globe-color);
+	content: "";
+	z-index: -1;
+}  */
+
+.unselectable {
+	-moz-user-select: none;
+	-webkit-user-drag: none;
+	-webkit-user-select: none;
+	-ms-user-select: none;
+	user-select: none;
+}
+
+.container {
+	width: fit-content;
+	display: flex;
+	height: fit-content;
+}
+
+.row {
+	flex-direction: row;
+}
+
+.center {
+	align-items: center;
+	justify-content: center;
+}
+
+.branding {
+	gap: 3.883vw;
+}
+
+.logos {
+	display: flex;
+	flex-direction: row;
+	gap: 2.913vw;
+	flex-wrap: nowrap;
+}
+
+.logo {
+	height: fit-content;
+	display: flex;
+}
+
+.logo img:first-child {
+	width: 8.981vw;
+}
+
+.logo img:last-child {
+	width: 8.252vw;
+}
+
+.name {
+	flex-direction: column;
+	text-wrap: nowrap;
+	height: 100%;
+	box-sizing: border-box;
+	font-size: var(--navigation);
+	font-family: "Muller";
+	font-weight: bold;
+	line-height: 120%;
+	text-transform: uppercase;
+}
+
+.menu {
+	width: 3.883vw;
+	padding: 2.913vw;
+}
+
+menu button img {
+	opacity: 0.6;
+}
+
+menu a:hover,
+details summary:hover {
+	color: var(--primary-color);
+}
+
+main {
+	height: fit-content;
+	display: flex;
+	width: calc(100% - 12.125 * 2);
+	flex-direction: column;
+	border-radius: 0 0 12.136vw 12.136vw;
+	background-color: var(--globe-color);
+	height: fit-content;
+	display: flex;
+	padding: 6.761vh 5.825vw 3.272vh 5.825vw;
+}
+
+.event-title {
+	flex-direction: column;
+	gap: 5.825vw;
+    margin-bottom: 2.885vh;
+}
+
+.event-title h2 {
+	font-size: var(--h2);
+	color: var(--primary-color);
+	font-family: "TT Tsars B";
+	font-weight: bold;
+	text-transform: uppercase;
+    height: fit-content;
+}
+
+.event-title button {
+	display: flex;
+	flex-direction: row;
+	gap: 0.971vw;
+	width: fit-content;
+	text-transform: uppercase;
+	text-decoration: none;
+	border: none;
+	background-color: var(--globe-color);
+	align-items: end;
+    height: fit-content;
+}
+
+.event-title span {
+	font-size: var(--navigation);
+	color: var(--tetriary-color);
+	font-family: "Muller";
+	text-decoration: none;
+    height: fit-content;
+    line-height: 90%;
+    text-anchor: end;
+}
+
+.event-title img {
+	padding: 0.436vh 0.646vw;
+	width: 2.67vw;
+	height: auto;
+}
+
+.event-title button:hover img {
+	-moz-transform: scale(-1, 1);
+	-o-transform: scale(-1, 1);
+	-webkit-transform: scale(-1, 1);
+	transform: scale(-1, 1);
+}
+
+.items {
+	width: 100%;
+	height: fit-content;
+	display: flex;
+	flex-direction: column;
+	gap: 6.979vh;
+}
+
+.item {
+	display: flex;
+	flex-direction: column;
+	gap: 2.617vh;
+}
+
+.item-preview {
+	width: fit-content;
+	height: auto;
+}
+
+.item-preview img {
+	width: 100%;
+	height: 26.39vh;
+	border-radius: 7.282vw;
+}
+
+.item-about {
+	display: flex;
+	flex-direction: column;
+	gap: 1.745vh;
+}
+
+.item-title {
+	font-size: var(--h4);
+	font-family: "Muller";
+	font-weight: bold;
+	color: var(--secondary-color);
+	width: 100%;
+	-o-text-overflow: ellipsis;
+	-ms-text-overflow: ellipsis;
+	text-overflow: ellipsis;
+	text-transform: uppercase;
+}
+
+.item-info {
+	display: flex;
+	flex-direction: column;
+	gap: 1.309vh;
+}
+
+.item-when {
+	display: flex;
+	flex-direction: row;
+	font-size: var(--text);
+	font-family: "Muller";
+	gap: 0.971vw;
+	align-items: start;
+}
+
+.item-when img {
+	width: 2.913vw;
+	height: auto;
+	padding: 0.073vh 0.485vw 0.218vh 0.485vw;
+}
+
+.item-when span {
+    line-height: 100%;
+    text-anchor: end;
+	color: var(--secondary-color);
+}
+
+.item-description {
+	font-size: var(--text);
+	color: var(--tetriary-color);
+	font-family: "Muller";
+	line-height: 150%;
+}
+
+.item-more {
+	width: 100%;
+	text-align: center;
+	line-height: 90%;
+	font-family: "Muller";
+	font-size: var(--text);
+	padding: 1.091vh 0 1.091vh 0;
+	color: var(--primary-inv);
+	background-color: var(--accent);
+	border-radius: 6.068vw;
+	text-decoration: none;
+    margin-top: 0.436vh;
+}
+
+footer {
+	padding: 5.234vh 4.854vw 5.234vh 4.854vw;
+	display: grid;
+	grid-template-columns: 1fr 5.825vw 1fr;
+	grid-template-rows: fit-content 1fr 2fr 2fr 0.545vh 2fr;
+	row-gap: 2.726vh;
+}
+
+footer .branding {
+	grid-row: 1;
+	grid-column: span 3;
+}
+
+footer .name {
+	font-size: 3.883vw;
+	color: var(--primary-inv);
+}
+
+.contacts {
+	grid-area: contacts;
+	flex-direction: column;
+	gap: 2.617vh;
+	grid-row: 2;
+	grid-column: 1;
+}
+
+.contacts span {
+	font-size: var(--navigation);
+	text-transform: uppercase;
+	color: var(--secondary-inv);
+	font-family: "Muller";
+}
+
+.contacts div {
+	flex-direction: column;
+	display: flex;
+}
+
+.contacts a {
+	text-decoration: none;
+	font-size: var(--navigation);
+	color: var(--tetriary-inv);
+	font-family: "Muller";
+}
+
+.links {
+	flex-direction: column;
+	grid-row: 3;
+	grid-column: 1;
+	gap: 3.053vh;
+}
+
+.linked {
+	gap: 0.436vh;
+	flex-direction: column;
+}
+
+.linked a {
+	height: fit-content;
+	align-items: center;
+	gap: 1.942vw;
+	text-decoration: none;
+	font-size: var(--navigation);
+	font-family: "Muller";
+	color: var(--secondary-inv);
+}
+
+.linked a svg {
+	width: 4.369vw;
+	fill: var(--accent);
+	background-color: var(--primary-inv);
+	border-radius: 100%;
+	padding: 0.728vw;
+	height: auto;
+}
+
+footer .linked a:last-child svg {
+	width: 3.277vw;
+	padding: 1.274vw;
+}
+
+.navigation {
+	font-family: "Muller";
+	grid-column: 3;
+	grid-row: span 2;
+	font-size: var(--navigation);
+	flex-direction: column;
+	gap: 2.617vh;
+}
+
+.navigation span {
+	text-transform: uppercase;
+	color: var(--secondary-inv);
+}
+
+.navigation div {
+	flex-direction: column;
+	gap: 0.872vh;
+}
+
+.navigation a {
+	text-decoration: none;
+	color: var(--tetriary-inv);
+}
+
+.madeby {
+	flex-direction: column;
+	gap: 0.872vh;
+	row-gap: 4;
+	grid-row: 5;
+	grid-column: span 3;
+	font-family: "Muller";
+	font-size: var(--navigation);
+}
+
+.madeby span {
+	color: var(--secondary-inv);
+}
+
+.madeby a {
+	color: var(--tetriary-inv);
+	text-decoration: none;
+}
+
+#menu-mob {
+	position: fixed;
+	overflow-x: hidden;
+	flex-direction: column;
+	align-items: center;
+	z-index: 2;
+	top: 0;
+	width: 100vw;
+	height: 100vh;
+	background-color: var(--globe-color);
+}
+
+.hdr {
+	padding: 1.316vh 5.825vw 1.316vh 5.825vw;
+	width: calc(100% - 5.825vw * 2);
+	justify-content: space-between;
+}
+
+.hdr .menu {
+	height: 1.745vh;
+}
+
+.dialog {
+	width: calc(100% - 5.825vw * 2);
+	height: 100%;
+	margin: 0.545vh 5.825vw 13.959vh 5.825vw;
+	font-family: "Muller";
+	display: flex;
+	flex-direction: column;
+}
+
+.dialog details {
+	display: flex;
+	flex-direction: column;
+	font-size: var(--text);
+	height: auto;
+}
+
+.dialog summary {
+	padding-bottom: 1.309vh;
+	padding-top: 2.617vh;
+	display: flex;
+	justify-content: space-between;
+	color: var(--primary-color);
+}
+
+.dialog details div {
+	flex-direction: column;
+	width: 100%;
+}
+
+.dialog details a {
+	padding-bottom: 1.309vh;
+	padding-top: 1.309vh;
+	text-decoration: none;
+	color: var(--secondary-color);
+}
+
+.dialog details a:last-child {
+	margin-bottom: 2.617vh;
+}
+
+summary::-webkit-details-marker {
+	display: none;
+}
+
+summary::marker {
+	content: "";
+}
+
+.dialog hr {
+	width: 100vw;
+	transform: translateX(-5.825vw);
+}
+
+.dialog .links {
+	width: 100%;
+	height: 100%;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	flex: auto;
+}
+
+.dialog span,
+dialog a {
+	font-size: var(--text);
+	width: 100%;
+}
+
+.dialog .urls {
+	flex-direction: column;
+	width: 100%;
+	color: var(--tetriary-color);
+}
+
+.dialog .urls a {
+	padding: 1.478vh 0;
+	font-size: var(--text);
+	color: var(--tetriary-color);
+	text-decoration: none;
+}
+
+.dialog .linked {
+	gap: 2.617vh;
+	width: 100%;
+}
+
+.dialog .linked a {
+	gap: 1.092vw;
+	width: 100%;
+}
+
+.dialog .linked svg {
+	fill: var(--globe-color);
+	background-color: var(--accent);
+	width: 5.097vw;
+	height: auto;
+	padding: 0.85vw;
+}
+
+.dialog .linked svg:last-child {
+	width: 3.883vw;
+	padding: 1.488vw;
+}
+
+.dialog .linked span {
+	color: var(--accent);
+}
+
+@media screen and (orientation: landscape) {
+	:root {
+		--h1: 4.688vw;
+		--h2: 2.813vw;
+		--h3: 2.188vw;
+		--h4: 1.875vw;
+		--text: 1.406vw;
+		--navigation: 1.094vw;
+        --text-small: 1.094vw;
+	}
+
+	header {
+		width: auto;
+		padding: 2.163vh 2.5vw;
+	}
+
+	.branding {
+		gap: 1.875vw;
+	}
+
+	.logos {
+		gap: 1.25vw;
+	}
+
+	.logo img:first-child {
+		width: 3.984vw;
+	}
+
+	.logo img:last-child {
+		width: 3.75vw;
+	}
+
+	.name {
+		font-size: 1.25vw;
+	}
+
+	.menu {
+		display: none;
+	}
+
+	menu {
+		font-family: Muller;
+		font-size: 1.683vh;
+		gap: 1.875vw;
+		flex-direction: row;
+		flex-wrap: nowrap;
+		text-transform: uppercase;
+		display: flex;
+		justify-items: center;
+		align-items: center;
+	}
+
+	.pages {
+		display: flex;
+	}
+
+	menu a {
+		color: var(--tetriary-color);
+		text-decoration: none;
+		height: 1.923vh;
+	}
+
+	menu a[data-activeLink] {
+		color: var(--accent);
+	}
+
+	menu details {
+		position: relative;
+	}
+
+	menu summary {
+		font-size: 1.683vh;
+		font-family: Muller;
+		color: var(--tetriary-color);
+		text-decoration: none;
+		height: fit-content;
+		text-transform: uppercase;
+		background-color: transparent;
+		border: none;
+		color: none;
+		display: flex;
+		align-items: center;
+	}
+
+	menu details img {
+		height: 0.601vh;
+		margin: 1.322vh;
+		opacity: 0.6;
+	}
+
+	menu details div {
+		position: absolute;
+		margin-top: 1.07vh;
+		gap: 0.985vh;
+		flex-direction: column;
+		background-color: #fff;
+		border-radius: 0.781vw;
+		padding: 2.463vh 1.563vw;
+		margin-left: -25%;
+		box-shadow: 0.246vh 0.246vh 2.463vh rgba(153, 153, 153, 0.25), 0.246vh -0.246vh 2.463vh rgba(153, 153, 153, 0.25);
+	}
+
+	menu details a {
+		font-size: var(--navigation);
+		font-family: "Muller";
+		color: var(--tetriary-color);
+		text-transform: uppercase;
+		text-decoration: none;
+		text-wrap: nowrap;
+		height: auto;
+	}
+
+	menu details a:hover {
+		color: var(--primary-color);
+	}
+
+	menu .vk {
+		display: flex;
+		height: 2.5vw;
+		background-color: var(--accent);
+		width: 2.5vw;
+		border-radius: 100%;
+	}
+
+	menu .vk svg {
+		position: relative;
+		height: 3.079vh;
+		width: 1.875vw;
+		fill: var(--primary-inv);
+	}
+
+	main {
+		border-radius: 0 0 3.906vw 3.906vw;
+		padding: 11.346vh 2.5vw 7.692vh 2.5vw;
+	}
+
+	.event-title {
+		gap: 5.529vh;
+        margin-bottom: 4.58vh;
+	}
+
+	.event-title button {
+		gap: 0.313vw;
+	}
+
+    .event-title img {
+        width: 0.859vw;
+        padding: 0.481vh 0.208vw;
+    }
+
+    .items {
+        gap: 2.885vh;
+    }
+
+    .item {
+        flex-direction: row;
+        gap: 2.5vw;
+    }
+
+    .item-preview {
+        height: fit-content;
+        width: auto;
+    }
+
+    .item-preview img {
+        border-radius: 2.344vw;
+        height: auto;
+        width: 30vw;
+        aspect-ratio: 3/2;
+    }
+
+    .item-about {
+        gap: 2.885vh;
+        margin: 1.382vh 0;
+    }
+
+    .item-info {
+        gap: 1.923vh;
+    }
+
+    .item-when {
+        gap: 0.313vw;
+        font-size: var(--text-small);
+        align-items: end;
+    }
+
+    .item-when img {
+        width: 0.938vw;
+        padding: 0.081vh 0.156vw 0.24vh 0.156vw;
+        align-items: start;
+    }
+
+    .item-span {
+        height: fit-content;
+    }
+
+    .item-description {
+        font-size: var(--text);
+    }
+
+    .item-more {
+        text-align: start;
+        border: unset;
+        background-color: unset;
+        color: var(--secondary-color);
+        padding: unset;
+        text-decoration: underline;
+        text-decoration-skip-ink:none;
+        -ms-text-underline-position: under;
+        text-underline-position: below;
+        line-height: 120%;
+        margin: unset;
+    }
+
+	/* footer */
+
+	footer {
+		padding: 6.01vh 2.5vw 7.212vh 2.5vw;
+		grid-template-columns: 2fr 16.719vw 1fr 1fr;
+		grid-template-rows: 1fr 1fr;
+		row-gap: 0;
+	}
+
+	footer .branding {
+		grid-row: 1;
+		grid-column: 1;
+	}
+
+	footer .name {
+		font-size: 1.563vw;
+	}
+
+	.contacts {
+		gap: 2.617vh;
+		grid-row: 1;
+		grid-column: 4;
+	}
+
+	.navigation {
+		grid-column: 3;
+		grid-row: span 2;
+		width: 100%;
+	}
+
+	.links {
+		gap: 3.125vw;
+		flex-direction: row;
+		grid-row: 2;
+		grid-column: 1;
+		width: 100%;
+		height: 100%;
+		align-items: end;
+	}
+
+	.links:first-child .linked:last-child span {
+		content: "Группа города ВКонтакте";
+	}
+
+	.linked a {
+		gap: 0.625vw;
+	}
+
+	.linked a svg {
+		width: 1.406vw;
+		padding: 0.234vw;
+	}
+
+	footer .linked a:last-child svg {
+		width: 1.055vw;
+		padding: 0.41vw;
+	}
+
+	#town-group {
+		display: none;
+	}
+
+	#town-group-desc {
+		display: block;
+	}
+
+	.madeby {
+		grid-row: 2;
+		grid-column: 4;
+		width: 100%;
+		height: 100%;
+		justify-content: end;
+	}
+
+	#menu {
+		display: none;
+	}
+}
