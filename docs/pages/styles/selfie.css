@@ -670,7 +670,7 @@ dialog a {
 
     .what div:first-child {
         flex-direction: row;
-        gap: 1rem;
+        gap: 0.25rem;
         text-wrap: nowrap;
         word-wrap: nowrap;
     }
