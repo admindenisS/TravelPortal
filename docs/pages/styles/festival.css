@@ -246,7 +246,6 @@ menu a:hover, menu details summary:hover {
 
 .event h2 {
 	height: fit-content;
-	width: 100%;
 	font-size: var(--h2);
 	font-family: "TT Tsars B";
 	text-wrap: nowrap;
