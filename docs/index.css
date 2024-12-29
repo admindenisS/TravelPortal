@@ -151,6 +151,10 @@ menu button img {
 	opacity: 0.6;
 }
 
+menu a:hover, menu details summary:hover {
+	color: var(--primary-color);
+}
+
 /* banner */
 
 .banner {

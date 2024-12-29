@@ -164,8 +164,7 @@ menu button img {
 	opacity: 0.6;
 }
 
-menu a:hover,
-details summary:hover {
+menu a:hover, menu details summary:hover {
 	color: var(--primary-color);
 }
 
@@ -184,7 +183,7 @@ main {
 .event-title {
 	flex-direction: column;
 	gap: 5.825vw;
-    margin-bottom: 2.885vh;
+	margin-bottom: 2.885vh;
 }
 
 .event-title h2 {
@@ -193,7 +192,7 @@ main {
 	font-family: "TT Tsars B";
 	font-weight: bold;
 	text-transform: uppercase;
-    height: fit-content;
+	height: fit-content;
 }
 
 .event-title button {
@@ -206,7 +205,7 @@ main {
 	border: none;
 	background-color: var(--globe-color);
 	align-items: end;
-    height: fit-content;
+	height: fit-content;
 }
 
 .event-title span {
@@ -214,9 +213,9 @@ main {
 	color: var(--tetriary-color);
 	font-family: "Muller";
 	text-decoration: none;
-    height: fit-content;
-    line-height: 90%;
-    text-anchor: end;
+	height: fit-content;
+	line-height: 90%;
+	text-anchor: end;
 }
 
 .event-title img {
@@ -297,8 +296,8 @@ main {
 }
 
 .item-when span {
-    line-height: 100%;
-    text-anchor: end;
+	line-height: 100%;
+	text-anchor: end;
 	color: var(--secondary-color);
 }
 
@@ -320,7 +319,7 @@ main {
 	background-color: var(--accent);
 	border-radius: 6.068vw;
 	text-decoration: none;
-    margin-top: 0.436vh;
+	margin-top: 0.436vh;
 }
 
 footer {
@@ -585,7 +584,7 @@ dialog a {
 		--h4: 1.875vw;
 		--text: 1.406vw;
 		--navigation: 1.094vw;
-        --text-small: 1.094vw;
+		--text-small: 1.094vw;
 	}
 
 	header {
@@ -719,81 +718,81 @@ dialog a {
 
 	.event-title {
 		gap: 5.529vh;
-        margin-bottom: 4.58vh;
+		margin-bottom: 4.58vh;
 	}
 
 	.event-title button {
 		gap: 0.313vw;
 	}
 
-    .event-title img {
-        width: 0.859vw;
-        padding: 0.481vh 0.208vw;
-    }
+	.event-title img {
+		width: 0.859vw;
+		padding: 0.481vh 0.208vw;
+	}
 
-    .items {
-        gap: 2.885vh;
-    }
+	.items {
+		gap: 2.885vh;
+	}
 
-    .item {
-        flex-direction: row;
-        gap: 2.5vw;
-    }
+	.item {
+		flex-direction: row;
+		gap: 2.5vw;
+	}
 
-    .item-preview {
-        height: fit-content;
-        width: auto;
-    }
+	.item-preview {
+		height: fit-content;
+		width: auto;
+	}
 
-    .item-preview img {
-        border-radius: 2.344vw;
-        height: auto;
-        width: 30vw;
-        aspect-ratio: 3/2;
-    }
+	.item-preview img {
+		border-radius: 2.344vw;
+		height: auto;
+		width: 30vw;
+		aspect-ratio: 3/2;
+	}
 
-    .item-about {
-        gap: 2.885vh;
-        margin: 1.382vh 0;
-    }
+	.item-about {
+		gap: 2.885vh;
+		margin: 1.382vh 0;
+	}
 
-    .item-info {
-        gap: 1.923vh;
-    }
+	.item-info {
+		gap: 1.923vh;
+	}
 
-    .item-when {
-        gap: 0.313vw;
-        font-size: var(--text-small);
-        align-items: end;
-    }
+	.item-when {
+		gap: 0.313vw;
+		font-size: var(--text-small);
+		align-items: end;
+	}
 
-    .item-when img {
-        width: 0.938vw;
-        padding: 0.081vh 0.156vw 0.24vh 0.156vw;
-        align-items: start;
-    }
+	.item-when img {
+		width: 0.938vw;
+		padding: 0.081vh 0.156vw 0.24vh 0.156vw;
+		align-items: start;
+	}
 
-    .item-span {
-        height: fit-content;
-    }
+	.item-span {
+		height: fit-content;
+	}
 
-    .item-description {
-        font-size: var(--text);
-    }
+	.item-description {
+		font-size: var(--text);
+	}
 
-    .item-more {
-        text-align: start;
-        border: unset;
-        background-color: unset;
-        color: var(--secondary-color);
-        padding: unset;
-        text-decoration: underline;
-        text-decoration-skip-ink:none;
-        -ms-text-underline-position: under;
-        text-underline-position: below;
-        line-height: 120%;
-        margin: unset;
-    }
+	.item-more {
+		text-align: start;
+		border: unset;
+		background-color: unset;
+		color: var(--secondary-color);
+		padding: unset;
+		text-decoration: underline;
+		text-decoration-skip-ink: none;
+		-ms-text-underline-position: under;
+		text-underline-position: below;
+		line-height: 120%;
+		margin: unset;
+	}
 
 	/* footer */
 

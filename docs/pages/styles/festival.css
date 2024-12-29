@@ -151,7 +151,7 @@ menu button img {
 	opacity: 0.6;
 }
 
-menu a:hover, details summary:hover {
+menu a:hover, menu details summary:hover {
 	color: var(--primary-color);
 }
 
@@ -279,6 +279,7 @@ menu a:hover, details summary:hover {
 	-ms-overflow-style: none;
 	left: 0;
 	top: 0;
+	scrollbar-width: none;
 }
 
 #images::-webkit-scrollbar {
@@ -287,11 +288,12 @@ menu a:hover, details summary:hover {
 	height: 0;
 	display: none;
 }
+
 #images img {
-	width: 100%;
-	height: auto;
-	border-radius: 7.282vw;
-	aspect-ratio: auto;
+    width: calc(100vw - 7.767vw * 2);
+    height: auto;
+    border-radius: 7.282vw;
+    aspect-ratio: 3/2;
 }
 
 .slider-info {
