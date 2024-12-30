@@ -46,6 +46,16 @@ body {
 	font-weight: bold;
 }
 
+@font-face {
+	font-family: "Inter Medium";
+	src: url("../../fonts/InterMedium.ttf") format("truetype");
+}
+
+@font-face {
+	font-family: "Inter Semi";
+	src: url("../../fonts/InterSemiBold.ttf") format("truetype");
+}
+
 /* variables */
 
 :root {
@@ -164,12 +174,14 @@ menu button img {
 	opacity: 0.6;
 }
 
-menu a:hover, menu details summary:hover {
+menu a:hover,
+menu details summary:hover {
 	color: var(--primary-color);
 }
 
-menu a[data-activeLink]:hover, menu a[data-activeLink] {
-    color: var(--accent);
+menu a[data-activeLink]:hover,
+menu a[data-activeLink] {
+	color: var(--accent);
 }
 
 main {
@@ -324,6 +336,48 @@ main {
 	border-radius: 6.068vw;
 	text-decoration: none;
 	margin-top: 0.436vh;
+}
+
+.nav {
+	margin-top: 6.979vh;
+	display: flex;
+	flex-direction: row;
+	width: 100%;
+	align-items: center;
+	justify-content: space-between;
+	font-family: "Inter Medium";
+	font-size: 3.398vw;
+}
+
+.pages.desktop {
+	display: none;
+}
+
+.nav button,
+.pages.mobile, .pages.desktop span {
+	color: #414651;
+}
+
+.arrow {
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	font-family: "Inter Semi";
+}
+
+.arrow img {
+	width: 2.913vw;
+	height: auto;
+	padding: 1.327vh 2.954vw;
+}
+
+.arrow:last-child img {
+	rotate: 180deg;
+}
+
+.arrow span {
+	display: none;
+	color: var(--tetriary-color);
 }
 
 footer {
@@ -693,7 +747,7 @@ dialog a {
 		text-transform: uppercase;
 		text-decoration: none;
 		text-wrap: nowrap;
-        word-wrap: nowrap;
+		word-wrap: nowrap;
 		height: auto;
 	}
 
@@ -797,6 +851,55 @@ dialog a {
 		text-underline-position: below;
 		line-height: 120%;
 		margin: unset;
+	}
+
+	.nav {
+		margin-top: 11.538vh;
+		font-size: 1.094vw;
+	}
+
+	.pages.desktop {
+		display: flex;
+	}
+
+	.pages.mobile {
+		display: none;
+	}
+
+	.arrow {
+		gap: 1.699vw;
+	}
+
+	.arrow img {
+		width: 0.938vw;
+		padding: 0.501vh 0.326vw;
+	}
+
+	.arrow span {
+		display: unset;
+	}
+
+	.pages.desktop {
+		gap: 0.156vw;
+		align-items: center;
+	}
+
+	.pages.pages.desktop button {
+		padding: 1.442vh 1.289vw;
+		border: none;
+		background-color: unset;
+		border-radius: 0.625vw;
+	}
+	
+	.pages.desktop button[data-activepage] {
+		background-color: rgba(58, 140, 128, 0.3);
+		color: var(--accent);
+		line-height: 2.404vh;
+	}
+
+	.pages.desktop span {
+		text-align: end;
+		height: fit-content;
 	}
 
 	/* footer */

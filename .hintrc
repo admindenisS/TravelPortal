@@ -8,7 +8,8 @@
       {
         "ignore": [
           "text-wrap: nowrap",
-          "-webkit-user-drag"
+          "-webkit-user-drag",
+          "scrollbar-width"
         ]
       }
     ]

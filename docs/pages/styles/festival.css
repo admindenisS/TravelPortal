@@ -238,15 +238,15 @@ menu a:hover, menu details summary:hover {
 	gap: 1.091vh;
 }
 
-.event > div:first-child {
+.event div:first-child {
 	flex-direction: column;
 	display: flex;
 	width: fit-content;
+	font-size: var(--h2);
 }
 
 .event h2 {
 	height: fit-content;
-	font-size: var(--h2);
 	font-family: "TT Tsars B";
 	text-wrap: nowrap;
 	word-wrap: nowrap;
@@ -761,7 +761,7 @@ dialog a {
 
 	.event > div:first-child {
 		flex-direction: row;
-		gap: 0.5rem;
+		gap: 0.938vw;
 		text-wrap: nowrap;
 		word-wrap: nowrap;
 	}

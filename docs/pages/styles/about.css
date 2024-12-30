@@ -250,9 +250,12 @@ menu a[data-activeLink]:hover, menu a[data-activeLink] {
     font-weight: normal;
 }
 
+.text:last-child {
+    font-weight: bold;
+}
+
 .text b {
     color: var(--accent);
-    font-weight: bold;
 }
 
 .slider {
