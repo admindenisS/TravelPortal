@@ -354,7 +354,8 @@ main {
 }
 
 .nav button,
-.pages.mobile, .pages.desktop span {
+.pages.mobile,
+.pages.desktop span {
 	color: #414651;
 }
 
@@ -706,6 +707,7 @@ dialog a {
 
 	menu details {
 		position: relative;
+		cursor: pointer;
 	}
 
 	menu summary {
@@ -868,6 +870,7 @@ dialog a {
 
 	.arrow {
 		gap: 1.699vw;
+		cursor: pointer;
 	}
 
 	.arrow img {
@@ -889,8 +892,11 @@ dialog a {
 		border: none;
 		background-color: unset;
 		border-radius: 0.625vw;
+		font-family: "Inter Medium";
+		font-size: 1.094vw;
+		cursor: pointer;
 	}
-	
+
 	.pages.desktop button[data-activepage] {
 		background-color: rgba(58, 140, 128, 0.3);
 		color: var(--accent);

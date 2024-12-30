@@ -257,6 +257,7 @@ menu a[data-activeLink] {
 
 .item img {
 	border-radius: 6.068vw;
+	width: 100%;
 }
 
 .single {
@@ -613,6 +614,7 @@ dialog a {
 
 	menu details {
 		position: relative;
+		cursor: pointer;
 	}
 
 	menu summary {

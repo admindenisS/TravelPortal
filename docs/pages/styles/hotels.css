@@ -742,6 +742,7 @@ dialog a {
 
 	menu details {
 		position: relative;
+		cursor: pointer;
 	}
 
 	menu summary {

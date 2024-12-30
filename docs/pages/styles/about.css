@@ -94,7 +94,6 @@ header::after {
     -webkit-user-drag: none;
     -webkit-user-select: none;
     -ms-user-select: none;
-    user-drag: none;
     user-select: none;
 }
 
@@ -645,6 +644,7 @@ dialog a {
 
     menu details {
         position: relative;
+        cursor: pointer;
     }
 
     menu summary {
@@ -767,8 +767,9 @@ dialog a {
 
     #images img {
         border-radius: 2.344vw;
-        width: 64.183vh;
-        height: auto;
+        height: 42.788vh;
+        width: auto;
+        aspect-ratio: 3/2;
     }
 
     .slider-info {

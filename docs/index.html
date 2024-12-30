@@ -6,10 +6,6 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="index.css" />
 		<link rel="icon" href="assets/favicon.ico" />
-		<link rel="prefetch" href="./assets/about.png" loading="lazy" />
-		<link rel="prefetch" href="./assets/selfie.png" loading="lazy" />
-		<link rel="prefetch" href="./assets/afisha.png" loading="lazy" />
-		<link rel="prefetch" href="./assets/tourists.png" loading="lazy" />
 	</head>
 	<body>
 		<header>
@@ -54,7 +50,7 @@
 			<div class="container background">
 				<div class="container banner-container">
 					<div class="pages" hidden>
-						<details id="tourists" data-subimage="tourists.png" class="container center">
+						<details id="tourists" data-subimage="tourists" data-target="#banner-image" data-source="banner" class="container center">
 							<summary class="container center">
 								<span>Для туристов</span>
 								<img role="presentation" alt="" src="./assets/arrow-inv.svg" />
@@ -67,14 +63,20 @@
 								<a href="./pages/festival.html">«Корюшка идёт!»</a>
 							</div>
 						</details>
-						<a id="about" data-subimage="about.png" href="./pages/about.html">О Новой Ладоге</a>
-						<a id="selfie" data-subimage="selfie.png" href="./pages/selfie.html">Селфи с Суворовым</a>
-						<a id="afisha" data-subimage="afisha.png" href="./pages/afisha.html">Афиша</a>
+						<a id="about" data-subimage="about" data-target="#banner-image" data-source="banner" href="./pages/about.html"
+							>О Новой Ладоге</a
+						>
+						<a id="selfie" data-subimage="selfie" data-target="#banner-image" data-source="banner" href="./pages/selfie.html"
+							>Селфи с Суворовым</a
+						>
+						<a id="afisha" data-subimage="afisha" data-target="#banner-image" data-source="banner" href="./pages/afisha.html">Афиша</a>
 					</div>
 					<div class="container banner">
 						<picture class="unselectable" role="presentation">
-							<source media="(orientation: landscape)" srcset="./assets/banner.png" />
-							<img id="banner-image" src="./assets/banner-small.png" alt="" />
+							<source media="(orientation: landscape)" srcset="/assets/banner.webp" />
+							<source media="(orientation: landscape)" srcset="/assets/banner.png" />
+							<source srcset="/assets/banner-small.webp" />
+							<img id="banner-image" src="/assets/banner-small.png" alt="" />
 						</picture>
 						<div class="container banner-text">
 							<h1>Новая Ладога</h1>
@@ -90,28 +92,42 @@
 					<div class="container content">
 						<a class="item container" href="./pages/cafe.html">
 							<span>Кафе</span>
-							<img alt="Кафе" src="./assets/cafe.png" loading="lazy" />
+							<picture class="unselectable" role="presentation">
+								<source srcset="/assets/cafe.webp" />
+								<img src="/assets/cafe.png" alt="Кафе" loading="lazy" />
+							</picture>
 						</a>
 						<a class="item container" href="./pages/hotels.html">
 							<span>Гостиницы</span>
-							<img alt="Гостиницы" src="./assets/guest-house.png" loading="lazy" />
+							<picture class="unselectable" role="presentation">
+								<source srcset="/assets/guest-house.webp" />
+								<img src="/assets/guest-house.png" alt="Гостиницы" loading="lazy" />
+							</picture>
 						</a>
 					</div>
 					<div class="container content">
 						<a class="item container" href="./pages/brands.html">
 							<span>Бренды</span>
-							<img alt="Бренды" src="./assets/fish-museum.png" loading="lazy" />
+							<picture class="unselectable" role="presentation">
+								<source srcset="/assets/fish-museum.webp" />
+								<img src="/assets/fish-museum.png" alt="Бренды" loading="lazy" />
+							</picture>
 						</a>
 						<a class="item container" href="./pages/route.html">
 							<span>Веломаршрут</span>
-							<img alt="Веломаршрут" src="./assets/basicle.png" loading="lazy" />
+							<picture class="unselectable" role="presentation">
+								<source srcset="/assets/basicle.webp" />
+								<img src="/assets/basicle.png" alt="Веломаршрут" loading="lazy" />
+							</picture>
 						</a>
 					</div>
 					<div class="container">
 						<a href="./pages/festival.html" class="container content item single">
 							<span>Фестиваль «Корюшка идёт!»</span>
-							<img alt="Фестиваль «Корюшка идёт!»" src="./assets/festival.png" loading="lazy"
-						/></a>
+							<picture class="unselectable" role="presentation">
+								<source srcset="/assets/festival.webp" />
+								<img src="/assets/festival.png" alt="Фестиваль «Корюшка идёт!»" loading="lazy" /> </picture
+						></a>
 					</div>
 				</div>
 				<div class="block container">
@@ -122,11 +138,17 @@
 					<div class="container content">
 						<a class="item container" href="./pages/about.html">
 							<span>О Новой Ладоге</span>
-							<img alt="О Новой Ладоге" src="./assets/town.png" loading="lazy" />
+							<picture class="unselectable" role="presentation">
+								<source srcset="/assets/town.webp" />
+								<img id="banner-image" src="/assets/town.png" alt="О Новой Ладоге" loading="lazy" /> </picture
+						>
 						</a>
 						<a class="item container" href="./pages/selfie.html">
 							<span>Селфи с Суворовым</span>
-							<img alt="Селфи с Суворовым" src="./assets/selfie-mini.png" loading="lazy" />
+							<picture class="unselectable" role="presentation">
+								<source srcset="/assets/selfie-mini.webp" />
+								<img id="banner-image" src="/assets/selfie-mini.png" alt="Селфи с Суворовым" loading="lazy" /> </picture
+						>
 						</a>
 					</div>
 				</div>
@@ -277,7 +299,7 @@
 				</div>
 			</div>
 		</div>
-		<script src="./scripts/menu.js"></script>
-		<script src="./scripts/imagewrapper.js"></script>
+		<script src="/scripts/menu.js"></script>
+		<script src="/scripts/imagewrapper.js"></script>
 	</body>
 </html>
