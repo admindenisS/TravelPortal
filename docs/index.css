@@ -155,6 +155,10 @@ menu a:hover, menu details summary:hover {
 	color: var(--primary-color);
 }
 
+menu a[data-activeLink] {
+    color: var(--accent-color);
+}
+
 /* banner */
 
 .banner {
