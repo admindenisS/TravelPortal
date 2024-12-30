@@ -649,7 +649,7 @@ dialog a {
 		text-transform: uppercase;
 		text-decoration: none;
 		text-wrap: nowrap;
-		white-space: nowrap;
+        word-wrap: nowrap;
 		height: auto;
 	}
 

@@ -635,6 +635,8 @@ dialog a {
         text-decoration: none;
         text-wrap: nowrap;
         height: auto;
+        text-wrap: nowrap;
+        word-wrap: nowrap;
     }
 
     menu details a:hover {

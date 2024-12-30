@@ -783,6 +783,7 @@ dialog a {
 		text-transform: uppercase;
 		text-decoration: none;
 		text-wrap: nowrap;
+        word-wrap: nowrap;
 		height: auto;
 	}
 
