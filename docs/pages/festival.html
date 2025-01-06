@@ -5,7 +5,7 @@
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<link rel="stylesheet" href="./styles/festival.css" />
-		<link rel="icon" href="/assets/favicon.ico" />
+		<link rel="icon" href="../assets/favicon.ico" />
 	</head>
 
 	<body>
@@ -13,10 +13,10 @@
 			<div class="container row center branding">
 				<div class="container row center logos">
 					<a href="https://new-ladoga-adm.ru/" class="logo center"
-						><img src="/assets/adm.svg" alt="Герб администрации Новоладожского городского поселения"
+						><img src="../assets/adm.svg" alt="Герб администрации Новоладожского городского поселения"
 					/></a>
 					<a href="https://sreda47.ru/" class="logo center"
-						><img src="/assets/center.svg" alt="Логотип Цетра компетенции Ленинградской области"
+						><img src="../assets/center.svg" alt="Логотип Цетра компетенции Ленинградской области"
 					/></a>
 				</div>
 				<div class="container name" hidden>
@@ -29,7 +29,7 @@
 				<a href="./selfie.html">Селфи с Суворовым</a>
 				<a href="./afisha.html">Афиша</a>
 				<details>
-					<summary><span>Для туристов</span> <img alt="" role="presentation" src="/assets/arrow.svg" /></summary>
+					<summary><span>Для туристов</span> <img alt="" role="presentation" src="../assets/arrow.svg" /></summary>
 					<div class="container">
 						<a href="./cafe.html">Кафе</a>
 						<a href="./hotels.html">Гостиницы</a>
@@ -45,12 +45,12 @@
 					</svg>
 				</a>
 			</menu>
-			<img alt="выпадающий список" class="menu" src="/assets/menu.svg" onclick="openMenu(`mobile`)" />
+			<img alt="выпадающий список" class="menu" src="../assets/menu.svg" onclick="openMenu(`mobile`)" />
 		</header>
 		<div class="content">
 			<div class="container scene">
 				<div class="marker container">
-					<img alt="" role="presentation" src="/assets/marker.svg" />
+					<img alt="" role="presentation" src="../assets/marker.svg" />
 					<span>Новая Ладога</span>
 				</div>
 				<div class="title container">
@@ -73,18 +73,36 @@
 				</div>
 				<div class="slider">
 					<div title="изображения с фестиваля" aria-valuenow="1" id="images" role="slider">
-						<img class="unselectable" alt="" role="presentation" src="/assets/slider-festival-1.png" />
-						<img class="unselectable" alt="" role="presentation" src="/assets/slider-festival-2.png" loading="lazy" />
-						<img class="unselectable" alt="" role="presentation" src="/assets/slider-festival-3.png" loading="lazy" />
-						<img class="unselectable" alt="" role="presentation" src="/assets/slider-festival-4.png" loading="lazy" />
-						<img class="unselectable" alt="" role="presentation" src="/assets/slider-festival-5.png" loading="lazy" />
-						<img class="unselectable" alt="" role="presentation" src="/assets/slider-festival-6.png" loading="lazy" />
+						<picture>
+							<source srcset="../assets/slider-festival-1.webp" />
+							<img class="unselectable" alt="" src="../assets/slider-festival-1.png" role="presentation" />
+						</picture>
+						<picture>
+							<source srcset="../assets/slider-festival-2.webp" />
+							<img class="unselectable" alt="" src="../assets/slider-festival-2.png" role="presentation" />
+						</picture>
+						<picture>
+							<source srcset="../assets/slider-festival-3.webp" />
+							<img class="unselectable" alt="" src="../assets/slider-festival-3.png" role="presentation" loading="lazy" />
+						</picture>
+						<picture>
+							<source srcset="../assets/slider-festival-4.webp" />
+							<img class="unselectable" alt="" src="../assets/slider-festival-4.png" role="presentation" loading="lazy" />
+						</picture>
+						<picture>
+							<source srcset="../assets/slider-festival-5.webp" />
+							<img class="unselectable" alt="" src="../assets/slider-festival-5.png" role="presentation" loading="lazy" />
+						</picture>
+						<picture>
+							<source srcset="../assets/slider-festival-6.webp" />
+							<img class="unselectable" alt="" src="../assets/slider-festival-6.png" role="presentation" loading="lazy" />
+						</picture>
 					</div>
 					<div class="slider-info">
 						<div class="progress-container">
 							<div title="slider-progress" id="progress" role="progressbar"></div>
 						</div>
-						<img src="/assets/swipe.svg" alt="" role="note" />
+						<img src="../assets/swipe.svg" alt="" role="note" />
 					</div>
 				</div>
 				<div class="text">
@@ -102,10 +120,10 @@
 			<div class="container row center branding">
 				<div class="container row center logos">
 					<a href="https://new-ladoga-adm.ru/" class="logo center"
-						><img src="/assets/adm.svg" alt="Герб администрации Новоладожского городского поселения"
+						><img src="../assets/adm.svg" alt="Герб администрации Новоладожского городского поселения"
 					/></a>
 					<a href="https://sreda47.ru/" class="logo center"
-						><img src="/assets/center-white.svg" alt="Логотип Цетра компетенции Ленинградской области"
+						><img src="../assets/center-white.svg" alt="Логотип Цетра компетенции Ленинградской области"
 					/></a>
 				</div>
 				<div class="container name">
@@ -182,10 +200,10 @@
 				<div class="container row center branding">
 					<div class="container row center logos">
 						<a href="https://new-ladoga-adm.ru/" class="logo center"
-							><img src="/assets/adm.svg" alt="Герб администрации Новоладожского городского поселения"
+							><img src="../assets/adm.svg" alt="Герб администрации Новоладожского городского поселения"
 						/></a>
 						<a href="https://sreda47.ru/" class="logo center"
-							><img src="/assets/center.svg" alt="Логотип Цетра компетенции Ленинградской области"
+							><img src="../assets/center.svg" alt="Логотип Цетра компетенции Ленинградской области"
 						/></a>
 					</div>
 					<div class="container name">
@@ -193,13 +211,13 @@
 						<span>Новая Ладога</span>
 					</div>
 				</div>
-				<img alt="выпадающий список" class="menu" src="/assets/close.svg" onclick="openMenu(`mobile`)" />
+				<img alt="выпадающий список" class="menu" src="../assets/close.svg" onclick="openMenu(`mobile`)" />
 			</div>
 			<div class="dialog">
 				<details>
 					<summary>
 						<span>Для туристов</span>
-						<img src="/assets/arrow.svg" alt="" role="presentation" />
+						<img src="../assets/arrow.svg" alt="" role="presentation" />
 					</summary>
 					<div class="container">
 						<a href="./cafe.html">Кафе</a>
@@ -235,7 +253,7 @@
 				</div>
 			</div>
 		</div>
-		<script src="/scripts/menu.js"></script>
-		<script src="/scripts/scroll.js"></script>
+		<script src="../scripts/menu.js"></script>
+		<script src="../scripts/scroll.js"></script>
 	</body>
 </html>

@@ -843,10 +843,7 @@ dialog a {
 		font-size: var(--h1);
 		text-transform: uppercase;
 		background-color: rgba(0, 0, 0, 0.1);
-		-webkit-backdrop-filter: blur(1.953vw);
-		backdrop-filter: blur(11.953vw);
 		padding: 0.601vh 0.391vw;
-		border-radius: 1.953vw;
 		text-align: center;
 	}
 
