@@ -951,6 +951,10 @@ dialog a {
 		width: auto;
 	}
 
+	.banner {
+		height: 50.2vh;
+	}
+
 	.ship {
 		transform: translateY(-20%);
 	}
@@ -963,6 +967,10 @@ dialog a {
 		width: auto;
 	}
 
+	.banner {
+		height: 68.51vh;
+	}
+
 	.ship {
 		transform: translateY(0);
 	}
@@ -973,6 +981,10 @@ dialog a {
 		height: 80vh;
 		border-radius: 3.906vw;
 		width: auto;
+	}
+
+	.banner {
+		height: 80vh;
 	}
 
 	.ship {
