@@ -211,7 +211,7 @@ main {
 	height: fit-content;
 }
 
-.event-title button {
+.event-title a {
 	display: flex;
 	flex-direction: row;
 	gap: 0.971vw;
@@ -240,7 +240,7 @@ main {
 	height: auto;
 }
 
-.event-title button:hover img {
+.event-title a:hover img {
 	-moz-transform: scale(-1, 1);
 	-o-transform: scale(-1, 1);
 	-webkit-transform: scale(-1, 1);
@@ -364,6 +364,10 @@ main {
 	flex-direction: row;
 	align-items: center;
 	font-family: "Inter Semi";
+}
+
+.arrow-disabled {
+	visibility: hidden;
 }
 
 .arrow img {
@@ -871,6 +875,7 @@ dialog a {
 	.arrow {
 		gap: 1.699vw;
 		cursor: pointer;
+		text-decoration: none;
 	}
 
 	.arrow img {
@@ -880,6 +885,12 @@ dialog a {
 
 	.arrow span {
 		display: unset;
+		text-decoration: none;
+		border-bottom: 2px solid var(--tetriary-color);
+	}
+
+	.arrow span:visited {
+		text-decoration-color: var(--tetriary-color);
 	}
 
 	.pages.desktop {
@@ -887,7 +898,9 @@ dialog a {
 		align-items: center;
 	}
 
-	.pages.pages.desktop button {
+	.pages.pages.desktop a {
+		text-decoration: none;
+		color: var(--tetriary-color);
 		padding: 1.442vh 1.289vw;
 		border: none;
 		background-color: unset;
@@ -897,7 +910,7 @@ dialog a {
 		cursor: pointer;
 	}
 
-	.pages.desktop button[data-activepage] {
+	.pages.desktop a[data-activepage] {
 		background-color: rgba(58, 140, 128, 0.3);
 		color: var(--accent);
 		line-height: 2.404vh;
