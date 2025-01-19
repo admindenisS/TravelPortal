@@ -32,20 +32,6 @@ function openMenu(device) {
 	}
 }
 
-//arrow wrapper for details
-
-document.querySelectorAll("details").forEach(function (element) {
-	element.addEventListener("click", function (event) {
-		let arrow = event.target.querySelector("img") ? event.target.querySelector("img") : event.target.parentElement.querySelector("img");
-
-		if (arrow.style.rotate == 0 || arrow.style.rotate == "0deg") {
-			arrow.style.rotate = "180deg";
-		} else {
-			arrow.style.rotate = "0deg";
-		}
-	});
-});
-
 //close tourists on main page
 
 let tourists = document.getElementById("tourists");

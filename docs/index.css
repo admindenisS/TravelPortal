@@ -105,6 +105,10 @@ header::after {
 	justify-content: center;
 }
 
+details[open] > summary > img{
+	rotate: 180deg;
+}
+
 .branding {
 	gap: 3.883vw;
 }
@@ -785,7 +789,7 @@ dialog a {
 	}
 
 	#about {
-		padding: 1.601vh 1.25vw 1.601vh 2.344vw;
+		padding: 1.601vh 2.344vw 1.601vh 2.344vw;
 	}
 
 	#about:hover {
