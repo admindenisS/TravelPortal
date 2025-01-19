@@ -212,6 +212,7 @@ menu a[data-activeLink]:hover, menu a[data-activeLink] {
     font-size: var(--h4);
     text-transform: uppercase;
     font-weight: bold;
+    color: var(--secondary-color);
     font-family: "Muller";
 }
 
