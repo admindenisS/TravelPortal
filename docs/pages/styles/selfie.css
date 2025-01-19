@@ -193,8 +193,6 @@ menu a[data-activeLink]:hover, menu a[data-activeLink] {
 }
 
 .what div:first-child {
-    display: flex;
-    flex-direction: column;
     font-family: "TT Tsars B";
     font-weight: bold;
     font-size: var(--h2);
@@ -258,6 +256,7 @@ menu a[data-activeLink]:hover, menu a[data-activeLink] {
     background-color: var(--accent);
     padding: 1.309vh 0;
     font-family: "Muller";
+    font-weight: normal;
     font-size: var(--text);
     color: var(--primary-inv);
 }
@@ -681,13 +680,6 @@ dialog a {
         gap: 5.769vh;
     }
 
-    .what div:first-child {
-        flex-direction: row;
-        gap: 0.938vw;
-        text-wrap: nowrap;
-        word-wrap: nowrap;
-    }
-
     .what div:last-child {
         gap: 2.885vh;
     }
@@ -702,6 +694,7 @@ dialog a {
         color: var(--secondary-color);
         font-family: "Muller";
         font-weight: normal;
+        line-height: 150%;
     }
 
     .how {
@@ -748,6 +741,7 @@ dialog a {
 
     .how p {
         font-size: 1.406vw;
+        line-height: 150%;
     }
 
     .content img {

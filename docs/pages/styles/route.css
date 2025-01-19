@@ -330,6 +330,7 @@ main {
 .info span {
 	font-family: "Muller";
 	font-size: var(--text);
+	color: var(--secondary-color);
 }
 
 .info span {
@@ -784,6 +785,7 @@ dialog a {
 
 	.marker span {
 		font-size: var(--h3);
+		text-transform: uppercase;
 	}
 
 	.title {
@@ -851,11 +853,6 @@ dialog a {
 	.info h4 {
 		color: var(--secondary-color);
 		font-size: var(--text);
-	}
-
-	.info p,
-	.info span {
-		font-weight: bold;
 	}
 
 	.info span {

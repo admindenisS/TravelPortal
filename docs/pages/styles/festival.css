@@ -201,6 +201,7 @@ menu a:hover, menu details summary:hover {
 	font-family: "Muller";
 	color: var(--primary-inv);
 	font-size: var(--h4);
+	text-transform: uppercase;
     transform: translateY(0.2rem);
 }
 

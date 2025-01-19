@@ -214,6 +214,7 @@ menu a[data-activeLink] {
 	color: var(--primary-inv);
 	font-size: var(--h4);
 	transform: translateY(0.2rem);
+	text-transform: uppercase;
 }
 
 .title {
@@ -240,6 +241,7 @@ menu a[data-activeLink] {
 	width: fit-content;
 	line-height: 120%;
 	font-family: "TT Tsars B";
+	font-weight: bold;
 	text-transform: uppercase;
 }
 
@@ -253,6 +255,7 @@ main {
 	font-family: "TT Tsars B";
 	font-weight: bold;
 	color: var(--primary-color);
+	text-transform: uppercase;
 }
 
 .items {
@@ -855,6 +858,7 @@ dialog a {
 	.title span {
 		font-size: var(--h1);
 		padding: 2.885vh 4.688vw 2.885vh 2.344vw;
+
 	}
 
 	main {
