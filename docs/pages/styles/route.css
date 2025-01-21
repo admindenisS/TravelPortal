@@ -268,7 +268,7 @@ main {
 	font-size: var(--text);
 	color: var(--tetriary-color);
 	font-family: "Muller";
-	font-weight: bold;
+	font-weight: normal;
 }
 
 .description {
