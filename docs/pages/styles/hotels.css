@@ -977,6 +977,10 @@ dialog a {
 		display: none;
 	}
 
+	.contacts a {
+		color: var(--secondary-inv);
+	}
+
 	.navigation {
 		grid-column: 5;
 		grid-row: span 4;
@@ -995,6 +999,7 @@ dialog a {
 
 	.linked a {
 		gap: 0.625vw;
+		color: var(--tetriary-inv);
 	}
 
 	.linked a svg {

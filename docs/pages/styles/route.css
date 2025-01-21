@@ -289,11 +289,13 @@ main {
 .map {
 	position: absolute;
 	cursor: grab;
+	height: 100%;
 }
 
 .map img {
 	max-width: none;
 	max-height: none;
+	height: 100%;
 	transform-origin: bottom right;
 }
 
@@ -907,6 +909,10 @@ dialog a {
 		display: none;
 	}
 
+	.contacts a {
+		color: var(--secondary-inv);
+	}
+
 	.navigation {
 		grid-column: 5;
 		grid-row: span 4;
@@ -925,6 +931,7 @@ dialog a {
 
 	.linked a {
 		gap: 0.625vw;
+		color: var(--tetriary-inv);
 	}
 
 	.linked a svg {
@@ -971,6 +978,7 @@ dialog a {
 
 	.madeby span:nth-child(1) {
 		display: block;
+		color: var(--secondary-inv);
 	}
 
 	.madeby span:nth-child(2) {
