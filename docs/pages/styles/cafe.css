@@ -1044,12 +1044,9 @@ dialog a {
 		justify-content: end;
 	}
 
-	.madeby span {
-		color: var(--tetriary-inv);
-	}
-
     .madeby span:nth-child(1) {
         display: block;
+		color: var(--secondary-inv);
     }
     
     .madeby span:nth-child(2) {
