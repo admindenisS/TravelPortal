@@ -47,14 +47,17 @@ body {
 }
 
 @font-face {
-	font-family: "Inter Medium";
+	font-family: "Inter Semi";
 	src: url("../../fonts/InterMedium.ttf") format("truetype");
+	font-weight: normal;
 }
 
 @font-face {
 	font-family: "Inter Semi";
-	src: url("../../fonts/InterSemiBold.ttf") format("truetype");
+	src: url("../../fonts/InterBold.ttf") format("truetype");
+	font-weight: bold;
 }
+
 
 /* variables */
 
@@ -328,6 +331,11 @@ main {
 	color: var(--tetriary-color);
 	font-family: "Muller";
 	line-height: 150%;
+	height: 4lh;
+}
+
+.item-description > span {
+	overflow: hidden;
 }
 
 .item-more {
@@ -335,6 +343,7 @@ main {
 	text-align: center;
 	line-height: 90%;
 	font-family: "Muller";
+	font-weight: bold;
 	font-size: var(--text);
 	padding: 1.091vh 0 1.091vh 0;
 	color: var(--primary-inv);
@@ -351,7 +360,8 @@ main {
 	width: 100%;
 	align-items: center;
 	justify-content: space-between;
-	font-family: "Inter Medium";
+	font-family: "Inter Semi";
+	font-weight: normal;
 	font-size: 3.398vw;
 }
 
@@ -367,9 +377,11 @@ main {
 
 .arrow {
 	display: flex;
+	gap: 0.625vw;
 	flex-direction: row;
 	align-items: center;
 	font-family: "Inter Semi";
+	font-weight: bold;
 }
 
 .arrow-disabled {
@@ -792,7 +804,7 @@ dialog a {
 		margin-bottom: 4.58vh;
 	}
 
-	.event-title button {
+	.event-title a {
 		gap: 0.313vw;
 	}
 
@@ -879,7 +891,7 @@ dialog a {
 	}
 
 	.arrow {
-		gap: 1.699vw;
+		gap: 0.625vw;
 		cursor: pointer;
 		text-decoration: none;
 	}
@@ -911,7 +923,8 @@ dialog a {
 		border: none;
 		background-color: unset;
 		border-radius: 0.625vw;
-		font-family: "Inter Medium";
+		font-family: "Inter Semi";
+		font-weight: normal;
 		font-size: 1.094vw;
 		cursor: pointer;
 	}
