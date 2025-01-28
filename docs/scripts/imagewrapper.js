@@ -26,7 +26,7 @@ function changeImage(newUrl, target, source) {
 	if (bannerText) bannerText.style.display = "none";
 
 	currentAnimation[newUrl] = target.animate(
-		[{ opacity: 1 }, { opacity: 0 }, { opacity: 1, content: `url(/assets/${newUrl}.${webpSupport ? "webp" : "png"})` }],
+		[{ opacity: 1 }, { opacity: 0 }, { opacity: 1, content: `url(/app/img/${newUrl}.${webpSupport ? "webp" : "png"})` }],
 		{
 			duration: 300,
 			easing: "ease-in-out",
@@ -35,7 +35,7 @@ function changeImage(newUrl, target, source) {
 	);
 
 	currentAnimation[newUrl].onfinish = () => {
-		target.src = `/assets/${newUrl}.${webpSupport ? "webp" : "png"}`;
+		target.src = `/app/img/${newUrl}.${webpSupport ? "webp" : "png"}`;
 		if (bannerText && newUrl === source) {
 			bannerText.style.display = "flex";
 		}
@@ -50,7 +50,7 @@ function preloadImage(url) {
 	}
 
 	let img = new Image();
-	img.src = `/assets/${url}.${webpSupport ? "webp" : "png"}`;
+	img.src = `/app/img/${url}.${webpSupport ? "webp" : "png"}`;
 
 	img.onload = () => {
 		console.log(`Image preloaded: ${img.src}`);

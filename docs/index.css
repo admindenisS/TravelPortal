@@ -14,21 +14,21 @@ body {
 
 @font-face {
 	font-family: "Muller";
-	src: url("./fonts/FontfabricMullerRegular.otf") format("opentype"), url("./fonts/MullerTrialRegular.woff2") format("woff2"),
-		url("./fonts/MullerTrialRegular.woff") format("woff"), url("./fonts/MullerTrialRegular.ttf") format("truetype");
+	src: url("/fonts/FontfabricMullerRegular.otf") format("opentype"), url("/fonts/MullerTrialRegular.woff2") format("woff2"),
+		url("/fonts/MullerTrialRegular.woff") format("woff"), url("/fonts/MullerTrialRegular.ttf") format("truetype");
 	font-weight: normal;
 }
 
 @font-face {
 	font-family: "Muller";
-	src: url("./fonts/FontfabricMullerBold.otf") format("opentype"), url("./fonts/MullerTrialBold.woff2") format("woff2"),
-		url("./fonts/MullerTrialBold.woff") format("woff"), url("./fonts/MullerTrialBlack.ttf") format("truetype");
+	src: url("/fonts/FontfabricMullerBold.otf") format("opentype"), url("/fonts/MullerTrialBold.woff2") format("woff2"),
+		url("/fonts/MullerTrialBold.woff") format("woff"), url("/fonts/MullerTrialBlack.ttf") format("truetype");
 	font-weight: bold;
 }
 
 @font-face {
 	font-family: "TT Tsars B";
-	src: url("./fonts/TTTsarsBRegular.ttf") format("truetype");
+	src: url("/fonts/TTTsarsBRegular.ttf") format("truetype");
 	font-weight: normal;
 }
 
@@ -74,7 +74,7 @@ header::after {
 	height: calc(100% + 1.554vh);
 	overflow-y: visible;
 	overflow-x: hidden;
-	background-image: url("./assets/header-background.png");
+	background-image: url("/app/img/header-background.png");
 	background-clip: border-box;
 	background-size: contain;
 	background-repeat: repeat-x;

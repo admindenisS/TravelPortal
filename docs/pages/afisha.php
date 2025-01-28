@@ -1,6 +1,6 @@
 <?php
 require_once '../../vendor/autoload.php';
-require_once '../scripts/database.php';
+require_once '/scripts/database.php';
 
 use Twig\Environment;
 use Twig\Loader\FilesystemLoader;
