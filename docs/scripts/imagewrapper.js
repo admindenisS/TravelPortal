@@ -49,41 +49,43 @@ function changeImage(newUrl, target, source) {
 let isMouseOverSubimage = {};
 
 function setEvents(element, targetElement) {
-	element.addEventListener("mouseenter", function (event) {
-		isMouseOverSubimage[targetElement.dataset.source] = true;
-		let target = event.target;
+	if (window.innerHeight < window.innerWidth) { //checks orientation
+		element.addEventListener("mouseenter", function (event) {
+			isMouseOverSubimage[targetElement.dataset.source] = true;
+			let target = event.target;
 
-		if (!target || !target.dataset.subimage) return;
+			if (!target || !target.dataset.subimage) return;
 
-		changeImage(target.dataset.subimage, targetElement);
-	});
+			changeImage(target.dataset.subimage, targetElement);
+		});
 
-	element.addEventListener("mouseleave", function (event) {
-		isMouseOverSubimage[targetElement.dataset.source] = false;
-		setTimeout(() => {
-			if (!isMouseOverSubimage[targetElement.dataset.source]) {
-				changeImage(element.dataset.source, targetElement, element.dataset.source);
-			}
-		}, 150);
-	});
+		element.addEventListener("mouseleave", function (event) {
+			isMouseOverSubimage[targetElement.dataset.source] = false;
+			setTimeout(() => {
+				if (!isMouseOverSubimage[targetElement.dataset.source]) {
+					changeImage(element.dataset.source, targetElement, element.dataset.source);
+				}
+			}, 150);
+		});
+	} else {
+		element.addEventListener("pointerenter", () => {
+			isMouseOverSubimage[targetElement.dataset.source] = true;
+			let target = event.target;
 
-	element.addEventListener("pointerenter", () => {
-		isMouseOverSubimage[targetElement.dataset.source] = true;
-		let target = event.target;
+			if (!target || !target.dataset.subimage) return;
 
-		if (!target || !target.dataset.subimage) return;
+			changeImage(target.dataset.subimage, targetElement);
+		});
 
-		changeImage(target.dataset.subimage, targetElement);
-	});
-
-	element.addEventListener("pointerleave", () => {
-		isMouseOverSubimage[targetElement.dataset.source] = false;
-		setTimeout(() => {
-			if (!isMouseOverSubimage[targetElement.dataset.source]) {
-				changeImage(element.dataset.source, targetElement, element.dataset.source);
-			}
-		}, 150);
-	});
+		element.addEventListener("pointerleave", () => {
+			isMouseOverSubimage[targetElement.dataset.source] = false;
+			setTimeout(() => {
+				if (!isMouseOverSubimage[targetElement.dataset.source]) {
+					changeImage(element.dataset.source, targetElement, element.dataset.source);
+				}
+			}, 150);
+		});
+	}
 
 	console.log(`${element.dataset.source} теперь прослушивается`);
 }
@@ -120,9 +122,11 @@ document.querySelectorAll("[data-subimage]").forEach(function (element) {
 	let targetElement = element.dataset.target == "this" ? element : document.querySelector(element.dataset.target);
 
 	if (element.dataset.subimage)
-		preloadImage(element.dataset.subimage).then(() => {
-			setEvents(element, targetElement);
-		}).catch((err) => {
-			console.error(`Failed to preload image: ${img.src}`);
-		})
+		preloadImage(element.dataset.subimage)
+			.then(() => {
+				setEvents(element, targetElement);
+			})
+			.catch((err) => {
+				console.error(`Failed to preload image: ${img.src}`);
+			});
 });
