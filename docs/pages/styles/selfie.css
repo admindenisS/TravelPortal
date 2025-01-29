@@ -8,8 +8,9 @@ html,
 body {
     max-width: 100%;
     height: fit-content;
-    background-color: var(--accent);
-    position: relative;
+	background-color: var(--globe-color);
+	position: relative;
+	z-index: -2;
 }
 
 @font-face {
@@ -80,7 +81,7 @@ header::after {
 	height: calc(100% + 1.554vh);
 	overflow-y: visible;
 	overflow-x: hidden;
-	background-image: url("/app/img/header-background.png");
+	background-image: url("/assets/header-background.png");
 	background-clip: border-box;
 	background-size: contain;
 	background-repeat: repeat-x;
@@ -228,14 +229,39 @@ menu a[data-activeLink]:hover, menu a[data-activeLink] {
     flex-direction: column;
     gap: 4.362vh;
     font-family: "Muller";
+    position: relative;
 }
 
-.how form {
+.form {
     display: flex;
     flex-direction: column;
     align-items: center;
     gap: 1.745vh;
     color: var(--tetriary-color);
+    width: 100%;
+}
+
+@keyframes wrong {
+    0% {
+        color: red;
+    }
+
+    25% {
+        transform: translateX(-3ch);
+    }
+
+    50% {
+        transform: translateX(3ch);
+    }
+
+    75% {
+        transform: translateX(-3ch);
+    }
+
+    100% {
+        transform: unset;
+        color: var(--tetriary-color);
+    }
 }
 
 .how input {
@@ -248,6 +274,7 @@ menu a[data-activeLink]:hover, menu a[data-activeLink] {
     border-radius: 1.942vw;
     border-width: 0.291vw;
     letter-spacing: 1rem;
+    position: relative;
 }
 
 .how button {
@@ -262,7 +289,7 @@ menu a[data-activeLink]:hover, menu a[data-activeLink] {
     color: var(--primary-inv);
 }
 
-.how div {
+.how > div > div {
     flex-direction: column;
     box-sizing: border-box;
     width: 100%;
@@ -276,6 +303,7 @@ menu a[data-activeLink]:hover, menu a[data-activeLink] {
 .content img {
     width: 57.852vw;
     height: auto;
+    z-index: 1;
 }
 
 footer {
@@ -284,6 +312,18 @@ footer {
     grid-template-columns: 1fr 5.825vw 1fr;
     grid-template-rows: fit-content 1fr 2fr 2fr 0.545vh 2fr;
     row-gap: 2.726vh;
+    background-color: var(--accent);
+    position: relative;
+}
+
+footer::before {
+	content: "";
+	background-color: var(--accent);
+	width: 100%;
+	height: 10vh;
+	z-index: -1;
+	position: absolute;
+	top: -9vh;
 }
 
 footer .branding {
@@ -716,7 +756,7 @@ dialog a {
         appearance: textfield;
     }
 
-    .how form {
+    .form {
         width: 30.547vw;
         gap: 1.923vh;
         padding: 0 2.734vw;

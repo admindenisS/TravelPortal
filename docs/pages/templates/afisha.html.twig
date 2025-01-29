@@ -6,7 +6,7 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
 		<meta name="theme-color" content="#f8f8f8"/>
 		<link rel="stylesheet" href="/pages/styles/afisha.css" />
-		<link rel="icon" href="/app/img/favicon.ico" />
+		<link rel="icon" href="/assets/favicon.ico" />
 	</head>
 
 	<body>
@@ -14,10 +14,10 @@
 			<div class="container row center branding">
 				<div class="container row center logos">
 					<a href="../index" class="logo center"
-						><img src="/app/img/adm.svg" alt="Герб администрации Новоладожского городского поселения"
+						><img src="/assets/adm.svg" alt="Герб администрации Новоладожского городского поселения"
 					/></a>
 					<a href="https://sreda47.ru/" class="logo center"
-						><img src="/app/img/center.svg" alt="Логотип Цетра компетенции Ленинградской области"
+						><img src="/assets/center.svg" alt="Логотип Цетра компетенции Ленинградской области"
 					/></a>
 				</div>
 				<a href="/" class="container name" hidden>
@@ -30,7 +30,7 @@
 				<a href="/selfie">Селфи с Суворовым</a>
 				<a href="/afisha" data-activeLink>Афиша</a>
 				<details>
-					<summary><span>Для туристов</span> <img alt="" role="presentation" src="/app/img/arrow.svg" /></summary>
+					<summary><span>Для туристов</span> <img alt="" role="presentation" src="/assets/arrow.svg" /></summary>
 					<div class="container">
 						<a href="/cafe">Кафе</a>
 						<a href="/hotels">Гостиницы</a>
@@ -46,14 +46,14 @@
 					</svg>
 				</a>
 			</menu>
-			<img alt="выпадающий список" class="menu" src="/app/img/menu.svg" onclick="openMenu(`mobile`)" />
+			<img alt="выпадающий список" class="menu" src="/assets/menu.svg" onclick="openMenu(`mobile`)" />
 		</header>
 		<main>
 			<div class="container event-title">
 				<h2>Афиша — новости Новой Ладоги</h2>
 				<a href="{{sort == "old" ? "?page=" ~ currentPage ~ "&sort=new" : "?page=" ~ currentPage ~ "&sort=old"}}">
 					<span>сначала {{sort == "old" ? "старые" : "новые"}}</span>
-					<img src="/app/img/switch.svg" alt="" role="presentation" />
+					<img src="/assets/switch.svg" alt="" role="presentation" />
 				</a>
 			</div>
 			<div class="items">
@@ -66,7 +66,7 @@
 						<span class="container item-title">{{ event.name }}</span>
 						<div class="container item-info">
 							<div class="container item-when">
-								<img alt="" src="/app/img/calendar.svg" role="presentation" />
+								<img alt="" src="/assets/calendar.svg" role="presentation" />
 								<span>{{ event.formatted_date }} года</span>
 							</div>
 							<div class="container item-description">
@@ -81,7 +81,7 @@
 			{% if currentPage and totalPages %}
 			<div class="nav">
 				<a href="{{sort ? "?page=" ~ (currentPage - 1) ~ "&" ~ "sort=" ~ sort : "?page=" ~ (currentPage - 1)}}" class="container {{currentPage == 1 ? 'arrow-disabled' : 'arrow'}} unselectable" role="navigation">
-					<img alt="стрелочка вперед" src="/app/img/arrow-afisha.svg" role="navigation" />
+					<img alt="стрелочка вперед" src="/assets/arrow-afisha.svg" role="navigation" />
 					<span>Назад</span>
 				</a>
 				<div class="container pages desktop" role="navigation">
@@ -102,7 +102,7 @@
 				</div>
 				<a href="{{sort ? "?page=" ~ (currentPage + 1) ~ "&" ~ "sort=" ~ sort : "?page=" ~ (currentPage + 1)}}" class="container {{currentPage >= totalPages ? 'arrow-disabled' : 'arrow'}} unselectable" role="navigation">
 					<span>Вперёд</span>
-					<img alt="стрелочка вперед" src="/app/img/arrow-afisha.svg" role="navigation" />
+					<img alt="стрелочка вперед" src="/assets/arrow-afisha.svg" role="navigation" />
 				</a>
 			</div>
 			{% endif %}
@@ -111,10 +111,10 @@
 			<div class="container row center branding">
 				<div class="container row center logos">
 					<a href="https://new-ladoga-adm.ru/" class="logo center"
-						><img src="/app/img/adm.svg" alt="Герб администрации Новоладожского городского поселения"
+						><img src="/assets/adm.svg" alt="Герб администрации Новоладожского городского поселения"
 					/></a>
 					<a href="https://sreda47.ru/" class="logo center"
-						><img src="/app/img/center-white.svg" alt="Логотип Цетра компетенции Ленинградской области"
+						><img src="/assets/center-white.svg" alt="Логотип Цетра компетенции Ленинградской области"
 					/></a>
 				</div>
 				<div class="container name">
@@ -191,10 +191,10 @@
 				<div class="container row center branding">
 					<div class="container row center logos">
 						<a href="https://new-ladoga-adm.ru/" class="logo center"
-							><img src="/app/img/adm.svg" alt="Герб администрации Новоладожского городского поселения"
+							><img src="/assets/adm.svg" alt="Герб администрации Новоладожского городского поселения"
 						/></a>
 						<a href="https://sreda47.ru/" class="logo center"
-							><img src="/app/img/center.svg" alt="Логотип Цетра компетенции Ленинградской области"
+							><img src="/assets/center.svg" alt="Логотип Цетра компетенции Ленинградской области"
 						/></a>
 					</div>
 					<div class="container name">
@@ -202,13 +202,13 @@
 						<span>Новая Ладога</span>
 					</div>
 				</div>
-				<img alt="выпадающий список" class="menu" src="/app/img/close.svg" onclick="openMenu(`mobile`)" />
+				<img alt="выпадающий список" class="menu" src="/assets/close.svg" onclick="openMenu(`mobile`)" />
 			</div>
 			<div class="dialog">
 				<details>
 					<summary>
 						<span>Для туристов</span>
-						<img src="/app/img/arrow.svg" alt="" role="presentation" />
+						<img src="/assets/arrow.svg" alt="" role="presentation" />
 					</summary>
 					<div class="container">
 						<a href="/cafe">Кафе</a>

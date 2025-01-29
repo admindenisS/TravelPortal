@@ -1,5 +1,5 @@
 <?php
-require_once '../app/vendor/autoload.php';
+require_once __DIR__ . '/../selfie/app/vendor/autoload.php';
 use Dotenv\Dotenv;
 
 class Config
@@ -8,7 +8,6 @@ class Config
 
     private function __construct()
     {
-
         $dotenv = Dotenv::createImmutable(realpath(__DIR__ . '/../../'));
         $dotenv->load();
     }
