@@ -196,6 +196,7 @@ menu a[data-activeLink] {
 
 main {
 	height: fit-content;
+	min-height: 30vh;
 	display: flex;
 	width: calc(100% - 12.125 * 2);
 	flex-direction: column;
