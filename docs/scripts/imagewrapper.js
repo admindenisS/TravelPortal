@@ -68,16 +68,17 @@ function setEvents(element, targetElement) {
 			}, 150);
 		});
 	} else {
-		element.addEventListener("pointerenter", () => {
+		element.addEventListener("pointerenter", (event) => {
 			isMouseOverSubimage[targetElement.dataset.source] = true;
 			let target = event.target;
 
 			if (!target || !target.dataset.subimage) return;
 
+			event.preventDefault();
 			changeImage(target.dataset.subimage, targetElement);
 		});
 
-		element.addEventListener("pointerleave", () => {
+		element.addEventListener("pointerleave", (event) => {
 			isMouseOverSubimage[targetElement.dataset.source] = false;
 			setTimeout(() => {
 				if (!isMouseOverSubimage[targetElement.dataset.source]) {
