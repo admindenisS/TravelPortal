@@ -4,17 +4,15 @@
 		<title>Туристический портал г. Новая Ладога</title>
 		<meta charset="utf-8" />
 		<meta name="viewport" content="width=device-width, initial-scale=1" />
-		<meta name="theme-color" content="#f8f8f8"/>
-		<link rel="stylesheet" href="/index.css" />
+		<meta name="theme-color" content="#f8f8f8" />
+		<link rel="stylesheet" href="/index-copy.css" />
 		<link rel="icon" href="/assets/favicon.ico" />
 	</head>
 	<body>
 		<header>
 			<div class="container row center branding">
 				<div class="container row center logos">
-					<a class="logo center"
-						><img src="/assets/adm.svg" alt="Герб администрации Новоладожского городского поселения"
-					/></a>
+					<a class="logo center"><img src="/assets/adm.svg" alt="Герб администрации Новоладожского городского поселения" /></a>
 					<a href="https://sreda47.ru/" class="logo center"
 						><img src="/assets/center.svg" alt="Логотип Цетра компетенции Ленинградской области"
 					/></a>
@@ -49,40 +47,35 @@
 		</header>
 		<div class="container pages-list">
 			<div class="container background">
-				<div class="container banner-container">
-					<div class="pages" hidden>
-						<details id="tourists" data-subimage="tourists" data-target="#banner-image" data-source="banner" class="container center">
-							<summary class="container center">
-								<span>Для туристов</span>
-								<img role="presentation" alt="" src="/assets/arrow-inv.svg" />
-							</summary>
-							<div class="container urls">
-								<a href="/cafe">Кафе</a>
-								<a href="/hotels">Гостиницы</a>
-								<a href="/brands">Бренды</a>
-								<a href="/route">Веломаршрут</a>
-								<a href="/festival">«Корюшка идёт!»</a>
-							</div>
-						</details>
-						<a id="about" data-subimage="about" data-target="#banner-image" data-source="banner" href="/about"
-							>О Новой Ладоге</a
-						>
-						<a id="selfie" data-subimage="selfie" data-target="#banner-image" data-source="banner" href="/selfie"
-							>Селфи с Суворовым</a
-						>
-						<a id="afisha" data-subimage="afisha" data-target="#banner-image" data-source="banner" href="/afisha">Афиша</a>
-					</div>
-					<div class="container banner">
-						<picture class="unselectable" role="presentation">
-							<source media="(orientation: landscape)" srcset="/assets/banner.webp" type="image/webp"/>
-							<source media="(orientation: landscape)" srcset="/assets/banner.png" type="image/png"/>
-							<source srcset="/assets/banner-small.webp" type="image/webp"/>
-							<img id="banner-image" src="/assets/banner-small.png" alt="" />
-						</picture>
-						<div class="container banner-text">
-							<h1>Новая Ладога</h1>
-							<h2>Откройте для себя Новую Ладогу!</h2>
+				<img class="ship unselectable" src="/assets/ship.svg" alt="" role="presentation" hidden />
+				<div class="pages" hidden>
+					<details id="tourists" data-subimage="tourists" data-target="#banner-image" data-source="banner" class="container center">
+						<summary class="container center">
+							<span>Для туристов</span>
+							<img role="presentation" alt="" src="/assets/arrow-inv.svg" />
+						</summary>
+						<div class="container urls">
+							<a href="/cafe">Кафе</a>
+							<a href="/hotels">Гостиницы</a>
+							<a href="/brands">Бренды</a>
+							<a href="/route">Веломаршрут</a>
+							<a href="/festival">«Корюшка идёт!»</a>
 						</div>
+					</details>
+					<a id="about" data-subimage="about" data-target="#banner-image" data-source="banner" href="/about">О Новой Ладоге</a>
+					<a id="selfie" data-subimage="selfie" data-target="#banner-image" data-source="banner" href="/selfie">Селфи с Суворовым</a>
+					<a id="afisha" data-subimage="afisha" data-target="#banner-image" data-source="banner" href="/afisha">Афиша</a>
+				</div>
+				<div class="container banner">
+					<picture class="unselectable" role="presentation">
+						<source media="(orientation: landscape)" srcset="/assets/banner.webp" type="image/webp" />
+						<source media="(orientation: landscape)" srcset="/assets/banner.png" type="image/png" />
+						<source srcset="/assets/banner-small.webp" type="image/webp" />
+						<img id="banner-image" src="/assets/banner-small.png" alt="" />
+					</picture>
+					<div class="container banner-text">
+						<h1>Новая Ладога</h1>
+						<h2>Откройте для себя Новую Ладогу!</h2>
 					</div>
 				</div>
 				<div class="block container">
@@ -94,14 +87,14 @@
 						<a class="item container" href="/cafe">
 							<span>Кафе</span>
 							<picture class="unselectable" role="presentation">
-								<source srcset="/assets/cafe.webp" type="image/webp"/>
+								<source srcset="/assets/cafe.webp" type="image/webp" />
 								<img src="/assets/cafe.png" alt="Кафе" loading="lazy" />
 							</picture>
 						</a>
 						<a class="item container" href="/hotels">
 							<span>Гостиницы</span>
 							<picture class="unselectable" role="presentation">
-								<source srcset="/assets/guest-house.webp" type="image/webp"/>
+								<source srcset="/assets/guest-house.webp" type="image/webp" />
 								<img src="/assets/guest-house.png" alt="Гостиницы" loading="lazy" />
 							</picture>
 						</a>
@@ -110,14 +103,14 @@
 						<a class="item container" href="/brands">
 							<span>Бренды</span>
 							<picture class="unselectable" role="presentation">
-								<source srcset="/assets/fish-museum.webp" type="image/webp"/>
+								<source srcset="/assets/fish-museum.webp" type="image/webp" />
 								<img src="/assets/fish-museum.png" alt="Бренды" loading="lazy" />
 							</picture>
 						</a>
 						<a class="item container" href="/route">
 							<span>Веломаршрут</span>
 							<picture class="unselectable" role="presentation">
-								<source srcset="/assets/basicle.webp" type="image/webp"/>
+								<source srcset="/assets/basicle.webp" type="image/webp" />
 								<img src="/assets/basicle.png" alt="Веломаршрут" loading="lazy" />
 							</picture>
 						</a>
@@ -126,7 +119,7 @@
 						<a href="/festival" class="container content item single">
 							<span>Фестиваль «Корюшка идёт!»</span>
 							<picture class="unselectable" role="presentation">
-								<source srcset="/assets/festival.webp" type="image/webp"/>
+								<source srcset="/assets/festival.webp" type="image/webp" />
 								<img src="/assets/festival.png" alt="Фестиваль «Корюшка идёт!»" loading="lazy" /> </picture
 						></a>
 					</div>
@@ -140,16 +133,16 @@
 						<a class="item container" href="/about">
 							<span>О Новой Ладоге</span>
 							<picture class="unselectable" role="presentation">
-								<source srcset="/assets/town.webp" type="image/webp"/>
-								<img id="banner-image" src="/assets/town.png" alt="О Новой Ладоге" loading="lazy" /> </picture
-						>
+								<source srcset="/assets/town.webp" type="image/webp" />
+								<img id="banner-image" src="/assets/town.png" alt="О Новой Ладоге" loading="lazy" />
+							</picture>
 						</a>
 						<a class="item container" href="/selfie">
 							<span>Селфи с Суворовым</span>
 							<picture class="unselectable" role="presentation">
-								<source srcset="/assets/selfie-mini.webp" type="image/webp"/>
-								<img id="banner-image" src="/assets/selfie-mini.png" alt="Селфи с Суворовым" loading="lazy" /> </picture
-						>
+								<source srcset="/assets/selfie-mini.webp" type="image/webp" />
+								<img id="banner-image" src="/assets/selfie-mini.png" alt="Селфи с Суворовым" loading="lazy" />
+							</picture>
 						</a>
 					</div>
 				</div>
@@ -161,7 +154,6 @@
 					<a href="/afisha">Перейти</a>
 				</div>
 			</div>
-			<img class="ship unselectable" src="/assets/ship.svg" alt="" role="presentation" hidden />
 		</div>
 		<footer>
 			<div class="container row center branding">

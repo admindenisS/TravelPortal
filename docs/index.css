@@ -700,7 +700,7 @@ dialog a {
 
 	.background {
 		display: flex;
-		gap: 4.688vw;
+		justify-content: space-between;
 		border-radius: 0 0 3.906vw 3.906vw;
 		padding: 7.212vh 2.422vw 12.74vh 0;
 		flex-direction: row;
@@ -710,7 +710,7 @@ dialog a {
 	.banner-container {
 		width: 100%;
 		justify-content: space-between;
-		z-index: 2;
+		z-index: 1;
 		position: relative;
 	}
 
@@ -879,7 +879,7 @@ dialog a {
 		position: absolute;
 		width: 100%;
 		bottom: 0;
-		z-index: 1;
+		z-index: 2;
 	}
 
 	.block {
