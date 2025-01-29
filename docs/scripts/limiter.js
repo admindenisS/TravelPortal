@@ -42,6 +42,5 @@ function validate(limit) {
 				}
 			);
 		}
-		console.log(res);
 	});
 }
