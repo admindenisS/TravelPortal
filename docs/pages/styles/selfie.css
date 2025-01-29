@@ -229,7 +229,6 @@ menu a[data-activeLink]:hover, menu a[data-activeLink] {
     flex-direction: column;
     gap: 4.362vh;
     font-family: "Muller";
-    position: relative;
 }
 
 .form {
@@ -239,29 +238,6 @@ menu a[data-activeLink]:hover, menu a[data-activeLink] {
     gap: 1.745vh;
     color: var(--tetriary-color);
     width: 100%;
-}
-
-@keyframes wrong {
-    0% {
-        color: red;
-    }
-
-    25% {
-        transform: translateX(-3ch);
-    }
-
-    50% {
-        transform: translateX(3ch);
-    }
-
-    75% {
-        transform: translateX(-3ch);
-    }
-
-    100% {
-        transform: unset;
-        color: var(--tetriary-color);
-    }
 }
 
 .how input {
@@ -274,7 +250,11 @@ menu a[data-activeLink]:hover, menu a[data-activeLink] {
     border-radius: 1.942vw;
     border-width: 0.291vw;
     letter-spacing: 1rem;
-    position: relative;
+    -webkit-appearance: none;
+}
+
+.how input {
+  transform: scale(1);
 }
 
 .how button {
