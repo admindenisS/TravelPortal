@@ -14,6 +14,7 @@ window.onload = () => {
     videoElement.muted = true;
     videoElement.setAttribute("muted", "");
     videoElement.setAttribute("playsinline", "");
+    videoElement.setAttribute("pip", "false")
     videoElement.id = "drone";
 
     let sourceWebm = document.createElement("source");
