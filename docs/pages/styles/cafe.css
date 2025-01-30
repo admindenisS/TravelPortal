@@ -219,7 +219,7 @@ menu a[data-activeLink] {
 }
 
 .title {
-	padding: 0.612vh 1.91vw 0.612vh 0;
+	padding-right: 1.91vw;
 	background-color: var(--accent);
 	border-radius: 0 22.442vw 22.442vw 0;
 	position: absolute;
@@ -236,7 +236,7 @@ menu a[data-activeLink] {
 	border-style: solid;
 	border-left: none;
 	margin: 0.915vh 0;
-	padding: 0 9.709vw 0 4.854vw;
+	padding: 0 4.854vw;
 	box-sizing: border-box;
 	height: fit-content;
 	width: fit-content;
