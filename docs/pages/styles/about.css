@@ -201,8 +201,22 @@ menu a[data-activeLink]:hover, menu a[data-activeLink] {
     border-radius: 0 0 12.136vw 12.136vw;
 }
 
+.drone video {
+    border-radius: 0 0 12.136vw 12.136vw;
+    height: auto;
+    width: auto;
+    min-height: 100%;
+    min-width: 100%;
+    z-index: 1;
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    pointer-events: none;
+}
+
 .drone div {
     flex-direction: column;
+    z-index: 2;
 }
 
 .drone span{
@@ -739,6 +753,14 @@ dialog a {
         border-radius: 0 0 3.906vw 3.906vw;
         justify-content: center;
         align-items: end;
+    }
+
+    .drone video {
+        border-radius: 0 0 3.906vw 3.906vw;
+    }
+
+    .drone video::-webkit-media-controls {
+        display: none;
     }
 
     .drone > .container {

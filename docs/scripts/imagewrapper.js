@@ -1,7 +1,6 @@
 let webpSupport = false;
 
 (() => {
-	// Проверка через реальный WebP-ресурс
 	var img = new Image();
 
 	img.onload = function () {
@@ -49,44 +48,51 @@ function changeImage(newUrl, target, source) {
 let isMouseOverSubimage = {};
 
 function setEvents(element, targetElement) {
-	if (window.innerHeight < window.innerWidth) { //checks orientation
-		element.addEventListener("mouseenter", function (event) {
-			isMouseOverSubimage[targetElement.dataset.source] = true;
-			let target = event.target;
 
-			if (!target || !target.dataset.subimage) return;
+	element.addEventListener("mouseenter", function (event) {
+		isMouseOverSubimage[targetElement.dataset.source] = true;
+		let target = event.target;
 
-			changeImage(target.dataset.subimage, targetElement);
+		if (!target || !target.dataset.subimage) return;
+
+		changeImage(target.dataset.subimage, targetElement);
+	});
+
+	element.addEventListener("mouseleave", function (event) {
+		isMouseOverSubimage[targetElement.dataset.source] = false;
+		setTimeout(() => {
+			if (!isMouseOverSubimage[targetElement.dataset.source]) {
+				changeImage(element.dataset.source, targetElement, element.dataset.source);
+			}
+		}, 150);
+	});
+
+	element.addEventListener("touchstart", (event) => {
+		isMouseOverSubimage[targetElement.dataset.source] = true;
+		let target = event.target;
+
+		if (!target || !target.dataset.subimage) return;
+
+		changeImage(target.dataset.subimage, targetElement);
+
+		window.addEventListener("contextmenu", (e) => {
+			e.preventDefault();
 		});
+	});
 
-		element.addEventListener("mouseleave", function (event) {
-			isMouseOverSubimage[targetElement.dataset.source] = false;
-			setTimeout(() => {
-				if (!isMouseOverSubimage[targetElement.dataset.source]) {
-					changeImage(element.dataset.source, targetElement, element.dataset.source);
-				}
-			}, 150);
-		});
-	} else {
-		element.addEventListener("pointerenter", (event) => {
-			isMouseOverSubimage[targetElement.dataset.source] = true;
-			let target = event.target;
+	element.addEventListener("touchend", () => {
+		isMouseOverSubimage[targetElement.dataset.source] = false;
 
-			if (!target || !target.dataset.subimage) return;
+		setTimeout(() => {
+			if (!isMouseOverSubimage[targetElement.dataset.source]) {
+				changeImage(element.dataset.source, targetElement, element.dataset.source);
+				window.removeEventListener("contextmenu", (event) => {
+					event.preventDefault();
+				});
+			}
+		}, 150);
+	});
 
-			event.preventDefault();
-			changeImage(target.dataset.subimage, targetElement);
-		});
-
-		element.addEventListener("pointerleave", (event) => {
-			isMouseOverSubimage[targetElement.dataset.source] = false;
-			setTimeout(() => {
-				if (!isMouseOverSubimage[targetElement.dataset.source]) {
-					changeImage(element.dataset.source, targetElement, element.dataset.source);
-				}
-			}, 150);
-		});
-	}
 
 	console.log(`${element.dataset.source} теперь прослушивается`);
 }
@@ -122,6 +128,7 @@ document.querySelectorAll("[data-subimage]").forEach(function (element) {
 	if (!element.dataset.target) return;
 	let targetElement = element.dataset.target == "this" ? element : document.querySelector(element.dataset.target);
 
+	if (element.dataset.destination == "PC" && window.innerHeight > window.innerWidth) return;
 	if (element.dataset.subimage)
 		preloadImage(element.dataset.subimage)
 			.then(() => {
