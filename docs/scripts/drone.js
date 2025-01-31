@@ -1,4 +1,4 @@
-(() => {
+window.onload = () => {
 
     let droneElement = document.getElementsByClassName("drone")[0];
 
@@ -8,9 +8,13 @@
     }
 
     let videoElement = document.createElement("video");
-    videoElement.setAttribute("autoplay", true);
-    videoElement.setAttribute("loop", "");
-    videoElement.setAttribute("playsinline", true);
+    videoElement.autoplay = true;
+    videoElement.loop = true;
+    videoElement.playsInline = true;
+    videoElement.muted = true;
+    videoElement.setAttribute("muted", "");
+    videoElement.setAttribute("playsinline", "");
+    videoElement.setAttribute("pip", "false")
     videoElement.id = "drone";
 
     let sourceWebm = document.createElement("source");
@@ -25,12 +29,11 @@
     videoElement.appendChild(sourceMP4);
     droneElement.append(videoElement);
 
-    videoElement.load();
     videoElement.onloadeddata = () => {
-        console.log("Drone video loading was started!")
+        console.log("Drone video loading was started!");
     }
 
-    videoElement.onerror = () => {
-        console.error("Ошибка при загрузке видео");
+    videoElement.onerror = (event) => {
+        console.error("Ошибка при загрузке видео:", event.target.error);
     };
-})()
+}

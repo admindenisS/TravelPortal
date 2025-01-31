@@ -231,7 +231,6 @@ menu details summary:hover {
 	border-width: 0.223vw;
 	border-style: solid;
 	border-left: none;
-	margin: 0.915vh 0;
 	padding: 0 9.709vw 0 4.854vw;
 	box-sizing: border-box;
 	height: fit-content;
@@ -806,7 +805,7 @@ dialog a {
 	.title {
 		border-radius: 0 14.866vw 14.866vw 0;
 		top: 14.904vh;
-		padding: 1.563vh 1.641vw 1.563vh 0;
+		padding: 1.563vh 1.563vh 1.563vh 0;
 	}
 
 	.title h2 {
