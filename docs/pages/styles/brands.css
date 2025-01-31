@@ -219,7 +219,7 @@ menu a[data-activeLink] {
 }
 
 .title {
-	padding: 0.689vh 1.252vw 0.689vh 0;
+	padding: 0.689vh 0.689vh 0.689vh 0;
 	background-color: var(--accent);
 	border-radius: 0 22.442vw 22.442vw 0;
 	position: absolute;
@@ -865,7 +865,7 @@ dialog a {
 	.title {
 		border-radius: 0 14.866vw 14.866vw 0;
 		top: 14.904vh;
-		padding: 1.563vh 1.641vw 1.563vh 0;
+		padding: 1.563vh 1.563vh 1.563vh 0;
 	}
 
 	.title span {

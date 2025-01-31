@@ -192,6 +192,7 @@ menu a[data-activeLink] {
 	white-space: nowrap;
 	font-size: var(--h1);
 	width: fit-content;
+	text-transform: uppercase;
 	line-height: 120%;
 }
 
@@ -864,7 +865,6 @@ dialog a {
 		left: calc(2.188vw - 0.391vw);
 		top: 33.654vh;
 		font-size: var(--h1);
-		text-transform: uppercase;
 		background-color: rgba(0, 0, 0, 0.1);
 		padding: 0.601vh 0.391vw;
 		text-align: center;

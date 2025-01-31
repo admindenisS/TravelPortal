@@ -865,13 +865,11 @@ dialog a {
 	.title {
 		border-radius: 0 14.866vw 14.866vw 0;
 		top: 14.904vh;
-		padding: 1.563vh 1.641vw 1.563vh 0;
+		padding: 0.781vw 1.172vw 0.781vw 0;
 	}
 
 	.title span {
 		font-size: var(--h1);
-		padding: 2.885vh 4.688vw 2.885vh 2.344vw;
-
 	}
 
 	main {
